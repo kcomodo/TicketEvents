@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    "\\.github\\workflows"
+    "",
+    "\\ConsoleTest",
+    "\\TicketEventWPF",
+    "\\TicketEventWPF\\TicketEventWPF"
   ],
   "PreviewInSolutionExplorer": false
 }
