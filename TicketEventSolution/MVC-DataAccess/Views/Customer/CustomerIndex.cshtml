@@ -1,0 +1,51 @@
+﻿@model MVC_DataAccess.Models.CustomerModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Customer Interaction</title>
+</head>
+<body>
+    <h1>Customer Interaction Page</h1>
+
+    <!-- Form to Add a Customer -->
+    <h2>Add a Customer</h2>
+    <form method="post" action="@Url.Action("AddCustomerController", "Customer")">
+        <label for="FirstName">First Name:</label>
+        <input type="text" id="FirstName" name="FirstName" required />
+        <br />
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName" name="LastName" required />
+        <br />
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" required />
+        <br />
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password" required />
+        <br />
+        <button type="submit">Add Customer</button>
+    </form>
+
+    <!-- Display Existing Customers -->
+    <h2>Existing Customers</h2>
+    <!-- Example table, you would need to populate this with data from your controller -->
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row, loop through your customers and display them -->
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>JohnDoe@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

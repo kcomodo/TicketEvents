@@ -1,6 +1,6 @@
 ﻿namespace MVC_DataAccess.Repositories.Admin
 {
-    public class AdminRepository
+    public class AdminRepository : IAdminRepository
     {
     }
 }
