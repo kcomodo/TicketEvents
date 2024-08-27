@@ -1,7 +1,13 @@
+using MVC_DataAccess.Repositories.Customer;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+//builder.Services.AddScoped<ICustomerServices, CustomerServices>();
 
 var app = builder.Build();
 

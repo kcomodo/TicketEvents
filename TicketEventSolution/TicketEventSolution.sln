@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC-DataAccess", "MVC-DataA
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "TicketEventClientSide", "TicketEventClientSide\TicketEventClientSide.esproj", "{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketEventWPF", "TicketEventWPF\TicketEventWPF.csproj", "{1251A32E-7A6D-4AFB-A780-368135148462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketEventWPF", "TicketEventWPF\TicketEventWPF.csproj", "{1251A32E-7A6D-4AFB-A780-368135148462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTicketUnitTest", "EventTicketUnitTest\EventTicketUnitTest.csproj", "{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventTicketUnitTest", "EventTicketUnitTest\EventTicketUnitTest.csproj", "{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{EDD0F781-EFEE-4D42-8564-F70067C51228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD0F781-EFEE-4D42-8564-F70067C51228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD0F781-EFEE-4D42-8564-F70067C51228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD0F781-EFEE-4D42-8564-F70067C51228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD0F781-EFEE-4D42-8564-F70067C51228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

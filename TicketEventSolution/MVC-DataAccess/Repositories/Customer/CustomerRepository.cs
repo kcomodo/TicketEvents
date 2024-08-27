@@ -6,7 +6,7 @@ namespace MVC_DataAccess.Repositories.Customer
 {
     //Connect to the database and perform CRUD operations
     //Create a constructor for that connection
-    public class CustomerRepository
+    public class CustomerRepository: ICustomerRepository
     {
         //create an object to represent the connection to mySql
         private readonly MySqlConnection _connection;
@@ -52,15 +52,62 @@ namespace MVC_DataAccess.Repositories.Customer
             }
             return null;
         }
-        public void AddCustomer(CustomerModel customer)
+        public void addCustomer(CustomerModel customer)
         {
             Regex verifyEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             string query = "INSERT INTO customer (customer_firstname, customer_lastname, customer_email, customer_password) VALUES (@FirstName, @LastName, @Email, @Password)";
             MySqlCommand command = new MySqlCommand(query, _connection);
+            if(!verifyEmail.IsMatch(customer.Email))
+            {
+                Console.WriteLine("Invalid Email. Customer not added.");
+                return; // Exit the method without executing the query
+            }
+            else
+            {
             command.Parameters.AddWithValue("@FirstName", customer.FirstName);
             command.Parameters.AddWithValue("@LastName", customer.LastName);
             command.Parameters.AddWithValue("@Email", customer.Email);
             command.Parameters.AddWithValue("@Password", customer.Password);
+            }
+    
+            command.ExecuteNonQuery();
+        }
+        public void deleteCustomer(string email)
+        {
+            Regex verifyEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            if (!verifyEmail.IsMatch(email))
+            {
+                Console.WriteLine("Email is invalid");
+                return;
+            }
+            CustomerRepository customer = new CustomerRepository();
+            CustomerModel customerInfo = customer.getCustomerInfo(email);
+            if(customerInfo == null)
+            {
+                Console.WriteLine("Email does not exist");
+                return;
+            }
+            else
+            {
+                string query = "DELETE FROM customer where customer_email = @Email";
+                MySqlCommand command = new MySqlCommand(query, _connection);
+
+                command.Parameters.AddWithValue("@Email", email);
+                command.ExecuteNonQuery();
+            }
+
+        }
+        public void updateCustomer(string firstname, string lastname, string email, string password, string target_email)
+        {
+            //UPDATE tablename SET value = @value, value = @value where customer_email = @email
+            string query = "UPDATE customer SET customer_firstname = @first_name, customer_lastname = @last_name," +
+                "customer_email = @email, customer_password = @password where customer_email = @target_email";
+            MySqlCommand command = new MySqlCommand(query, _connection);
+            command.Parameters.AddWithValue("@target_email", target_email);
+            command.Parameters.AddWithValue("@first_name", firstname);
+            command.Parameters.AddWithValue("@last_name", lastname);
+            command.Parameters.AddWithValue("@email", email);
+            command.Parameters.AddWithValue("@password", password);
             command.ExecuteNonQuery();
         }
     }
