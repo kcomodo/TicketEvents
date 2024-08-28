@@ -31,7 +31,7 @@ namespace ConsoleTestApp
                 Password = "password1234"
             };
             */
-            if(choice == 1)
+            if (choice == 1)
             {
                 Console.Write("Enter first name: ");
                 customerModel.FirstName = Console.ReadLine();
@@ -45,9 +45,9 @@ namespace ConsoleTestApp
                 Console.Write("Enter password: ");
                 customerModel.Password = Console.ReadLine();
                 customerRepository.addCustomer(customerModel);
-
+                    
             }
-            if(choice == 2)
+            if (choice == 2)
             {
                 CustomerModel customerInfo = customerRepository.getCustomerInfo("JohnDoe@gmail.com");
                 //Concatenate the string when printing it out 
@@ -57,13 +57,25 @@ namespace ConsoleTestApp
                 Console.WriteLine($"Customer Email: {customerInfo.Email}");
                 Console.WriteLine($"Customer Password: {customerInfo.Password}");
             }
-            if(choice == 3)
+            if (choice == 3)
             {
                 customerRepository.deleteCustomer("testing@gmail.com");
             }
-            if(choice == 4)
+            if (choice == 4)
             {
                 customerRepository.updateCustomer("UpdateJohn", "UpdateJoe", "UpdateJohnDoe@gmail.com", "Password54321", "JohnDoe@gmail.com");
+            }
+            if (choice == 5)
+            {
+               IEnumerable<CustomerModel> allCustomerInfo =  customerRepository.getAllCustomer();
+               foreach(var customer in allCustomerInfo)
+                {
+                    Console.WriteLine(customer.CustomerId);
+                    Console.WriteLine(customer.FirstName);
+                    Console.WriteLine(customer.LastName);
+                    Console.WriteLine(customer.Email);
+                    Console.WriteLine(customer.Password);
+                }
             }
             else
             {

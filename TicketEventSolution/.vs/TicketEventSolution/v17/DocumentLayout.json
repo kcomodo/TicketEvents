@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|solutionrelative:mvc-dataaccess\\views\\customer\\customerindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|d:\\ticketevent\\ticketeventsolution\\mvc-dataaccess\\repositories\\customer\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|solutionrelative:mvc-dataaccess\\repositories\\customer\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|d:\\ticketevent\\ticketeventsolution\\mvc-dataaccess\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|solutionrelative:mvc-dataaccess\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|d:\\ticketevent\\ticketeventsolution\\mvc-dataaccess\\repositories\\customer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52CCAFD4-ECE8-449B-BB82-C54FB9268819}|MVC-DataAccess\\MVC-DataAccess.csproj|solutionrelative:mvc-dataaccess\\repositories\\customer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 103,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,29 +38,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Repositories\\Customer\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "MVC-DataAccess\\Repositories\\Customer\\CustomerRepository.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Repositories\\Customer\\CustomerRepository.cs",
+              "RelativeToolTip": "MVC-DataAccess\\Repositories\\Customer\\CustomerRepository.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:44:47.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Repositories\\Customer\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "MVC-DataAccess\\Repositories\\Customer\\ICustomerRepository.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Repositories\\Customer\\ICustomerRepository.cs",
+              "RelativeToolTip": "MVC-DataAccess\\Repositories\\Customer\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T18:56:06.001Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CustomerIndex.cshtml",
               "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Views\\Customer\\CustomerIndex.cshtml",
               "RelativeDocumentMoniker": "MVC-DataAccess\\Views\\Customer\\CustomerIndex.cshtml",
               "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Views\\Customer\\CustomerIndex.cshtml",
               "RelativeToolTip": "MVC-DataAccess\\Views\\Customer\\CustomerIndex.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-27T22:25:10.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "MVC-DataAccess\\Controllers\\CustomerController.cs",
               "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "MVC-DataAccess\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T21:48:46.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T21:48:46.004Z"
             }
           ]
         }

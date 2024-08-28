@@ -1,4 +1,6 @@
-﻿@model MVC_DataAccess.Models.CustomerModel
+﻿<!--use the Amodel directive to specify the type of data the view will receive. 
+This allows the view to strongly type the data it’s working with.-->
+@model IEnumerable<MVC_DataAccess.Models.CustomerModel>
 
 <!DOCTYPE html>
 <html>
@@ -10,8 +12,15 @@
     <h1>Customer Interaction Page</h1>
 
     <!-- Form to Add a Customer -->
+   
     <h2>Add a Customer</h2>
-    <form method="post" action="@Url.Action("AddCustomerController", "Customer")">
+    <!--@Url is a razor syntax helper that auto generates a URL for the specify method-->
+    <!--Left is Controller method and right is the folder-->
+    <!--Razor has likes to reduce work so instead of the controller being called CustomerController
+        They don't include the word controller
+        Or use this action="/Customer/AddCustomerController"
+    -->
+    <form method="post" action="@Url.Action("AddCustomerControllerMethod", "Customer")">
         <label for="FirstName">First Name:</label>
         <input type="text" id="FirstName" name="FirstName" required />
         <br />
@@ -26,25 +35,43 @@
         <br />
         <button type="submit">Add Customer</button>
     </form>
+    <h2>Update A Customer</h2>
+    <form method="post" action="@Url.Action(")">
 
+    </form>
+    <h2>Delete A Customer</h2>
+    <!--Use post for deletion because html only supports GET and POST for some reason (sub categories of post)-->
+    <form method="post" action= "@Url.Action("DeleteCustomerControllerMethod", "Customer")">
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" name="Email" required />
+        <br />
+        <button type="submit">Delete Customer</button>
+    </form>
     <!-- Display Existing Customers -->
     <h2>Existing Customers</h2>
-    <!-- Example table, you would need to populate this with data from your controller -->
     <table>
         <thead>
             <tr>
+                <th>Customer ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Password</th>
+
             </tr>
         </thead>
         <tbody>
-            <!-- Example row, loop through your customers and display them -->
-            <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>JohnDoe@gmail.com</td>
-            </tr>
+            <!--Model is represented as -->
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.CustomerId</td>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.LastName</td>
+                    <td>@customer.Email</td>
+                    <td>@customer.Password</td>
+                </tr>
+            }
         </tbody>
     </table>
 </body>

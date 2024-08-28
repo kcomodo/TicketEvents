@@ -12,8 +12,12 @@ namespace MVC_DataAccess.Controllers
         private readonly ICustomerRepository _customerRepository;
         public IActionResult Index()
         {
-           
-            return View("CustomerIndex");
+            //In the beginning of the page called index, fill in the form with all customer info
+            IEnumerable<CustomerModel> customers = _customerRepository.getAllCustomer();
+            //View works like this: CustomerIndex.cshtml on the left side and object on the right side
+            //So basically send the model to the view
+            return View("CustomerIndex", customers);
+    
         }
         //constructor injection
         public CustomerController(ICustomerRepository customerRepository)
@@ -29,10 +33,16 @@ namespace MVC_DataAccess.Controllers
         }
         //CRUD method for getting a customer by email
         [HttpPost]
-        public IActionResult AddCustomerController(CustomerModel customer)
+        public IActionResult AddCustomerControllerMethod(CustomerModel customer)
         {
             _customerRepository.addCustomer(customer);
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public IActionResult DeleteCustomerControllerMethod(string email) {
+            _customerRepository.deleteCustomer(email);
+            return RedirectToAction("Index");
+        }
+
     }
 }
