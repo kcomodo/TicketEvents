@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TicketEventSolution",
-    "\\TicketEventSolution\\MVC-DataAccess",
-    "\\TicketEventSolution\\MVC-DataAccess\\Models"
+    ""
   ],
-  "SelectedNode": "\\TicketEventSolution\\TicketEventSolution.sln",
+  "SelectedNode": "\\TicketEventSolution.sln",
   "PreviewInSolutionExplorer": false
 }
