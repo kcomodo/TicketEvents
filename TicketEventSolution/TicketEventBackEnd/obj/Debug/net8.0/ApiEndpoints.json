@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "AddCustomer",
+    "RelativePath": "api/Values/AddCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "TicketEventBackEnd.Models.CustomerModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "DeleteCustomer",
+    "RelativePath": "api/Values/DeleteCustomer",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "GetAllCustomer",
+    "RelativePath": "api/Values/Get All Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "GetCustomerByEmail",
+    "RelativePath": "api/Values/GetCustomerByEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
