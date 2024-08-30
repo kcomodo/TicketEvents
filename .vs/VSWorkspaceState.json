@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TicketEventSolution",
+    "\\TicketEventSolution\\TicketEventBackEnd",
+    "\\TicketEventSolution\\TicketEventBackEnd\\Controllers"
   ],
-  "SelectedNode": "\\TicketEventSolution.sln",
+  "SelectedNode": "\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
   "PreviewInSolutionExplorer": false
 }

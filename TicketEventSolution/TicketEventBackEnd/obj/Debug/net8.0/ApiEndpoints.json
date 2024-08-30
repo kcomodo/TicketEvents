@@ -2,7 +2,7 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "AddCustomer",
-    "RelativePath": "api/Values/AddCustomer",
+    "RelativePath": "api/Values/Add Customer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "DeleteCustomer",
-    "RelativePath": "api/Values/DeleteCustomer",
+    "RelativePath": "api/Values/Delete Customer",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -44,13 +44,34 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "GetCustomerByEmail",
-    "RelativePath": "api/Values/GetCustomerByEmail",
+    "RelativePath": "api/Values/Get Customer By Email",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "ValidateLogin",
+    "RelativePath": "api/Values/Validate Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
         "Type": "System.String",
         "IsRequired": false
       }
