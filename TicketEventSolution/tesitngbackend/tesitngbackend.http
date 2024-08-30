@@ -1,6 +1,0 @@
-@tesitngbackend_HostAddress = http://localhost:5016
-
-GET {{tesitngbackend_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

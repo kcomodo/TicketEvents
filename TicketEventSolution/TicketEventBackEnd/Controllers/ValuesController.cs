@@ -12,9 +12,11 @@ namespace TicketEventBackEnd.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly ICustomerRepository _customerRepository;
-        public ValuesController(ICustomerRepository customerRepository)
+        private readonly ICustomerServices _customerServices;
+        public ValuesController(ICustomerRepository customerRepository, ICustomerServices customerServices)
         {
             _customerRepository = customerRepository;
+            _customerServices = customerServices;
 
         }
         [HttpGet("Get All Customer")]
@@ -46,6 +48,12 @@ namespace TicketEventBackEnd.Controllers
         {
             _customerRepository.deleteCustomer(email);
             return Ok();
+        }
+        [HttpGet("Validate Login")]
+        public IActionResult ValidateLogin(string email, string password)
+        {
+            bool validate = _customerServices.validateCustomerLogin(email, password);
+            return Ok(validate);
         }
 
     }

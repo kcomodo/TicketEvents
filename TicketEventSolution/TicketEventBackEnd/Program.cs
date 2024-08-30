@@ -1,3 +1,4 @@
+using MVC_DataAccess.Services.Customer;
 using TicketEventBackEnd.Repositories.Customer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<ICustomerServices, CustomerServices>();
 //Allows the controller to recieve its dependency
 //just make sure to go to program.cs to inject the dependency
 /*
