@@ -48,3 +48,11 @@ D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\runtimes\
 D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
 D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\TicketEvent\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
