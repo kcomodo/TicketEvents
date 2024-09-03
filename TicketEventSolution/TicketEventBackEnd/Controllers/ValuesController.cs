@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
 using MVC_DataAccess.Services.Customer;
 using TicketEventBackEnd.Models;
 using TicketEventBackEnd.Repositories;
 using TicketEventBackEnd.Repositories.Customer;
+
 /*
  Import Token from microsoft.IdentityModel
  Import the system Identity model
@@ -20,12 +22,14 @@ using System.Security.Claims;
 
 namespace TicketEventBackEnd.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
+    
     public class ValuesController : ControllerBase
     {
-        private readonly string _issuer = "https://localhost:7059"; // Your issuer
-        private readonly string _audience = "https://localhost:7059"; // Your audience
+        private readonly string _issuer = "https://localhost:7240"; // Your issuer
+        private readonly string _audience = "https://localhost:7240 , http://localhost:4200"; // Your audience
 
         private readonly ICustomerRepository _customerRepository;
         private readonly ICustomerServices _customerServices;
@@ -42,6 +46,7 @@ namespace TicketEventBackEnd.Controllers
             return Ok(customer);
         }
         // GET api/<ValuesController>/5
+        [Authorize]
         [HttpGet("Get Customer By Email")]
         public IActionResult GetCustomerByEmail(string email)
         {
@@ -65,13 +70,41 @@ namespace TicketEventBackEnd.Controllers
             _customerRepository.deleteCustomer(email);
             return Ok();
         }
+        
         [HttpGet("Validate Login")]
         public IActionResult ValidateLogin(string email, string password)
         {
             bool validate = _customerServices.validateCustomerLogin(email, password);
-            return Ok(validate);
+            //when validation is true, generate a token for authorization of other methods
+            if (validate)
+            {
+                var token = generateJWTToken(email);
+                //create an instance for the cookie by assigning it to an object
+                //normally has configurable options such as expiration date, security setting and accessbility
+                var cookieOptions = new CookieOptions
+                {
+                    //Since we're using JWT token and authentication we need http
+                    HttpOnly = true,
+                    Secure = true,
+                    Expires = DateTime.UtcNow.AddHours(1),
+                    //Samesite controls cross-sites requests
+                    //Strict means the cookie is only sent with requests from the same site
+                    //Lax allows some external sites
+                    //None means the cookie is sent with all requests including cross-site requests
+                    SameSite = SameSiteMode.Strict
+                };
+                //After giving the object some configs append the token onto a cookie which can now be accessed from the client side
+                Response.Cookies.Append("auth_token",token,cookieOptions);
+                return Ok(new { Token = token });
+
+            }
+            else
+            {
+                return Unauthorized();
+            }
         }
         
+        //use email as parameter to identify the user when the token is presented in the future requests
         private string generateJWTToken(string email)
         {
             //creat a token handler
@@ -88,12 +121,11 @@ namespace TicketEventBackEnd.Controllers
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 Issuer = _issuer,
-                Audience = "https://localhost:7059 , http://localhost:4200/",  // Your audience
+                Audience = "https://localhost:7240",
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
-
-            var token = tokenHandler.CreateToken(tokenDescription);
-            return tokenHandler.WriteToken(token);
+            var token = tokenHandler.CreateToken(tokenDescription); // Create token
+            return tokenHandler.WriteToken(token); // Write token and return it
         }
         
     }
