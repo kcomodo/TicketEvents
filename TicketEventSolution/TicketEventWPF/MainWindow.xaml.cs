@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using MVC_DataAccess.Repositories.Admin;
+using MVC_DataAccess.Services.Admin;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,7 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TicketEventBackEnd.Repositories;
+using TicketEventBackEnd.Repositories.Customer;
+using TicketEventBackEnd.Services;
 namespace TicketEventWPF
 {
     /// <summary>
@@ -16,8 +20,12 @@ namespace TicketEventWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        IAdminRepository adminRepository = new AdminRepository();
+        IAdminServices adminServices = new AdminServices();
+        public MainWindow(IAdminServices _adminServices, IAdminRepository _adminRepository)
         {
+            adminRepository = _adminRepository;
+            adminServices = _adminServices;
             InitializeComponent();
         }
     }

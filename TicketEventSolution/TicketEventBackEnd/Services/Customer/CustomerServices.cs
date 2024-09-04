@@ -2,7 +2,7 @@
 using TicketEventBackEnd.Models;
 using TicketEventBackEnd.Repositories;
 using TicketEventBackEnd.Repositories.Customer;
-namespace MVC_DataAccess.Services.Customer
+namespace TicketEventBackEnd.Services.Customer
 {
  
     public class CustomerServices : ICustomerServices

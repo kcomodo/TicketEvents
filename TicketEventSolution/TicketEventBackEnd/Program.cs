@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using MVC_DataAccess.Services.Customer;
+using TicketEventBackEnd.Services.Customer;
 using System.Text;
 using TicketEventBackEnd.Repositories.Customer;
 using System.Configuration;
 using Microsoft.OpenApi.Models;
+using MVC_DataAccess.Repositories.Admin;
+using MVC_DataAccess.Services.Admin;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerServices, CustomerServices>();
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+builder.Services.AddScoped<IAdminServices, AdminServices>();
 //Allows the controller to recieve its dependency
 //just make sure to go to program.cs to inject the dependency
 /*

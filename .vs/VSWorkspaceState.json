@@ -5,6 +5,6 @@
     "\\TicketEventSolution\\TicketEventBackEnd",
     "\\TicketEventSolution\\TicketEventBackEnd\\Controllers"
   ],
-  "SelectedNode": "\\TicketEventSolution\\TicketEventSolution.sln",
+  "SelectedNode": "\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
   "PreviewInSolutionExplorer": false
 }
