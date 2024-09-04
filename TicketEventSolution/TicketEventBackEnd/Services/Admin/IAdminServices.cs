@@ -1,6 +1,6 @@
 ﻿namespace MVC_DataAccess.Services.Admin
 {
-    public class IAdminServices
+    public interface IAdminServices
     {
     }
 }

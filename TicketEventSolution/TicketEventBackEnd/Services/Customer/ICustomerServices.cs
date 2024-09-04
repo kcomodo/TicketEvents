@@ -1,4 +1,4 @@
-﻿namespace MVC_DataAccess.Services.Customer
+﻿namespace TicketEventBackEnd.Services.Customer
 {
     public interface ICustomerServices
     {
