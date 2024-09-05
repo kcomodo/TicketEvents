@@ -5,8 +5,8 @@ using System.Text;
 using TicketEventBackEnd.Repositories.Customer;
 using System.Configuration;
 using Microsoft.OpenApi.Models;
-using MVC_DataAccess.Repositories.Admin;
-using MVC_DataAccess.Services.Admin;
+using TicketEventBackEnd.Repositories.Admin;
+using TicketEventBackEnd.Services.Admin;
 
 
 var builder = WebApplication.CreateBuilder(args);

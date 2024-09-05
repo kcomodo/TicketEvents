@@ -1,4 +1,4 @@
-﻿namespace TicketEventBackEnd.Models
+﻿namespace TicketEventBackEnd.Models.Customer
 {
     public class CustomerModel
     {

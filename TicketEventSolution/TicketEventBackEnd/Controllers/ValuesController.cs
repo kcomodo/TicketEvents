@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using TicketEventBackEnd.Services.Customer;
-using TicketEventBackEnd.Models;
-using TicketEventBackEnd.Repositories;
+using TicketEventBackEnd.Models.Customer;
 using TicketEventBackEnd.Repositories.Customer;
 
 /*

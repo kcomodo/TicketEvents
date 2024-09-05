@@ -1,5 +1,5 @@
-﻿using MVC_DataAccess.Models;
-using MVC_DataAccess.Repositories.Customer;
+﻿using TicketEventBackEnd.Repositories.Customer;
+using TicketEventBackEnd.Models.Customer;
 // See https://aka.ms/new-console-template for more information
 using System;
 

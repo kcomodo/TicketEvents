@@ -1,4 +1,4 @@
-﻿using TicketEventBackEnd.Models;
+﻿using TicketEventBackEnd.Models.Customer;
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
