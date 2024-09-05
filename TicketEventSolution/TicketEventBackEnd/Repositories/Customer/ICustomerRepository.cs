@@ -1,4 +1,4 @@
-﻿using TicketEventBackEnd.Models;
+﻿using TicketEventBackEnd.Models.Customer;
 
 namespace TicketEventBackEnd.Repositories.Customer
 {

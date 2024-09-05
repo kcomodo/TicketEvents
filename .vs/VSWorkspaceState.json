@@ -3,8 +3,9 @@
     "",
     "\\TicketEventSolution",
     "\\TicketEventSolution\\TicketEventBackEnd",
-    "\\TicketEventSolution\\TicketEventBackEnd\\Controllers"
+    "\\TicketEventSolution\\TicketEventBackEnd\\Controllers",
+    "\\TicketEventSolution\\TicketEventWPF"
   ],
-  "SelectedNode": "\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
+  "SelectedNode": "\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

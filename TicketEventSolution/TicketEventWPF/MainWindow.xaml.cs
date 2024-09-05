@@ -12,7 +12,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TicketEventBackEnd.Repositories;
 using TicketEventBackEnd.Repositories.Customer;
-using TicketEventBackEnd.Services;
+using TicketEventBackEnd.Services.Admin;
+using TicketEventBackEnd.Repositories.Admin;
 namespace TicketEventWPF
 {
     /// <summary>
@@ -27,6 +28,12 @@ namespace TicketEventWPF
             adminRepository = _adminRepository;
             adminServices = _adminServices;
             InitializeComponent();
+        }
+        public void adminLogin()
+        {
+            string email = EmailInfo.Text;
+            string password = PasswordInfo.Text;
+
         }
     }
 }

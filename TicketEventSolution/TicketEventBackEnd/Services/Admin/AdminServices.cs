@@ -1,6 +1,6 @@
-﻿namespace MVC_DataAccess.Services.Admin
-{
+﻿namespace TicketEventBackEnd.Services.Admin {
     public class AdminServices : IAdminServices
     {
+        
     }
 }

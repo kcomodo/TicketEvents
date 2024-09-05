@@ -1,6 +1,8 @@
-﻿namespace MVC_DataAccess.Repositories.Admin
+﻿using TicketEventBackEnd.Models.Admin;
+namespace TicketEventBackEnd.Repositories.Admin;
+
+public interface IAdminRepository
 {
-    public interface IAdminRepository
-    {
-    }
+    IEnumerable<AdminModel> GetAdminModels();
+    AdminModel getAdminInfo();
 }

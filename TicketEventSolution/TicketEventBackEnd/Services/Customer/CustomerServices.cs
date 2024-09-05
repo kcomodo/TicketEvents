@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using TicketEventBackEnd.Models;
+using TicketEventBackEnd.Models.Customer;
 using TicketEventBackEnd.Repositories;
 using TicketEventBackEnd.Repositories.Customer;
 namespace TicketEventBackEnd.Services.Customer
