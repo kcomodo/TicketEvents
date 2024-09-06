@@ -1,5 +1,4 @@
-﻿using MVC_DataAccess.Repositories.Admin;
-using MVC_DataAccess.Services.Admin;
+﻿
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,18 +20,31 @@ namespace TicketEventWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        IAdminRepository adminRepository = new AdminRepository();
-        IAdminServices adminServices = new AdminServices();
-        public MainWindow(IAdminServices _adminServices, IAdminRepository _adminRepository)
+      
+        public MainWindow()
         {
-            adminRepository = _adminRepository;
-            adminServices = _adminServices;
             InitializeComponent();
+            
         }
-        public void adminLogin()
+
+
+        private void adminLogin(object sender, RoutedEventArgs e)
         {
             string email = EmailInfo.Text;
             string password = PasswordInfo.Text;
+            IAdminRepository adminRepository = new AdminRepository();
+            IAdminServices adminServices = new AdminServices(adminRepository);
+            bool validation = adminServices.validateAdminLogin(email,password);
+            testBlock.Text = validation.ToString();
+            if (validation == true)
+            {
+                Home home = new Home();
+                home.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login failed. Invalid email or password.");
+            }
 
         }
     }

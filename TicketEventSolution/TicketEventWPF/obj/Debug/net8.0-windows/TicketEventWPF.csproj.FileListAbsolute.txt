@@ -52,3 +52,5 @@ D:\TicketEvent\TicketEventSolution\TicketEventWPF\bin\Debug\net8.0-windows\runti
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\bin\Debug\net8.0-windows\TicketEventBackEnd.dll
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\bin\Debug\net8.0-windows\TicketEventBackEnd.pdb
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\TicketEv.B4146DD0.Up2Date
+D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\Home.g.cs
+D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\Home.baml

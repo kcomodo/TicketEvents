@@ -55,6 +55,14 @@ namespace TicketEventBackEnd.Repositories.Admin
             }
             return null;
         }
+        public void addAdmin()
+        {
+
+        }
+        public void deleteAdmin()
+        {
+
+        }
     }
 }
 

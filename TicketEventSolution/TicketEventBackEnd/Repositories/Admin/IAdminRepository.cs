@@ -3,6 +3,8 @@ namespace TicketEventBackEnd.Repositories.Admin;
 
 public interface IAdminRepository
 {
-    IEnumerable<AdminModel> GetAdminModels();
-    AdminModel getAdminInfo();
+    IEnumerable<AdminModel> getAllAdmin();
+    AdminModel getAdminInfo(string email);
+    void addAdmin();
+    void deleteAdmin();
 }
