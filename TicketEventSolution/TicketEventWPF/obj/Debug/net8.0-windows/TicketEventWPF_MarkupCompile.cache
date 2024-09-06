@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\App.xaml
-11407045341
+2-1134580622
 
 4-2123837694
 354-46780292
-MainWindow.xaml;
+Home.xaml;MainWindow.xaml;
 
-True
+False
 

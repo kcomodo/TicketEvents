@@ -4,8 +4,10 @@
     "\\TicketEventSolution",
     "\\TicketEventSolution\\TicketEventBackEnd",
     "\\TicketEventSolution\\TicketEventBackEnd\\Controllers",
+    "\\TicketEventSolution\\TicketEventBackEnd\\Services",
+    "\\TicketEventSolution\\TicketEventBackEnd\\Services\\Admin",
     "\\TicketEventSolution\\TicketEventWPF"
   ],
-  "SelectedNode": "\\TicketEventSolution\\TicketEventBackEnd\\Program.cs",
+  "SelectedNode": "\\TicketEventSolution\\TicketEventBackEnd\\Services\\Admin\\AdminServices.cs",
   "PreviewInSolutionExplorer": false
 }

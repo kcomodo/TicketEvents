@@ -2,4 +2,5 @@
 
 public interface IAdminServices
 {
+    bool validateAdminLogin(string email, string password);
 }
