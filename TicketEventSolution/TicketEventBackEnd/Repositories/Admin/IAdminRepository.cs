@@ -5,6 +5,7 @@ public interface IAdminRepository
 {
     IEnumerable<AdminModel> getAllAdmin();
     AdminModel getAdminInfo(string email);
-    void addAdmin();
-    void deleteAdmin();
+    void addAdmin(string email, string password);
+    void deleteAdmin(string email);
+    void updateAdmin(string email, string password, string target);
 }
