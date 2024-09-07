@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 using TicketEventBackEnd.Models.Admin;
 namespace TicketEventBackEnd.Repositories.Admin
 {
@@ -55,13 +57,33 @@ namespace TicketEventBackEnd.Repositories.Admin
             }
             return null;
         }
-        public void addAdmin()
+        public void addAdmin(string email, string password)
         {
+            Regex emailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            if (emailRegex.IsMatch(email))
+            {
+                string query = "INSERT INTO admin (admin_email,admin_password) VALUES (@email, @password)";
+                MySqlCommand _command = new MySqlCommand(query, _connection);
+                _command.Parameters.AddWithValue("@email", email);
+                _command.Parameters.AddWithValue("@password", password);
+                _command.ExecuteNonQuery();
+            }
+            throw new ArgumentException("Invalid email format");
 
         }
-        public void deleteAdmin()
+        public void deleteAdmin(string email)
         {
-
+            string query = "DELETE FROM admin where admin_email = @email";
+            MySqlCommand _command = new MySqlCommand(query, _connection);
+            _command.Parameters.AddWithValue("@email", email);
+            _command.ExecuteNonQuery();
+        }
+        public void updateAdmin(string email, string password, string target)
+        {
+            string query = "UPDATE admin SET admin_email = @email, admin_password = @password WHERE admin_email = @target";
+            MySqlCommand _command = new MySqlCommand(query, _connection);
+            _command.Parameters.AddWithValue("@target", target);
+            _command.ExecuteNonQuery();
         }
     }
 }

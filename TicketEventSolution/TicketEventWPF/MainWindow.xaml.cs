@@ -32,6 +32,7 @@ namespace TicketEventWPF
         {
             string email = EmailInfo.Text;
             string password = PasswordInfo.Text;
+            //create an instance of the repository to use the service
             IAdminRepository adminRepository = new AdminRepository();
             IAdminServices adminServices = new AdminServices(adminRepository);
             bool validation = adminServices.validateAdminLogin(email,password);
