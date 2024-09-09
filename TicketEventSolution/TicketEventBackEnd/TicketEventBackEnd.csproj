@@ -13,4 +13,9 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\Events\" />
+    <Folder Include="Services\Events\" />
+  </ItemGroup>
+
 </Project>

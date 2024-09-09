@@ -40,6 +40,7 @@ namespace TicketEventWPF
             if (validation == true)
             {
                 Home home = new Home();
+                this.Hide();
                 home.Show();
             }
             else
@@ -47,6 +48,13 @@ namespace TicketEventWPF
                 MessageBox.Show("Login failed. Invalid email or password.");
             }
 
+        }
+
+        private void registerAdmin(object sender, RoutedEventArgs e)
+        {
+            RegisterMenu register = new RegisterMenu();
+            this.Hide();
+            register.Show();
         }
     }
 }

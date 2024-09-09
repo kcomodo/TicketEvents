@@ -22,5 +22,19 @@ namespace TicketEventBackEnd.Services.Admin {
             }
             return false;
         }
+        public void registerAdmin(string email, string password) 
+        {
+            _adminRepository.addAdmin(email, password);
+        }
+        public void removeCustomer(string email)
+        {
+
+
+        }
+        public void editCustomer(string customer_firstname, string customer_lastname, string customer_email, string customer_password)
+        {
+
+        }
+
     }
 }

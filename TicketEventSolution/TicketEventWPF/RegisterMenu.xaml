@@ -1,0 +1,49 @@
+﻿<Window x:Class="TicketEventWPF.RegisterMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicketEventWPF"
+        mc:Ignorable="d"
+        Title="RegisterMenu" Height="450" Width="800">
+    <Grid>
+        <Border
+
+            >
+            <StackPanel
+                Height="250"
+                Width="250"
+                Background="AliceBlue"
+                
+                >
+                <TextBox
+                    Margin="0,80,0,0"
+                    FontSize="20"
+                    x:Name="emailBox"
+                    Text="Email"
+                    Width="150"
+                    HorizontalContentAlignment="Center"
+                    >
+                    
+                </TextBox>
+                <TextBox
+                    x:Name="passwordBox"
+                    Text="Password"
+                      FontSize="20"
+                    HorizontalContentAlignment="Center"
+                    Width="150"
+                    >
+                    
+                </TextBox>
+                <Button
+                    FontSize="20"
+                    Height="35"
+                    Width="170"
+                    Content="Register Account"
+                    >
+                    
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
