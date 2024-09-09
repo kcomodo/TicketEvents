@@ -52,6 +52,7 @@
                 <Button
                     Height="50"
                     Content="Register"
+                    Click="registerAdmin"
                     >
                     
                 </Button>
