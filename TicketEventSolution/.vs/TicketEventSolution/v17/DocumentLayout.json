@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\TicketEvent\\TicketEventSolution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\usermanagement.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\usermanagement.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\setting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\setting.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 103,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,31 +42,53 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserManagement.xaml",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\UserManagement.xaml",
+              "RelativeDocumentMoniker": "TicketEventWPF\\UserManagement.xaml",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\UserManagement.xaml",
+              "RelativeToolTip": "TicketEventWPF\\UserManagement.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-11T21:01:15.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Setting.xaml",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\Setting.xaml",
+              "RelativeDocumentMoniker": "TicketEventWPF\\Setting.xaml",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\Setting.xaml",
+              "RelativeToolTip": "TicketEventWPF\\Setting.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-11T21:00:46.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RegisterMenu.xaml",
               "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\RegisterMenu.xaml",
               "RelativeDocumentMoniker": "TicketEventWPF\\RegisterMenu.xaml",
               "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\RegisterMenu.xaml",
               "RelativeToolTip": "TicketEventWPF\\RegisterMenu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-09T21:02:31.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T21:02:31.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TicketEventWPF\\MainWindow.xaml",
               "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml",
               "RelativeToolTip": "TicketEventWPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-09T21:00:23.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T21:00:23.239Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "TicketEventWPF\\MainWindow.xaml.cs",
