@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomecomponentComponent } from './homecomponent/homecomponent.component';
-import { LogincomponentComponent } from './logincomponent/logincomponent.component';
-import { ProfilecomponentComponent } from './profilecomponent/profilecomponent.component';
-import { AboutcomponentComponent } from './aboutcomponent/aboutcomponent.component';
-import { EventscomponentComponent } from './components/eventscomponent/eventscomponent.component';
+import { HomecomponentComponent } from './components/homecomponent/homecomponent.component';
+import { LogincomponentComponent } from './components/logincomponent/logincomponent.component';
+import { ProfilecomponentComponent } from './components/profilecomponent/profilecomponent.component';
+import { AboutcomponentComponent } from './components/aboutcomponent/aboutcomponent.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { EventscomponentComponent } from './components/eventscomponent/eventscom
     LogincomponentComponent,
     ProfilecomponentComponent,
     AboutcomponentComponent,
-    EventscomponentComponent
   ],
   imports: [
     BrowserModule,
