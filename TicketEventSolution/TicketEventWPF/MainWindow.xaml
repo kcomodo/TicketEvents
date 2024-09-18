@@ -12,53 +12,64 @@
             Height="300"
             
             >
-            <StackPanel
-                Background="AliceBlue"
-                Width="180"
-                HorizontalAlignment="Right"
-                >
+            <StackPanel>
                 <StackPanel
-                    Height="200"
-                    >
-                    <TextBox
-                        Height="30"
-                        x:Name="EmailInfo"
-                        Text="Email"
-                        
-                        >
-                        
-                    </TextBox>
-                    <TextBox
-                        Height="30"
-                        x:Name="PasswordInfo"
-                        Text="Password"
-                        >
-                        
-                    </TextBox>
-                    <TextBlock
-                        x:Name="testBlock"
-                        >
-                        
-                    </TextBlock>
-                </StackPanel>
-                <Button
-                    Height="50"
-                    Content="Login"
-                    Margin="0,0,0,0"
-                    Click="adminLogin"
-                    >
-                    
-                </Button>
-                <Button
-                    Height="50"
-                    Content="Register"
-                    Click="registerAdmin"
-                    >
-                    
-                </Button>
-            </StackPanel>
-   
+       Background="AliceBlue"
+       Width="180"
+       HorizontalAlignment="Right"
+       >
+                    <StackPanel
+           Height="200"
+           >
+                        <TextBox
+               Height="30"
+               x:Name="EmailInfo"
+               Text="Email"
+               
+               >
 
+                        </TextBox>
+                        <TextBox
+               Height="30"
+               x:Name="PasswordInfo"
+               Text="Password"
+               >
+
+                        </TextBox>
+                        <TextBlock
+               x:Name="testBlock"
+               >
+
+                        </TextBlock>
+                    </StackPanel>
+                    <Button
+           Height="50"
+           Content="Login"
+           Margin="0,0,0,0"
+           Click="adminLogin"
+           >
+
+                    </Button>
+                    <Button
+           Height="50"
+           Content="Register"
+           Click="registerAdmin"
+           >
+
+                    </Button>
+                </StackPanel>
+                <StackPanel
+                    HorizontalAlignment="Left"
+                    Width="220"
+                    Height="300"
+                    Margin="0,-300,0,0"
+                    >
+                    
+                </StackPanel>
+            </StackPanel>
+         
+
+     
         </Border>
     </Grid>
 </Window>

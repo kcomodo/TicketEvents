@@ -24,7 +24,7 @@
                     Width="150"
                     HorizontalContentAlignment="Center"
                     >
-                    
+
                 </TextBox>
                 <TextBox
                     x:Name="passwordBox"
@@ -33,15 +33,16 @@
                     HorizontalContentAlignment="Center"
                     Width="150"
                     >
-                    
+
                 </TextBox>
                 <Button
                     FontSize="20"
                     Height="35"
                     Width="170"
                     Content="Register Account"
+                    Click="RegisterAdmin"
                     >
-                    
+
                 </Button>
             </StackPanel>
         </Border>
