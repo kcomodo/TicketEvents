@@ -56,3 +56,7 @@ D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\Home.
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\Home.baml
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\RegisterMenu.g.cs
 D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\RegisterMenu.baml
+D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\Setting.g.cs
+D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\UserManagement.g.cs
+D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\Setting.baml
+D:\TicketEvent\TicketEventSolution\TicketEventWPF\obj\Debug\net8.0-windows\UserManagement.baml

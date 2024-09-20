@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="free-logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TicketEventBackEnd\TicketEventBackEnd.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="free-logo.jpg" />
   </ItemGroup>
 
 </Project>

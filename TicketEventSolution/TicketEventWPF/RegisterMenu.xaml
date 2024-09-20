@@ -18,7 +18,7 @@
                 >
                 <TextBox
                     Margin="0,80,0,0"
-                    FontSize="20"
+                    FontSize="15"
                     x:Name="emailBox"
                     Text="Email"
                     Width="150"
@@ -29,16 +29,16 @@
                 <TextBox
                     x:Name="passwordBox"
                     Text="Password"
-                      FontSize="20"
+                      FontSize="15"
                     HorizontalContentAlignment="Center"
                     Width="150"
                     >
 
                 </TextBox>
                 <Button
-                    FontSize="20"
+                    FontSize="15"
                     Height="35"
-                    Width="170"
+                    Width="150"
                     Content="Register Account"
                     Click="RegisterAdmin"
                     >

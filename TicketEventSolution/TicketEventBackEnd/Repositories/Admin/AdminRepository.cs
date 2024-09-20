@@ -68,7 +68,11 @@ namespace TicketEventBackEnd.Repositories.Admin
                 _command.Parameters.AddWithValue("@password", password);
                 _command.ExecuteNonQuery();
             }
-            throw new ArgumentException("Invalid email format");
+            else
+            {
+                throw new ArgumentException("Invalid email format");
+            }
+           
 
         }
         public void deleteAdmin(string email)
