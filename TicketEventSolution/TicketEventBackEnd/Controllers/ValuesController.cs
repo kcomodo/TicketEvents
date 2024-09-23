@@ -25,7 +25,9 @@ namespace TicketEventBackEnd.Controllers
     [Route("api/[controller]")]
     [ApiController]
     //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+    //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
     //Use this for transit api
+    //And for searching specific agency/operator names
     public class ValuesController : ControllerBase
     {
         private readonly string _issuer = "https://localhost:7240"; // Your issuer

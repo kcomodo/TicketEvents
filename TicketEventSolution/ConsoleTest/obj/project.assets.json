@@ -691,22 +691,6 @@
           "lib/net8.0/ZstdSharp.dll": {}
         }
       },
-      "MVC-DataAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MySql.Data": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MVC-DataAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MVC-DataAccess.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "TicketEventBackEnd/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2379,11 +2363,6 @@
         "zstdsharp.port.nuspec"
       ]
     },
-    "MVC-DataAccess/1.0.0": {
-      "type": "project",
-      "path": "../MVC-DataAccess/MVC-DataAccess.csproj",
-      "msbuildProject": "../MVC-DataAccess/MVC-DataAccess.csproj"
-    },
     "TicketEventBackEnd/1.0.0": {
       "type": "project",
       "path": "../TicketEventBackEnd/TicketEventBackEnd.csproj",
@@ -2397,7 +2376,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MVC-DataAccess >= 1.0.0",
       "TicketEventBackEnd >= 1.0.0",
       "TicketEventClientSide >= 1.0.0"
     ]
@@ -2430,9 +2408,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\MVC-DataAccess.csproj": {
-              "projectPath": "D:\\TicketEvent\\TicketEventSolution\\MVC-DataAccess\\MVC-DataAccess.csproj"
-            },
             "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
               "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
             },
