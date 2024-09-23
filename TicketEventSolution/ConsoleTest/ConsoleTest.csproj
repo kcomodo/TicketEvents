@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MVC-DataAccess\MVC-DataAccess.csproj" />
     <ProjectReference Include="..\TicketEventBackEnd\TicketEventBackEnd.csproj" />
     <ProjectReference Include="..\TicketEventClientSide\TicketEventClientSide.esproj" />
   </ItemGroup>

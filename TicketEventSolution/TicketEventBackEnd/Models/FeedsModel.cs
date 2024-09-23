@@ -1,6 +1,6 @@
 ﻿namespace TicketEventBackEnd.Models
 {
-    public class EventModel
+    public class FeedsModel
     {
     }
 }

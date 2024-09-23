@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\TicketEvent\\TicketEventSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\repositories\\admin\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\repositories\\admin\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|d:\\ticketevent\\ticketeventsolution\\eventticketunittest\\adminunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|solutionrelative:eventticketunittest\\adminunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\registermenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\registermenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|d:\\ticketevent\\ticketeventsolution\\eventticketunittest\\customerunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|solutionrelative:eventticketunittest\\customerunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\models\\feedsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\models\\feedsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\services\\admin\\iadminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\services\\admin\\iadminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventwpf\\registermenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1251A32E-7A6D-4AFB-A780-368135148462}|TicketEventWPF\\TicketEventWPF.csproj|solutionrelative:ticketeventwpf\\registermenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\repositories\\admin\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\repositories\\admin\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 103,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminRepository.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Admin\\AdminRepository.cs",
-              "RelativeDocumentMoniker": "TicketEventBackEnd\\Repositories\\Admin\\AdminRepository.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Admin\\AdminRepository.cs",
-              "RelativeToolTip": "TicketEventBackEnd\\Repositories\\Admin\\AdminRepository.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAArwEgAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T14:03:54.801Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -59,62 +46,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterMenu.xaml",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\RegisterMenu.xaml",
-              "RelativeDocumentMoniker": "TicketEventWPF\\RegisterMenu.xaml",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\RegisterMenu.xaml",
-              "RelativeToolTip": "TicketEventWPF\\RegisterMenu.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-18T15:40:03.105Z"
+              "DocumentIndex": 2,
+              "Title": "CustomerModel.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:11:41.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FeedsModel.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Models\\FeedsModel.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Models\\FeedsModel.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Models\\FeedsModel.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Models\\FeedsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:10:43.676Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RegisterMenu.xaml.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\RegisterMenu.xaml.cs",
-              "RelativeDocumentMoniker": "TicketEventWPF\\RegisterMenu.xaml.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\RegisterMenu.xaml.cs",
-              "RelativeToolTip": "TicketEventWPF\\RegisterMenu.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
+              "Title": "CustomerUnitTest.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\CustomerUnitTest.cs",
+              "RelativeDocumentMoniker": "EventTicketUnitTest\\CustomerUnitTest.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\CustomerUnitTest.cs",
+              "RelativeToolTip": "EventTicketUnitTest\\CustomerUnitTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:05:38.384Z",
+              "WhenOpened": "2024-09-23T15:09:23.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAdminRepository.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Admin\\IAdminRepository.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Repositories\\Admin\\IAdminRepository.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Admin\\IAdminRepository.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Repositories\\Admin\\IAdminRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:05:44.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminUnitTest.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\AdminUnitTest.cs",
+              "RelativeDocumentMoniker": "EventTicketUnitTest\\AdminUnitTest.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\AdminUnitTest.cs",
+              "RelativeToolTip": "EventTicketUnitTest\\AdminUnitTest.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAmwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T14:55:49.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IAdminServices.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Services\\Admin\\IAdminServices.cs",
-              "RelativeDocumentMoniker": "TicketEventBackEnd\\Services\\Admin\\IAdminServices.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Services\\Admin\\IAdminServices.cs",
-              "RelativeToolTip": "TicketEventBackEnd\\Services\\Admin\\IAdminServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:06:41.349Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TicketEventWPF\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml.cs",
-              "RelativeToolTip": "TicketEventWPF\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:05:43.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "TicketEventWPF\\MainWindow.xaml",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\MainWindow.xaml",
-              "RelativeToolTip": "TicketEventWPF\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-18T15:03:44.097Z"
+              "WhenOpened": "2024-09-20T15:13:04.33Z",
+              "EditorCaption": ""
             }
           ]
         }

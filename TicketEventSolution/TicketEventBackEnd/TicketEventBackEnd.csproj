@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Events\" />
+    <Folder Include="Repositories\Feeds\" />
     <Folder Include="Services\Events\" />
   </ItemGroup>
 
