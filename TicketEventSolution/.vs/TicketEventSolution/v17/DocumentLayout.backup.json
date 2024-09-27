@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "EventTicketUnitTest\\AdminUnitTest.cs",
               "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\AdminUnitTest.cs",
               "RelativeToolTip": "EventTicketUnitTest\\AdminUnitTest.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAYwIQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAYwAwBAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T14:55:49.795Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "TicketEventBackEnd\\Repositories\\Admin\\IAdminRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T15:05:44.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T15:05:44.537Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAIBJwBwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T15:13:04.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T15:13:04.33Z"
             }
           ]
         }
