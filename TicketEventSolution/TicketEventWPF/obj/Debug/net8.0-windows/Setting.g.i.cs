@@ -53,7 +53,7 @@ namespace TicketEventWPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TicketEventWPF;V1.0.0.0;component/setting.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TicketEventWPF;component/setting.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Setting.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -69,7 +69,7 @@ namespace TicketEventWPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TicketEventWPF;V1.0.0.0;component/registermenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TicketEventWPF;component/registermenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RegisterMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
