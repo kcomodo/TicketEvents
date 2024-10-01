@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nu4KSrwr698=",
+  "dgSpecHash": "Ol0e+SYFSK8=",
   "success": true,
-  "projectFilePath": "D:\\TicketEvent\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj",
+  "projectFilePath": "D:\\TicketEvents\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mxrsh\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\mxrsh\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

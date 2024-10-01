@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj": {}
+    "D:\\TicketEvents\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj": {}
   },
   "projects": {
-    "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj",
         "projectName": "EventTicketUnitTest",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj",
         "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-        "outputPath": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\obj\\",
+        "outputPath": "D:\\TicketEvents\\TicketEventSolution\\EventTicketUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
-                "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
+              "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
+                "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
               }
             }
           }
@@ -91,14 +91,14 @@
         }
       }
     },
-    "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
         "projectName": "TicketEventBackEnd",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
         "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-        "outputPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
+        "outputPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",

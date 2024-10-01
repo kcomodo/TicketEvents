@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TicketEvent\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj": {}
+    "D:\\TicketEvents\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj": {}
   },
   "projects": {
-    "D:\\TicketEvent\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj",
         "projectName": "ConsoleTest",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\ConsoleTest\\ConsoleTest.csproj",
         "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-        "outputPath": "D:\\TicketEvent\\TicketEventSolution\\ConsoleTest\\obj\\",
+        "outputPath": "D:\\TicketEvents\\TicketEventSolution\\ConsoleTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
-                "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
+              "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
+                "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
               },
-              "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
-                "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj"
+              "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
+                "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
         "projectName": "TicketEventBackEnd",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
         "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-        "outputPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
+        "outputPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -154,11 +154,11 @@
         }
       }
     },
-    "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
         "projectName": "TicketEventClientSide",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

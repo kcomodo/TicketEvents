@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kVIUxudPLL0=",
+  "dgSpecHash": "fNOWMU7/V1I=",
   "success": true,
-  "projectFilePath": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj",
+  "projectFilePath": "D:\\TicketEvents\\TicketEventSolution\\EventTicketUnitTest\\EventTicketUnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mxrsh\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\mxrsh\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

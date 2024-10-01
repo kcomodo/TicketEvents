@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj": {}
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj": {}
   },
   "projects": {
-    "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
         "projectName": "TicketEventBackEnd",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
         "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-        "outputPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
+        "outputPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,14 +86,14 @@
         }
       }
     },
-    "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj": {
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj",
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj",
         "projectName": "TicketEventWPF",
-        "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj",
         "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-        "outputPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\obj\\",
+        "outputPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventWPF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -111,8 +111,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
-                "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
+              "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj": {
+                "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj"
               }
             }
           }
