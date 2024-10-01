@@ -1,1 +1,2 @@
 D:\TicketEvent\TicketEventSolution\TicketEventClientSide\obj\Debug\TicketEventClientSide.esproj.CoreCompileInputs.cache
+D:\TicketEvents\TicketEventSolution\TicketEventClientSide\obj\Debug\TicketEventClientSide.esproj.CoreCompileInputs.cache

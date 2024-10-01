@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dcvm76kxgg4=",
+  "dgSpecHash": "Jt+5hDZ/sHY=",
   "success": true,
-  "projectFilePath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj",
+  "projectFilePath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventWPF\\TicketEventWPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mxrsh\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\mxrsh\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

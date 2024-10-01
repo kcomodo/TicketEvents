@@ -2352,11 +2352,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+      "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
       "projectName": "TicketEventBackEnd",
-      "projectPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
+      "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\TicketEventBackEnd.csproj",
       "packagesPath": "C:\\Users\\mxrsh\\.nuget\\packages\\",
-      "outputPath": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
+      "outputPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mxrsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
