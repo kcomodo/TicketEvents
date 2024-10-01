@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\TicketEvent\\TicketEventSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|d:\\ticketevent\\ticketeventsolution\\eventticketunittest\\customerunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|solutionrelative:eventticketunittest\\customerunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevent\\ticketeventsolution\\ticketeventclientside\\src\\app\\app.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\app.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\repositories\\customer\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\repositories\\customer\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|d:\\ticketevent\\ticketeventsolution\\eventticketunittest\\adminunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D2731C-88A4-4DF8-A32B-726C0D252B1E}|EventTicketUnitTest\\EventTicketUnitTest.csproj|solutionrelative:eventticketunittest\\adminunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevent\\ticketeventsolution\\ticketeventbackend\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevent\\ticketeventsolution\\ticketeventclientside\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 103,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,52 +29,33 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerModel.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
-              "RelativeDocumentMoniker": "TicketEventBackEnd\\Models\\CustomerModel.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
-              "RelativeToolTip": "TicketEventBackEnd\\Models\\CustomerModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T15:37:26.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminUnitTest.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\AdminUnitTest.cs",
-              "RelativeDocumentMoniker": "EventTicketUnitTest\\AdminUnitTest.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\AdminUnitTest.cs",
-              "RelativeToolTip": "EventTicketUnitTest\\AdminUnitTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T15:36:17.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ICustomerRepository.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Customer\\ICustomerRepository.cs",
-              "RelativeDocumentMoniker": "TicketEventBackEnd\\Repositories\\Customer\\ICustomerRepository.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Customer\\ICustomerRepository.cs",
-              "RelativeToolTip": "TicketEventBackEnd\\Repositories\\Customer\\ICustomerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T15:36:13.963Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CustomerUnitTest.cs",
-              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\CustomerUnitTest.cs",
-              "RelativeDocumentMoniker": "EventTicketUnitTest\\CustomerUnitTest.cs",
-              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\EventTicketUnitTest\\CustomerUnitTest.cs",
-              "RelativeToolTip": "EventTicketUnitTest\\CustomerUnitTest.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAIA2wI4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T15:19:05.151Z",
+              "Title": "app.component.css",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app.component.css",
+              "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\app.component.css",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app.component.css",
+              "RelativeToolTip": "TicketEventClientSide\\src\\app\\app.component.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-01T15:02:30.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.component.html",
+              "DocumentMoniker": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app.component.html",
+              "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\app.component.html",
+              "ToolTip": "D:\\TicketEvent\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app.component.html",
+              "RelativeToolTip": "TicketEventClientSide\\src\\app\\app.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-01T13:24:37.124Z",
               "EditorCaption": ""
             }
           ]

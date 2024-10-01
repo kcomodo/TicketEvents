@@ -1,0 +1,27 @@
+
+/*stylize both nav bars inside of navigationBar*/
+.navigationBar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  word-spacing: 1.5rem;
+  background: #f2f2f2;
+  font-size: 20px;
+  margin:30px;
+  width:50%;
+  margin:0 auto;
+  border-radius:0.5rem;
+}
+/*
+    style anything under the a tag in navigationBar
+*/
+.navigationBar a {
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    color:blue;
+}
+a:visited{
+    color:none;
+}
