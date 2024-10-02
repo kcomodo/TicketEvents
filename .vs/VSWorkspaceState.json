@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TicketEventSolution",
-    "\\TicketEventSolution\\EventTicketUnitTest",
-    "\\TicketEventSolution\\TicketEventBackEnd",
-    "\\TicketEventSolution\\TicketEventBackEnd\\Controllers",
-    "\\TicketEventSolution\\TicketEventBackEnd\\Repositories",
-    "\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Admin",
-    "\\TicketEventSolution\\TicketEventBackEnd\\Services",
-    "\\TicketEventSolution\\TicketEventBackEnd\\Services\\Admin",
-    "\\TicketEventSolution\\TicketEventWPF"
+    ""
   ],
-  "SelectedNode": "\\TicketEventSolution\\EventTicketUnitTest\\CustomerUnitTest.cs",
+  "SelectedNode": "\\TicketEventSolution.sln",
   "PreviewInSolutionExplorer": false
 }
