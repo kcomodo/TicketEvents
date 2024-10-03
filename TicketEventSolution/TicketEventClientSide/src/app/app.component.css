@@ -1,3 +1,7 @@
+body {
+  background: #cfd3d4;
+  height:fit-content;
+}
 @media(min-width: 1025px) {
 
   #containerIcon {
@@ -16,7 +20,6 @@
     padding: 15px;
     display: flex;
     justify-content: space-between;
-    word-spacing: 1.5rem;
     background: #f2f2f2;
     font-size: 20px;
     margin: 30px;
@@ -26,20 +29,26 @@
   }
     /*
     style anything under the a tag in navigationBar
-*/
+    */
     .navigationBar a {
       text-decoration: none;
       color: black;
+      padding: 0 15px; /* Add horizontal padding for spacing */
     }
 
       .navigationBar a:hover {
         color: #1090b3;
+        border-radius: 10px;
+        padding: 6px 15px;
+        background: #fff;
+        text-align: center;
       }
 
   a:visited {
     color: none;
   }
 
+  /*Animation Section for fade-out*/
   @keyframes fadeOut {
     0% {
       opacity: 1;
@@ -386,8 +395,20 @@
     }
   }
 
-
-
+  .cloud1{
+      animation: animateCloud 50s linear infinite;
+      animation-delay:0s;
+  }
+  @keyframes animateCloud{
+      0%
+      {
+        transform:translateX(-100%) scale(1);
+      }
+      100%
+      {
+        transform: translateX(400%) scale(1.5);
+      }
+  }
 
 
 
@@ -417,6 +438,7 @@
 
       .navigationBar a:hover {
         color: skyblue;
+      
       }
 
   a:visited {
