@@ -1,8 +1,9 @@
 body {
   background: #cfd3d4;
-  height:fit-content;
+  height:98vh;
+  overflow:hidden;
 }
-@media(min-width: 1025px) {
+@media(min-width: 1025px) { /*Desktop View*/
 
   #containerIcon {
     position: absolute;
@@ -12,7 +13,7 @@ body {
     background-repeat: no-repeat; /* Prevent the image from repeating */
     width: 150px; /* Set a fixed width for the icon */
     height: 150px; /* Set a fixed height for the icon */
-    left:300px;
+    left:14%;
     top:-35px;
   }
 
@@ -398,6 +399,8 @@ body {
   .cloud1{
       animation: animateCloud 50s linear infinite;
       animation-delay:0s;
+      width:250px;
+      height:200px;
   }
   @keyframes animateCloud{
       0%
@@ -406,7 +409,7 @@ body {
       }
       100%
       {
-        transform: translateX(400%) scale(1.5);
+        transform: translateX(900%) scale(2.5);
       }
   }
 
@@ -415,6 +418,18 @@ body {
 
 }
 @media(max-width: 1024px) {
+
+  #containerIcon {
+    position: absolute;
+    background-image: url('Images/icon2.png');
+    background-size: contain; /* Ensure the image scales to fit the container */
+    background-position: center; /* Center the image in the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 130px; /* Set a fixed width for the icon */
+    height: 150px; /* Set a fixed height for the icon */
+    left: 2%;
+    top: -35px;
+  }
   /*stylize both nav bars inside of navigationBar*/
   .navigationBar {
     padding: 13px;
@@ -459,9 +474,38 @@ body {
     animation: 3s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
     animation-iteration-count: 1; /* Ensure the animation runs only once */
   }
+  .cloud1 {
+    animation: animateCloud 50s linear infinite;
+    animation-delay: 0s;
+    width: 250px;
+    height: 200px;
+  }
+
+  @keyframes animateCloud {
+    0% {
+      transform: translateX(-100%) scale(1);
+    }
+
+    100% {
+      transform: translateX(900%) scale(2.5);
+    }
+  }
 }
 
   @media(max-width: 320px) {
+
+    #containerIcon {
+      position: absolute;
+      background-image: url('Images/icon2.png');
+      background-size: contain; /* Ensure the image scales to fit the container */
+      background-position: center; /* Center the image in the div */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      width: 150px; /* Set a fixed width for the icon */
+      height: 150px; /* Set a fixed height for the icon */
+      visibility: hidden;
+      left: 300px;
+      top: -35px;
+    }
     /*stylize both nav bars inside of navigationBar*/
     .navigationBar {
       padding: 10px;
@@ -508,6 +552,19 @@ body {
   }
 
   @media(min-width:321px) and (max-width: 375px) {
+
+    #containerIcon {
+      position: absolute;
+      background-image: url('Images/icon2.png');
+      background-size: contain; /* Ensure the image scales to fit the container */
+      background-position: center; /* Center the image in the div */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      width: 150px; /* Set a fixed width for the icon */
+      height: 150px; /* Set a fixed height for the icon */
+      visibility: hidden;
+      left: 300px;
+      top: -35px;
+    }
     /*stylize both nav bars inside of navigationBar*/
     .navigationBar {
       padding: 13px;
@@ -554,6 +611,19 @@ body {
   }
 
 @media (min-width: 376px) and (max-width: 425px) {
+
+  #containerIcon {
+    position: absolute;
+    background-image: url('Images/icon2.png');
+    background-size: contain; /* Ensure the image scales to fit the container */
+    background-position: center; /* Center the image in the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 150px; /* Set a fixed width for the icon */
+    height: 150px; /* Set a fixed height for the icon */
+    visibility:hidden;
+    left: 1%;
+    top: -35px;
+  }
   /*stylize both nav bars inside of navigationBar*/
   .navigationBar {
     padding: 13px;
@@ -600,6 +670,18 @@ body {
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
+
+  #containerIcon {
+    position: absolute;
+    background-image: url('Images/icon2.png');
+    background-size: contain; /* Ensure the image scales to fit the container */
+    background-position: center; /* Center the image in the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 100px; /* Set a fixed width for the icon */
+    height: 150px; /* Set a fixed height for the icon */
+    left: 1.7%;
+    top: -35px;
+  }
   /*stylize both nav bars inside of navigationBar*/
   .navigationBar {
     padding: 13px;
