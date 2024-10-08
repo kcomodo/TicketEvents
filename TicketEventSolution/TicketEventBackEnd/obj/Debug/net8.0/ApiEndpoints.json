@@ -2,14 +2,14 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "AddCustomer",
-    "RelativePath": "api/Values/Add Customer",
+    "RelativePath": "api/Values/AddCustomer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "customer",
-        "Type": "TicketEventBackEnd.Models.CustomerModel",
+        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
         "IsRequired": true
       }
     ],
@@ -18,7 +18,7 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "DeleteCustomer",
-    "RelativePath": "api/Values/Delete Customer",
+    "RelativePath": "api/Values/DeleteCustomer",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -34,7 +34,7 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "GetAllCustomer",
-    "RelativePath": "api/Values/Get All Customer",
+    "RelativePath": "api/Values/GetAllCustomer",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "GetCustomerByEmail",
-    "RelativePath": "api/Values/Get Customer By Email",
+    "RelativePath": "api/Values/GetCustomerByEmail",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -60,7 +60,7 @@
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "ValidateLogin",
-    "RelativePath": "api/Values/Validate Login",
+    "RelativePath": "api/Values/ValidateLogin",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -6,18 +6,15 @@ body {
 @media(min-width: 1025px) {
   .containerBox {
     background: #f2f2f2;
-    position:absolute;
+    position: absolute;
     top: 25%;
     border-radius: 20px;
     text-align: center;
-    height: 100px;
-    left:30%;
+    height: 150px;
+    left: 30%;
+    padding: 20px; /* Add padding to give space between text and the border */
   }
-  .IntroTitle {
-    position: absolute;
-    left: 45%;
-    top: 20%;
-  }
+
   .buttonContainer{
       display:flex;
       align-items:center;
@@ -28,7 +25,7 @@ body {
     color: black;
     height:100vh;
     width:99.14%;
-    position:absolute;
+    position:relative;
 
   }
   .container{
@@ -42,11 +39,14 @@ body {
     animation-iteration-count: 1; /* Ensure the animation runs only once */
     z-index:1;
   }
-
+  .IntroTitle {
+    position: relative;
+    left: 45%;
+    top: 20%;
+  }
   .content {
     position: relative;
-    width: 400px;
-    overflow: hidden;
+    width: 300px;
     left: 40%;
   }
 
