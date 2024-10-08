@@ -41,7 +41,7 @@ namespace TicketEventBackEnd.Controllers
             _customerServices = customerServices;
 
         }
-        [HttpGet("Get All Customer")]
+        [HttpGet("GetAllCustomer")]
         public IActionResult GetAllCustomer()
         {
             IEnumerable<CustomerModel> customer = _customerRepository.getAllCustomer();
@@ -49,7 +49,7 @@ namespace TicketEventBackEnd.Controllers
         }
         // GET api/<ValuesController>/5
         [Authorize]
-        [HttpGet("Get Customer By Email")]
+        [HttpGet("GetCustomerByEmail")]
         public IActionResult GetCustomerByEmail(string email)
         {
             CustomerModel customer = _customerRepository.getCustomerInfo(email);
@@ -60,20 +60,20 @@ namespace TicketEventBackEnd.Controllers
             return Ok(customer);
         }
         // POST api/<ValuesController>
-        [HttpPost("Add Customer")]
+        [HttpPost("AddCustomer")]
         public IActionResult AddCustomer(CustomerModel customer)
         {
             _customerRepository.addCustomer(customer);
             return Ok(customer);
         }
-        [HttpDelete("Delete Customer")]
+        [HttpDelete("DeleteCustomer")]
         public IActionResult DeleteCustomer(string email)
         {
             _customerRepository.deleteCustomer(email);
             return Ok();
         }
         
-        [HttpGet("Validate Login")]
+        [HttpGet("ValidateLogin")]
         public IActionResult ValidateLogin(string email, string password)
         {
             bool validate = _customerServices.validateCustomerLogin(email, password);
