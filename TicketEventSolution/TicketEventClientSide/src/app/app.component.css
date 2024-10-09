@@ -397,11 +397,12 @@ body {
     }
   }
 
-  .cloud1{
-      animation: animateCloud 50s linear infinite;
-      animation-delay:0s;
-      width:250px;
-      height:200px;
+  .cloud1 {
+    animation: animateCloud 50s linear infinite;
+    animation-delay: 0s;
+    width: 250px;
+    height: 200px;
+    pointer-events: none; /* This makes the image non-interactive */
   }
   @keyframes animateCloud{
       0%
