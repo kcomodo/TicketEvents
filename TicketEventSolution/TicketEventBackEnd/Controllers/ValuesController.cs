@@ -73,7 +73,7 @@ namespace TicketEventBackEnd.Controllers
             return Ok();
         }
         
-        [HttpGet("ValidateLogin")]
+        [HttpPost("ValidateLogin")]
         public IActionResult ValidateLogin(string email, string password)
         {
             bool validate = _customerServices.validateCustomerLogin(email, password);

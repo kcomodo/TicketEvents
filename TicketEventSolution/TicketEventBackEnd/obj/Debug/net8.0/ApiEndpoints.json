@@ -61,7 +61,7 @@
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "ValidateLogin",
     "RelativePath": "api/Values/ValidateLogin",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
