@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\models\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\models\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\service\\customerservice.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\service\\customerservice.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 809,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,33 +50,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Models\\LoginForm.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Models\\LoginForm.cs",
+              "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Models\\LoginForm.cs*",
+              "RelativeToolTip": "TicketEventBackEnd\\Models\\LoginForm.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T18:51:04.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerModel.cs",
+              "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Models\\CustomerModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T18:40:48.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwEsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwE8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T16:56:49.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "customerservice.service.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCkAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-10-09T15:58:29.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "logincomponent.component.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.ts",
@@ -81,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "logincomponent.component.html",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.html",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.html",
@@ -89,7 +123,8 @@
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-10-08T15:54:03.264Z"
+              "WhenOpened": "2024-10-08T15:54:03.264Z",
+              "EditorCaption": ""
             }
           ]
         }

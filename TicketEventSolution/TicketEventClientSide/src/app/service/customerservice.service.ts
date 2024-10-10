@@ -24,11 +24,14 @@ export class CustomerserviceService {
   validateLogin(email: string, password: string): Observable<boolean>
   {
     console.log("customer service now: ", email, password);
-    const url = `${this.baseUrl}/ValidateLogin?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
-    //keep it as a post
-    return this.http.post<{ token: string }>(`${this.baseUrl}/ValidateLogin?email=${email}&password=${password}`, "")
+    //keep it as a post because the information is not visible to the URl, and is more secured
+    //old method
+    //return this.http.post<{ token: string }>(`${this.baseUrl}/ValidateLogin?email=${email}&password=${password}`, "")
+    //new method, this is more secured instead of directly accessing the url, we are sending it into the body of the request
+    return this.http.post<{ token: string }>(`${this.baseUrl}/ValidateLogin`, { email, password }, {
+      headers: { 'Content-Type': 'application/json' }
+    })
       .pipe(
-       
         tap(response => {
           console.log(response);
         if (response.token) {

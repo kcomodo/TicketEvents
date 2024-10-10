@@ -66,14 +66,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "password",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "loginRequest",
+        "Type": "TicketEventBackEnd.Models.Login.LoginForm",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
