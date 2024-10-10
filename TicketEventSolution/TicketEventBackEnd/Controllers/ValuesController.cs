@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TicketEventBackEnd.Services.Customer;
 using TicketEventBackEnd.Models.Customer;
 using TicketEventBackEnd.Repositories.Customer;
+using TicketEventBackEnd.Models.Login;
 
 /*
  Import Token from microsoft.IdentityModel
@@ -74,8 +75,10 @@ namespace TicketEventBackEnd.Controllers
         }
         
         [HttpPost("ValidateLogin")]
-        public IActionResult ValidateLogin(string email, string password)
+        public IActionResult ValidateLogin([FromBody] LoginForm loginRequest)
         {
+            var email = loginRequest.Email;
+            var password = loginRequest.Password;
             bool validate = _customerServices.validateCustomerLogin(email, password);
             //when validation is true, generate a token for authorization of other methods
             if (validate)
