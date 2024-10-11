@@ -31,9 +31,9 @@ body {
   .container{
     position: absolute;
     background-color: #f0ead2;
-    left: 0px;
-    top: 0px;
-    width: 100%;
+    left: 39%;
+    top: 90px;
+    width: 0%;
     height: 200%;
     animation: 2.5s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
     animation-iteration-count: 1; /* Ensure the animation runs only once */
@@ -41,8 +41,8 @@ body {
   }
   .IntroTitle {
     position: relative;
-    left: 45%;
-    top: 20%;
+    left: 150px;
+    top: 10%;
   }
   .content {
     position: relative;
