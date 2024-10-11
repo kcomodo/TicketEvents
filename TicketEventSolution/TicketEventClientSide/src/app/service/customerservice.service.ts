@@ -37,19 +37,19 @@ export class CustomerserviceService {
         if (response.token) {
           this.token = response.token;
           this.isAuthenticated = true; // Set authentication status based on response
-            console.log("isLoggedin received: ", this.isAuthenticated);
-           console.log("Token received and saved: ", this.token);
+          //  console.log("isLoggedin received: ", this.isAuthenticated);
+         //  console.log("Token received and saved: ", this.token);
           this.cookieService.set(this.tokenSaved, this.token, { path: '/' });
         }
         else if (this.getToken() != null) {
           this.isAuthenticated = true;
-          console.log("token is not null");
-          console.log("token not null and: ", email,password)
+      //    console.log("token is not null");
+      //    console.log("token not null and: ", email,password)
         }
         else {
           this.isAuthenticated = false;
-            console.log(response.token);
-            console.log("isLoggedin failed: ", this.isAuthenticated);
+          //  console.log(response.token);
+          //  console.log("isLoggedin failed: ", this.isAuthenticated);
         }
 
       }),
