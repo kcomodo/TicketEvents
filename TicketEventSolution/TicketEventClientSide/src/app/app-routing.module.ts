@@ -4,6 +4,10 @@ import { HomecomponentComponent } from './components/homecomponent/homecomponent
 import { LogincomponentComponent } from './components/logincomponent/logincomponent.component';
 import { ProfilecomponentComponent } from './components/profilecomponent/profilecomponent.component';
 import { AboutcomponentComponent } from './components/aboutcomponent/aboutcomponent.component';
+import { RegisterComponent } from './components/register/register.component';
+import { GuideComponent } from './components/guide/guide.component';
+import { DiscoverComponent } from './components/discover/discover.component';
+
 const routes: Routes = [
   {
     path: 'login',
@@ -21,7 +25,18 @@ const routes: Routes = [
     path: 'about',
     component:AboutcomponentComponent
   },
-
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'guide',
+    component: GuideComponent
+  },
+  {
+    path: 'discover',
+    component: DiscoverComponent
+  },
   {
     path: '',
     redirectTo: 'home',
