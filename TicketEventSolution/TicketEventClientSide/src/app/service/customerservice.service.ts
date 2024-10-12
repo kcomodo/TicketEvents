@@ -59,11 +59,14 @@ export class CustomerserviceService {
 
   
   }
-  registerCustomer() {
-
+  registerCustomer(firstname : string, lastname: string, email: string, password: string) {
+    return this.http.post<any>(`${this.baseUrl}/AddCustomer`, { firstname, lastname, email, password}, {
+      headers: { 'Content-Type': 'application/json' }
+    })
   }
-  updateCustomerInfo() {
-
+  updateCustomerInfo(updatedInfo: any): Observable<any> {
+    //replace the return later
+    return updatedInfo;
   }
   
   getToken(): string | null {

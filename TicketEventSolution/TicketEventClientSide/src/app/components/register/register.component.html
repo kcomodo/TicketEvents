@@ -1,6 +1,6 @@
 <body>
   <div class="container">
-    <form class="registerForm">
+    <form class="registerForm" (ngSubmit)="onRegister()">
       <input placeholder="First Name" name="firstName" required />
       <input placeholder="Last Name" name="lastName" required />
       <input type="email" placeholder="Email" name="email" required />
