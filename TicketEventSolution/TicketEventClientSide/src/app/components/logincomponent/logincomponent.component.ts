@@ -15,7 +15,7 @@ export class LogincomponentComponent {
   errorMessage: string = '';
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   passwordFormControl = new FormControl('', [Validators.required]);
-  constructor(private router: Router, private customerService: CustomerserviceService,) { }
+  constructor(private router: Router, private customerService: CustomerserviceService) { }
   onLogin(): void {
    // console.log('Login clicked with email: ', this.email, ' and password: ', this.password);
     this.customerService.validateLogin(this.email, this.password).subscribe(
