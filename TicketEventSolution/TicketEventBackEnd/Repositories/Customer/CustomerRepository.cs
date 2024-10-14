@@ -52,27 +52,31 @@ namespace TicketEventBackEnd.Repositories.Customer
             }
             return null;
         }
-        public IEnumerable<CustomerModel> getAllCustomer()
+
+        public async Task<IEnumerable<CustomerModel>> getAllCustomer()
         {
             List<CustomerModel> customers = new List<CustomerModel>();
             string query = "SELECT * FROM customer";
             MySqlCommand command = new MySqlCommand(query, _connection);
-            MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+
+            using (MySqlDataReader reader = await command.ExecuteReaderAsync() as MySqlDataReader) 
             {
-                customers.Add(new CustomerModel
+                while (await reader.ReadAsync())
                 {
-                    CustomerId = reader.GetInt32("customer_id"),
-                    FirstName = reader.GetString("customer_firstname"),
-                    LastName = reader.GetString("customer_lastname"),
-                    Email = reader.GetString("customer_email"),
-                    Password = reader.GetString("customer_password")
-                });
-               
+                    customers.Add(new CustomerModel
+                    {
+                        CustomerId = reader.GetInt32("customer_id"),
+                        FirstName = reader.GetString("customer_firstname"),
+                        LastName = reader.GetString("customer_lastname"),
+                        Email = reader.GetString("customer_email"),
+                        Password = reader.GetString("customer_password")
+                    });
+
+                }
+                return customers;
             }
-            reader.Close();
-            return customers;
         }
+
         public void addCustomer(CustomerModel customer)
         {
             Regex verifyEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");

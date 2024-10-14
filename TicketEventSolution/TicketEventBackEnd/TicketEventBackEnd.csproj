@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositories\Feeds\**" />
+    <Content Remove="Repositories\Feeds\**" />
+    <EmbeddedResource Remove="Repositories\Feeds\**" />
+    <None Remove="Repositories\Feeds\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
     <PackageReference Include="MySql.Data" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
@@ -14,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Feeds\" />
     <Folder Include="Services\Events\" />
   </ItemGroup>
 
