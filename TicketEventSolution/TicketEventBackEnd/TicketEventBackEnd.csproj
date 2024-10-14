@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="Repositories\Feeds\**" />
+    <Compile Remove="Services\Events\**" />
     <Content Remove="Repositories\Feeds\**" />
+    <Content Remove="Services\Events\**" />
     <EmbeddedResource Remove="Repositories\Feeds\**" />
+    <EmbeddedResource Remove="Services\Events\**" />
     <None Remove="Repositories\Feeds\**" />
+    <None Remove="Services\Events\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,10 +22,6 @@
     <PackageReference Include="MySql.Data" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\Events\" />
   </ItemGroup>
 
 </Project>

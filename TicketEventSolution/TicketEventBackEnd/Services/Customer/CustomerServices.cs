@@ -14,9 +14,9 @@ namespace TicketEventBackEnd.Services.Customer
             _customerRepository = customerRepository;
 
         }
-        public bool validateCustomerLogin(string email, string password)
+        public async Task<bool> validateCustomerLogin(string email, string password)
         {
-            CustomerModel customerInfo = _customerRepository.getCustomerInfo(email);
+            CustomerModel customerInfo = await _customerRepository.getCustomerInfo(email);
             if(customerInfo == null)
             {
                 return false;

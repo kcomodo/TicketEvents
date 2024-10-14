@@ -2,6 +2,6 @@
 {
     public interface ICustomerServices
     {
-        bool validateCustomerLogin(string email, string password);
+       Task<bool> validateCustomerLogin(string email, string password);
     }
 }
