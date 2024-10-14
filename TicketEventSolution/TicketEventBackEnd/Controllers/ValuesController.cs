@@ -42,10 +42,22 @@ namespace TicketEventBackEnd.Controllers
             _customerServices = customerServices;
 
         }
+        
+        //use async for asynchronous programming so that the method doesn't block the main thread while waiting for the
+        //database to repsond
+        //async will mark this method as asynchronous 
+        //will contain await expression 
+        //async always returns a task, or task<T> T is the type of result
+        //await will pause hte execution until the task has completed, the await will only execute after
+        //the asynchronous operation finished
+        //if we dont use async then the code would block the thread during the query which prevents all other requests to not be processed
+        //because they have to wait for this method to finish.
+        //typically you use async when retrieving large amount of data
+        //dont need it for updating or deletion or validation.
         [HttpGet("GetAllCustomer")]
-        public IActionResult GetAllCustomer()
+        public async Task<IActionResult> GetAllCustomer()
         {
-            IEnumerable<CustomerModel> customer = _customerRepository.getAllCustomer();
+            IEnumerable<CustomerModel> customer = await _customerRepository.getAllCustomer();
             return Ok(customer);
         }
         // GET api/<ValuesController>/5
@@ -105,7 +117,7 @@ namespace TicketEventBackEnd.Controllers
             }
             else
             {
-                return Unauthorized();
+                return Unauthorized(new { message = "Invalid email or password" });
             }
         }
         
