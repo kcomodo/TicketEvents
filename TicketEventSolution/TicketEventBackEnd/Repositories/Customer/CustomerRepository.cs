@@ -27,7 +27,7 @@ namespace TicketEventBackEnd.Repositories.Customer
             _connection.Close();
         }
         //Create CRUD Methods
-        public CustomerModel getCustomerInfo(string email)
+        public async Task<CustomerModel> getCustomerInfo(string email)
         {
             //create query to do stuff
             string query = "SELECT * FROM customer WHERE customer_email = @Email";
@@ -36,23 +36,24 @@ namespace TicketEventBackEnd.Repositories.Customer
             //Bind the parameter value to the query value
             command.Parameters.AddWithValue("@Email", email);
             //Use a reader now to grab the data
-            MySqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
+            using (MySqlDataReader reader = await command.ExecuteReaderAsync() as MySqlDataReader)
             {
-                //create a new object to store the data
-                CustomerModel customer = new CustomerModel();
+                if (await reader.ReadAsync())
                 {
-                    customer.CustomerId = reader.GetInt32("customer_id");
-                    customer.FirstName = reader.GetString("customer_firstname");
-                    customer.LastName = reader.GetString("customer_lastname");
-                    customer.Email = reader.GetString("customer_email");
-                    customer.Password = reader.GetString("customer_password");
-                };
-                return customer;
+                    //create a new object to store the data
+                    CustomerModel customer = new CustomerModel();
+                    {
+                        customer.CustomerId = reader.GetInt32("customer_id");
+                        customer.FirstName = reader.GetString("customer_firstname");
+                        customer.LastName = reader.GetString("customer_lastname");
+                        customer.Email = reader.GetString("customer_email");
+                        customer.Password = reader.GetString("customer_password");
+                    };
+                    return customer;
+                }
+                return null;
             }
-            return null;
         }
-
         public async Task<IEnumerable<CustomerModel>> getAllCustomer()
         {
             List<CustomerModel> customers = new List<CustomerModel>();
@@ -106,7 +107,7 @@ namespace TicketEventBackEnd.Repositories.Customer
                 return;
             }
             CustomerRepository customer = new CustomerRepository();
-            CustomerModel customerInfo = customer.getCustomerInfo(email);
+            Task<CustomerModel> customerInfo = customer.getCustomerInfo(email);
             if(customerInfo == null)
             {
                 Console.WriteLine("Email does not exist");

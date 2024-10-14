@@ -63,9 +63,9 @@ namespace TicketEventBackEnd.Controllers
         // GET api/<ValuesController>/5
         [Authorize]
         [HttpGet("GetCustomerByEmail")]
-        public IActionResult GetCustomerByEmail(string email)
+        public async Task<IActionResult> GetCustomerByEmail(string email)
         {
-            CustomerModel customer = _customerRepository.getCustomerInfo(email);
+            CustomerModel customer = await _customerRepository.getCustomerInfo(email);
             if (customer == null)
             {
                 throw new Exception("Customer not found.");
