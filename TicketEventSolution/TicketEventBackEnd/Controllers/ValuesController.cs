@@ -87,11 +87,11 @@ namespace TicketEventBackEnd.Controllers
         }
         
         [HttpPost("ValidateLogin")]
-        public IActionResult ValidateLogin([FromBody] LoginForm loginRequest)
+        public async Task<IActionResult> ValidateLogin([FromBody] LoginForm loginRequest)
         {
             var email = loginRequest.Email;
             var password = loginRequest.Password;
-            bool validate = _customerServices.validateCustomerLogin(email, password);
+            bool validate = await _customerServices.validateCustomerLogin(email, password);
             //when validation is true, generate a token for authorization of other methods
             if (validate)
             {
