@@ -59,7 +59,8 @@ export class CustomerserviceService {
 
   
   }
-  registerCustomer(firstname : string, lastname: string, email: string, password: string) {
+  registerCustomer(firstname: string, lastname: string, email: string, password: string) {
+    console.log("registerCustomer called");
     return this.http.post<any>(`${this.baseUrl}/AddCustomer`, { firstname, lastname, email, password}, {
       headers: { 'Content-Type': 'application/json' }
     })

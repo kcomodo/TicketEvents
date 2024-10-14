@@ -62,7 +62,7 @@ namespace TicketEventBackEnd.Controllers
         }
         // POST api/<ValuesController>
         [HttpPost("AddCustomer")]
-        public IActionResult AddCustomer(CustomerModel customer)
+        public IActionResult AddCustomer([FromBody] CustomerModel customer)
         {
             _customerRepository.addCustomer(customer);
             return Ok(customer);

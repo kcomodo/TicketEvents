@@ -11,9 +11,19 @@ export class RegisterComponent {
   lastname: string = "";
   email: string = "";
   password: string = "";
-  constructor(private router: Router, private customerService : CustomerserviceService) {}
-  onSubmit(): void{
-    this.customerService.registerCustomer(this.firstname, this.lastname, this.email, this.password);
+  constructor(private router: Router, private customerService: CustomerserviceService) { }
+  onRegister(): void {
+    this.customerService.registerCustomer(this.firstname, this.lastname, this.email, this.password).subscribe(
+      (response) => {
+        console.log('Registration successful:', response);
+        this.router.navigate(['/home']);
+        // Handle success, maybe navigate to another page or show a message
+      },
+      (error) => {
+        console.error('Registration failed:', error);
+        // Handle error, show error message
+      }
+    );
   }
-  
+
 }

@@ -1,10 +1,10 @@
 <body>
   <div class="container">
     <form class="registerForm" (ngSubmit)="onRegister()">
-      <input placeholder="First Name" name="firstName" required />
-      <input placeholder="Last Name" name="lastName" required />
-      <input type="email" placeholder="Email" name="email" required />
-      <input type="password" placeholder="Password" name="password" required />
+      <input placeholder="First Name" name="firstname" [(ngModel)]="firstname" required />
+      <input placeholder="Last Name" name="lastname" [(ngModel)]="lastname" required />
+      <input type="email" placeholder="Email" name="email" [(ngModel)]="email" required />
+      <input type="password" placeholder="Password" name="password" [(ngModel)]="password" required />
       <div class="buttonContainer">
         <button type="submit" class="guideButton">
           Register!
