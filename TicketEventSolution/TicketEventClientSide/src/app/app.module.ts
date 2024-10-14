@@ -11,9 +11,9 @@ import { CustomerserviceService } from './service/customerservice.service';
 import { RouterModule } from '@angular/router'; // for routing
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
-import { RegisterComponent } from './components/register/register.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { DiscoverComponent } from './components/discover/discover.component';
+import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +21,13 @@ import { DiscoverComponent } from './components/discover/discover.component';
     LogincomponentComponent,
     ProfilecomponentComponent,
     AboutcomponentComponent,
-    RegisterComponent,
     GuideComponent,
     DiscoverComponent,
+    RegisterComponent,
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
