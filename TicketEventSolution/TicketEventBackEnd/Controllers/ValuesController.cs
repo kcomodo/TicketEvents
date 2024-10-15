@@ -79,6 +79,12 @@ namespace TicketEventBackEnd.Controllers
             _customerRepository.addCustomer(customer);
             return Ok(customer);
         }
+        [HttpPut]
+        public IActionResult UpdateCustomer(string firstname, string lastname, string email, string password, string targetemail)
+        {
+            _customerRepository.updateCustomer(firstname, lastname, email, password, targetemail);
+            return Ok();
+        }
         [HttpDelete("DeleteCustomer")]
         public IActionResult DeleteCustomer(string email)
         {
