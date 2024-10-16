@@ -24,9 +24,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "customer",
+        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -51,6 +51,27 @@
     "Parameters": [
       {
         "Name": "email",
+        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "api/Values/UpdateCustomer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "targetemail",
         "Type": "System.String",
         "IsRequired": false
       }
