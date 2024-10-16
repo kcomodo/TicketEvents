@@ -68,7 +68,7 @@ namespace TicketEventBackEnd.Controllers
             CustomerModel customer = await _customerRepository.getCustomerInfo(email);
             if (customer == null)
             {
-                throw new Exception("Customer not found.");
+                return NotFound(new { message = "Customer not found." });
             }
             return Ok(customer);
         }
@@ -79,10 +79,11 @@ namespace TicketEventBackEnd.Controllers
             _customerRepository.addCustomer(customer);
             return Ok(customer);
         }
-        [HttpPut]
-        public IActionResult UpdateCustomer(string firstname, string lastname, string email, string password, string targetemail)
+        [Authorize]
+        [HttpPut("UpdateCustomer")]
+        public IActionResult UpdateCustomer([FromBody] CustomerModel customer, string targetemail)
         {
-            _customerRepository.updateCustomer(firstname, lastname, email, password, targetemail);
+            _customerRepository.updateCustomer(customer.FirstName, customer.LastName, customer.Email, customer.Password, targetemail);
             return Ok();
         }
         [HttpDelete("DeleteCustomer")]
