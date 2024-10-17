@@ -1,1 +1,29 @@
-<p>profilecomponent works!</p>
+<div class="card">
+  <div class="container" *ngIf="!isEditMode">
+    <p>First Name: {{firstname}}</p>
+    <p>Last Name: {{lastname}}</p>
+    <p>Email: {{email}}</p>
+    <p>Password: {{password}}</p>
+    <button (click)="toggleEditMode()">Edit</button>
+  </div>
+  <div class="container" *ngIf="isEditMode">
+    <form>
+      <label>First Name: </label>
+      <input [(ngModel)]="firstname" />
+    </form>
+    <form>
+      <label>Last Name: </label>
+      <input [(ngModel)]="lastname" />
+    </form>
+    <form>
+      <label>Email: </label>
+      <input [(ngModel)]="email" />
+    </form>
+    <form>
+      <label>Password: </label>
+      <input [(ngModel)]="password" />
+    </form>
+    <button (click)="saveChanges()">Save</button>
+    <button (click)="toggleEditMode()">Cancel</button>
+  </div>
+</div>

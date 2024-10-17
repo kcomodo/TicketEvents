@@ -65,15 +65,25 @@ export class CustomerserviceService {
       headers: { 'Content-Type': 'application/json' }
     })
   }
+  /*
   updateCustomerInfo(updatedInfo: any): Observable<any> {
     //replace the return later
-    return updatedInfo;
+    return this.http.post<any>(`${this.baseUrl}/UpdateCustomer`, { updatedInfo.firstname, updatedInfo.lastname, updatedInfo.email, updatedInfo.password}, {
+      headers: { 'Content-Type': 'application/json' }
+    })
   }
-  
+*/  
   getToken(): string | null {
     //grab the token from the cookie service and then return it to be stored
     //cookieService is a library that allows us to store the token
    return this.cookieService.get(this.tokenSaved) || null;
   }
-  
+  isLoggedIn(): boolean {
+    return this.isAuthenticated;
+  }
+  lougout(): void {
+    this.isAuthenticated = false;
+    this.token = null;
+    this.cookieService.delete(this.tokenSaved, '/');
+  }
 }
