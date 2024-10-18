@@ -11,6 +11,7 @@ export class ProfilecomponentComponent {
   lastname: string = "UNDEFINED";
   email: string = "UNDEFINED";
   password: string = "UNDEFINED";
+  eventToken: string = "UNDEFINED";
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
     //console.log("Edit clicked: ", this.isEditMode);
