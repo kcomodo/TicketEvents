@@ -25,15 +25,15 @@ namespace TicketEventBackEnd.Controllers
     
     [Route("api/[controller]")]
     [ApiController]
-    //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
-    //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
-    //Use this for transit api
-    //And for searching specific agency/operator names
+
     public class ValuesController : ControllerBase
     {
         private readonly string _issuer = "https://localhost:7240"; // Your issuer
         private readonly string _audience = "https://localhost:7240 , http://localhost:4200"; // Your audience
 
+     
+        //Use this for transit api
+        //And for searching specific agency/operator names
         private readonly ICustomerRepository _customerRepository;
         private readonly ICustomerServices _customerServices;
         public ValuesController(ICustomerRepository customerRepository, ICustomerServices customerServices)
@@ -92,7 +92,9 @@ namespace TicketEventBackEnd.Controllers
             _customerRepository.deleteCustomer(email);
             return Ok();
         }
-        
+
+
+
         [HttpPost("ValidateLogin")]
         public async Task<IActionResult> ValidateLogin([FromBody] LoginForm loginRequest)
         {
@@ -127,7 +129,25 @@ namespace TicketEventBackEnd.Controllers
                 return Unauthorized(new { message = "Invalid email or password" });
             }
         }
-        
+        [Authorize]
+        [HttpGet]
+        public IActionResult getCustomerEmail(string token)
+        {
+             //need to decode JWT in order to get the email
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> getLocationBasedOnAgency(string siteToken, string agencyName)
+        {
+            //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+        }
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> getFeedFromSite(string siteToken)
+        {
+            //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV //get feeds
+        }
         //use email as parameter to identify the user when the token is presented in the future requests
         private string generateJWTToken(string email)
         {
@@ -151,6 +171,7 @@ namespace TicketEventBackEnd.Controllers
             var token = tokenHandler.CreateToken(tokenDescription); // Create token
             return tokenHandler.WriteToken(token); // Write token and return it
         }
+
         
     }
 }

@@ -7,6 +7,7 @@ import { AboutcomponentComponent } from './components/aboutcomponent/aboutcompon
 import { GuideComponent } from './components/guide/guide.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { RegisterComponent }from './components/register/register.component';
+import { accessGuard } from './guards/access.guard';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component:ProfilecomponentComponent
+    component: ProfilecomponentComponent,
+    canActivate: [accessGuard]
   },
   {
     path: 'about',
