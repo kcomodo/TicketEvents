@@ -1,6 +1,6 @@
 import { CanActivateFn } from '@angular/router';
 import { inject } from '@angular/core';  // Used to inject services in standalone functions
-import { CustomerserviceService } from '../service/customerservice.service';  // Assuming you have an AuthService
+import { CustomerserviceService } from '../service/customerservice.service';  
 import { Router } from '@angular/router';
 
 export const accessGuard: CanActivateFn = (route, state) => {

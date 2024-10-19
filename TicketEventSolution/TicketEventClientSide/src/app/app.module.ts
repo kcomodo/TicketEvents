@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GuideComponent } from './components/guide/guide.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { RegisterComponent } from './components/register/register.component';
+import { TransitTrackerComponent } from './components/transit-tracker/transit-tracker.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { RegisterComponent } from './components/register/register.component';
     GuideComponent,
     DiscoverComponent,
     RegisterComponent,
+    TransitTrackerComponent,
   ],
   imports: [
     FormsModule,
