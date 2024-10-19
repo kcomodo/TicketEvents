@@ -8,20 +8,22 @@
   </div>
   <div class="container" *ngIf="isEditMode">
     <form>
-      <label>First Name: </label>
-      <input [(ngModel)]="firstname" />
+      <label>First Name</label>
+      <input matInput [(ngModel)]="firstname">
+    </form>
+
+    <form>
+      <label>Last Name</label>
+      <input matInput [(ngModel)]="lastname">
+    </form>
+
+    <form>
+      <label>Email</label>
+      <input matInput [(ngModel)]="email">
     </form>
     <form>
-      <label>Last Name: </label>
-      <input [(ngModel)]="lastname" />
-    </form>
-    <form>
-      <label>Email: </label>
-      <input [(ngModel)]="email" />
-    </form>
-    <form>
-      <label>Password: </label>
-      <input [(ngModel)]="password" />
+      <label>Password</label>
+      <input matInput [(ngModel)]="password" type="password">
     </form>
     <button (click)="saveChanges()">Save</button>
     <button (click)="toggleEditMode()">Cancel</button>
