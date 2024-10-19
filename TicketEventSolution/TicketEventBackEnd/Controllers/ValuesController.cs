@@ -92,9 +92,6 @@ namespace TicketEventBackEnd.Controllers
             _customerRepository.deleteCustomer(email);
             return Ok();
         }
-
-
-
         [HttpPost("ValidateLogin")]
         public async Task<IActionResult> ValidateLogin([FromBody] LoginForm loginRequest)
         {
@@ -129,25 +126,33 @@ namespace TicketEventBackEnd.Controllers
                 return Unauthorized(new { message = "Invalid email or password" });
             }
         }
+        
         [Authorize]
-        [HttpGet]
+        [HttpGet("GetCustomerEmail")]
         public IActionResult getCustomerEmail(string token)
         {
-             //need to decode JWT in order to get the email
+            //need to decode JWT in order to get the email
+            //same concept as generating, just need to extract the email claim
+            return Ok();
         }
-
+        
         [Authorize]
-        [HttpGet]
+        [HttpGet("GetAgencyLocation")]
         public async Task<IActionResult> getLocationBasedOnAgency(string siteToken, string agencyName)
         {
+            //You can find schedule based on agency
             //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+            return Ok();
         }
+        
         [Authorize]
-        [HttpGet]
+        [HttpGet("GetFeed")]
         public async Task<IActionResult> getFeedFromSite(string siteToken)
         {
             //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV //get feeds
+            return Ok();
         }
+        
         //use email as parameter to identify the user when the token is presented in the future requests
         private string generateJWTToken(string email)
         {

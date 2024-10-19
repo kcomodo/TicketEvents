@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\TicketEvents\\TicketEventSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\guards\\access.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\guards\\access.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\guards\\access.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\guards\\access.guard.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,32 +43,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAuwIIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T21:50:47.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "app-routing.module.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app-routing.module.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\app-routing.module.ts",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app-routing.module.ts",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\app-routing.module.ts",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-10-18T21:43:02.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "app.module.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app.module.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\app.module.ts",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\app.module.ts",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\app.module.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-10-18T21:42:52.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "access.guard.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\guards\\access.guard.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\guards\\access.guard.ts",

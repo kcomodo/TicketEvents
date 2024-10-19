@@ -8,7 +8,7 @@ import { GuideComponent } from './components/guide/guide.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { RegisterComponent }from './components/register/register.component';
 import { accessGuard } from './guards/access.guard';
-
+import { TransitTrackerComponent } from './components/transit-tracker/transit-tracker.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -21,6 +21,11 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfilecomponentComponent,
+    canActivate: [accessGuard]
+  },
+  {
+    path: 'transitEvent',
+    component: TransitTrackerComponent,
     canActivate: [accessGuard]
   },
   {

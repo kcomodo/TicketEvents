@@ -78,6 +78,12 @@ export class CustomerserviceService {
     //cookieService is a library that allows us to store the token
    return this.cookieService.get(this.tokenSaved) || null;
   }
+  // Need to decode token to recieve email
+  getEmail(token: string): string | null{
+    //replace this return later
+    return this.baseUrl;
+  }
+  
   isLoggedIn(): boolean {
     return this.isAuthenticated;
   }
