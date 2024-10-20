@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using System.Security.Claims;
+using static System.Net.WebRequestMethods;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TicketEventBackEnd.Controllers
@@ -131,11 +132,48 @@ namespace TicketEventBackEnd.Controllers
         [HttpGet("GetCustomerEmail")]
         public IActionResult getCustomerEmail(string token)
         {
-            //need to decode JWT in order to get the email
-            //same concept as generating, just need to extract the email claim
-            return Ok();
+            /*
+             STEPS:
+             Token handler 
+             Get key (secretkey)
+             Validate the token
+             Get email using FindFirst(ClaimTypes)
+             */
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes("YourSuperSecureKeyHereThatIsAtLeast32BytesLong");
+
+            try
+            {
+                // Validate the token
+                var principal = tokenHandler.ValidateToken(token, new TokenValidationParameters
+                {
+                    //Parameters used for token (Same as generating)
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = true,
+                    ValidIssuer = _issuer,
+                    ValidateAudience = true,
+                    ValidAudience = "https://localhost:7240",
+                    ValidateLifetime = true, // Ensure the token is not expired
+                    ClockSkew = TimeSpan.Zero
+                }, out SecurityToken validatedToken);
+
+                // Get the email claim
+                var emailClaim = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value; // or use JwtRegisteredClaimNames.Sub
+                if (emailClaim != null)
+                {
+                    return Ok(new { email = emailClaim });
+                }
+
+                return BadRequest("Email claim not found in token.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Token validation failed: {ex.Message}");
+            }
         }
-        
+
+
         [Authorize]
         [HttpGet("GetAgencyLocation")]
         public async Task<IActionResult> getLocationBasedOnAgency(string siteToken, string agencyName)

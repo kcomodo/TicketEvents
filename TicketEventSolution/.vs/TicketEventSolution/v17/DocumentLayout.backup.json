@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAuwIoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAwI4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T21:50:47.075Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\app-routing.module.ts",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-10-18T21:43:02.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T21:43:02.07Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\app.module.ts",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-10-18T21:42:52.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T21:42:52.63Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\guards\\access.guard.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-10-18T21:41:23.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T21:41:23.758Z"
             }
           ]
         }
