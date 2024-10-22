@@ -495,14 +495,18 @@ body {
 }
 
   @media(max-width: 320px) {
-
+    body {
+      min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+      margin: 0; /* Removes any default margin that might cause overflow */
+      width: 63vh;
+    }
     #containerIcon {
       position: absolute;
       background-image: url('Images/icon2.png');
       background-size: contain; /* Ensure the image scales to fit the container */
       background-position: center; /* Center the image in the div */
       background-repeat: no-repeat; /* Prevent the image from repeating */
-      width: 150px; /* Set a fixed width for the icon */
+      width: 200px; /* Set a fixed width for the icon */
       height: 150px; /* Set a fixed height for the icon */
       visibility: hidden;
       left: 300px;
@@ -515,7 +519,7 @@ body {
       justify-content: space-between;
       word-spacing: 0.5rem;
       background: #f2f2f2;
-      font-size: 8.5px;
+      font-size: 10.5px;
       margin: 30px;
       width: 88%;
       margin: 0 auto;
@@ -554,7 +558,11 @@ body {
   }
 
   @media(min-width:321px) and (max-width: 375px) {
-
+    body {
+      min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+      margin: 0; /* Removes any default margin that might cause overflow */
+      width: 67vh;
+    }
     #containerIcon {
       position: absolute;
       background-image: url('Images/icon2.png');
@@ -613,7 +621,11 @@ body {
   }
 
 @media (min-width: 376px) and (max-width: 425px) {
-
+  body {
+    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    margin: 0; /* Removes any default margin that might cause overflow */
+    width:69vh;
+  }
   #containerIcon {
     position: absolute;
     background-image: url('Images/icon2.png');
