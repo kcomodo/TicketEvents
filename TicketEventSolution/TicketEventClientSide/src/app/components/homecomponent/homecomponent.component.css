@@ -1088,7 +1088,7 @@ body {
     }
   }
 
-  @media(max-width: 1024px) { /*Laptop view*/
+  @media(max-width: 1024px) { /*1024 width 768 height Laptop view*/
 
 
     .buttonContainer {
@@ -1100,11 +1100,12 @@ body {
     .containerBox {
       background: #f2f2f2;
       position: absolute;
-      top: 25%;
+      top: 15%;
       left: 15%;
       border-radius: 20px;
       text-align: center;
-      height: 100px;
+      height: 200px;
+      width:300px;
     }
 
     .container {
@@ -1443,17 +1444,18 @@ body {
     }
   }
 
-  @media (min-width: 426px) and (max-width: 768px) { /*Tablet view*/
+  @media (min-width: 426px) and (max-width: 768px) { /*768 width 600 height Tablet view*/
     .containerBox {
       background: #f2f2f2;
       position: absolute;
-      top: 25%;
+      top: 15%;
       border-radius: 20px;
       text-align: center;
-      height: 150px;
-      left: 15%;
-      width:500px;
+      height: 100px;
+      left: 10%;
+      width:300px;
       padding: 15px; /* Add padding to give space between text and the border */
+      font-size:10px;
     }
 
     .buttonContainer {
@@ -1462,16 +1464,16 @@ body {
       justify-content: space-evenly;
     }
   }
-@media (min-width: 376px) and (max-width: 425px) {
+@media (min-width: 376px) and (max-width: 425px) { /*425 width 812 height Mobile L*/
   .containerBox {
     background: #f2f2f2;
     position: absolute;
     top: 25%;
     border-radius: 20px;
     text-align: center;
-    height: 150px;
-    left: 15%;
-    width: 400px;
+    height: 200px;
+    left: 10%;
+    width: 250px;
     padding: 15px; /* Add padding to give space between text and the border */
   }
 
@@ -1482,7 +1484,41 @@ body {
   }
 }
 
-@media(min-width:321px) and (max-width: 375px) {
+@media(min-width:321px) and (max-width: 375px) { /*375 width 667 height Mobile M*/
+  .containerBox {
+    background: #f2f2f2;
+    position: absolute;
+    top: 25%;
+    border-radius: 20px;
+    text-align: center;
+    height: 250px;
+    left: 10%;
+    width: 240px;
+    padding: 15px; /* Add padding to give space between text and the border */
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
-@media(max-width: 320px) {
+@media(max-width: 320px) { /*320 width 568 height Mobile S*/
+  .containerBox {
+    background: #f2f2f2;
+    position: absolute;
+    top: 25%;
+    border-radius: 20px;
+    text-align: center;
+    height: 260px;
+    left: 15%;
+    width: 200px;
+    padding: 15px; /* Add padding to give space between text and the border */
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }

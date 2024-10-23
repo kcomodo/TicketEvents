@@ -420,16 +420,20 @@ body {
 
 }
 @media(max-width: 1024px) {
-
+  body {
+    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    margin: 0; /* Removes any default margin that might cause overflow */
+    width: 79vh;
+  }
   #containerIcon {
     position: absolute;
     background-image: url('Images/icon2.png');
     background-size: contain; /* Ensure the image scales to fit the container */
     background-position: center; /* Center the image in the div */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    width: 130px; /* Set a fixed width for the icon */
+    width: 100px; /* Set a fixed width for the icon */
     height: 150px; /* Set a fixed height for the icon */
-    left: 2%;
+    left: 1%;
     top: -35px;
   }
   /*stylize both nav bars inside of navigationBar*/
@@ -439,9 +443,9 @@ body {
     justify-content: space-between;
     word-spacing: 1.2rem;
     background: #f2f2f2;
-    font-size: 20px;
+    font-size: 15px;
     margin: 30px;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     border-radius: 0.5rem;
   }
@@ -494,138 +498,78 @@ body {
   }
 }
 
-  @media(max-width: 320px) {
-    body {
-      min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
-      margin: 0; /* Removes any default margin that might cause overflow */
-      width: 63vh;
-    }
-    #containerIcon {
-      position: absolute;
-      background-image: url('Images/icon2.png');
-      background-size: contain; /* Ensure the image scales to fit the container */
-      background-position: center; /* Center the image in the div */
-      background-repeat: no-repeat; /* Prevent the image from repeating */
-      width: 200px; /* Set a fixed width for the icon */
-      height: 150px; /* Set a fixed height for the icon */
-      visibility: hidden;
-      left: 300px;
-      top: -35px;
-    }
-    /*stylize both nav bars inside of navigationBar*/
-    .navigationBar {
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      word-spacing: 0.5rem;
-      background: #f2f2f2;
-      font-size: 10.5px;
-      margin: 30px;
-      width: 88%;
-      margin: 0 auto;
-      border-radius: 0.5rem;
-    }
-      /*
+
+
+
+
+@media (min-width: 426px) and (max-width: 768px) {
+  body {
+    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    margin: 0; /* Removes any default margin that might cause overflow */
+    width: 75vh;
+  }
+  #containerIcon {
+    position: absolute;
+    background-image: url('Images/icon2.png');
+    background-size: contain; /* Ensure the image scales to fit the container */
+    background-position: center; /* Center the image in the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 75px; /* Set a fixed width for the icon */
+    height: 150px; /* Set a fixed height for the icon */
+    left: 1%;
+    top: -35px;
+  }
+  /*stylize both nav bars inside of navigationBar*/
+  .navigationBar {
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    word-spacing: 0.5rem;
+    background: #f2f2f2;
+    font-size: 13px;
+    margin: 30px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+  }
+    /*
     style anything under the a tag in navigationBar
 */
-      .navigationBar a {
-        text-decoration: none;
-        color: black;
-      }
-
-        .navigationBar a:hover {
-          color: skyblue;
-        }
-
-    a:visited {
-      color: none;
+    .navigationBar a {
+      text-decoration: none;
+      color: black;
     }
 
-    @keyframes fadeOut {
-      0% {
-        opacity: 1;
+      .navigationBar a:hover {
+        color: skyblue;
       }
 
-      100% {
-        opacity: 0;
-      }
+  a:visited {
+    color: none;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
     }
 
-    .fade-out {
-      animation: 3s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
-      animation-iteration-count: 1; /* Ensure the animation runs only once */
+    100% {
+      opacity: 0;
     }
   }
 
-  @media(min-width:321px) and (max-width: 375px) {
-    body {
-      min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
-      margin: 0; /* Removes any default margin that might cause overflow */
-      width: 67vh;
-    }
-    #containerIcon {
-      position: absolute;
-      background-image: url('Images/icon2.png');
-      background-size: contain; /* Ensure the image scales to fit the container */
-      background-position: center; /* Center the image in the div */
-      background-repeat: no-repeat; /* Prevent the image from repeating */
-      width: 150px; /* Set a fixed width for the icon */
-      height: 150px; /* Set a fixed height for the icon */
-      visibility: hidden;
-      left: 300px;
-      top: -35px;
-    }
-    /*stylize both nav bars inside of navigationBar*/
-    .navigationBar {
-      padding: 13px;
-      display: flex;
-      justify-content: space-between;
-      word-spacing: 0.5rem;
-      background: #f2f2f2;
-      font-size: 9px;
-      margin: 30px;
-      width: 88%;
-      margin: 0 auto;
-      border-radius: 0.5rem;
-    }
-      /*
-    style anything under the a tag in navigationBar
-*/
-      .navigationBar a {
-        text-decoration: none;
-        color: black;
-      }
-
-        .navigationBar a:hover {
-          color: skyblue;
-        }
-
-    a:visited {
-      color: none;
-    }
-
-    @keyframes fadeOut {
-      0% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0;
-      }
-    }
-
-    .fade-out {
-      animation: 3s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
-      animation-iteration-count: 1; /* Ensure the animation runs only once */
-    }
+  .fade-out {
+    animation: 3s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
+    animation-iteration-count: 1; /* Ensure the animation runs only once */
   }
-
+}
 @media (min-width: 376px) and (max-width: 425px) {
   body {
     min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width:69vh;
+    width: 41vh;
   }
+
   #containerIcon {
     position: absolute;
     background-image: url('Images/icon2.png');
@@ -634,7 +578,7 @@ body {
     background-repeat: no-repeat; /* Prevent the image from repeating */
     width: 150px; /* Set a fixed width for the icon */
     height: 150px; /* Set a fixed height for the icon */
-    visibility:hidden;
+    visibility: hidden;
     left: 1%;
     top: -35px;
   }
@@ -682,8 +626,12 @@ body {
     animation-iteration-count: 1; /* Ensure the animation runs only once */
   }
 }
-
-@media (min-width: 426px) and (max-width: 768px) {
+@media(min-width:321px) and (max-width: 375px) {
+  body {
+    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    margin: 0; /* Removes any default margin that might cause overflow */
+    width: 48vh;
+  }
 
   #containerIcon {
     position: absolute;
@@ -691,9 +639,10 @@ body {
     background-size: contain; /* Ensure the image scales to fit the container */
     background-position: center; /* Center the image in the div */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    width: 100px; /* Set a fixed width for the icon */
+    width: 150px; /* Set a fixed width for the icon */
     height: 150px; /* Set a fixed height for the icon */
-    left: 1.7%;
+    visibility: hidden;
+    left: 300px;
     top: -35px;
   }
   /*stylize both nav bars inside of navigationBar*/
@@ -703,9 +652,72 @@ body {
     justify-content: space-between;
     word-spacing: 0.5rem;
     background: #f2f2f2;
-    font-size: 18px;
+    font-size: 9px;
     margin: 30px;
-    width: 70%;
+    width: 88%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+  }
+    /*
+    style anything under the a tag in navigationBar
+*/
+    .navigationBar a {
+      text-decoration: none;
+      color: black;
+    }
+
+      .navigationBar a:hover {
+        color: skyblue;
+      }
+
+  a:visited {
+    color: none;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .fade-out {
+    animation: 3s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
+    animation-iteration-count: 1; /* Ensure the animation runs only once */
+  }
+}
+@media(max-width: 320px) {
+  body {
+    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    margin: 0; /* Removes any default margin that might cause overflow */
+    width: 53vh;
+  }
+
+  #containerIcon {
+    position: absolute;
+    background-image: url('Images/icon2.png');
+    background-size: contain; /* Ensure the image scales to fit the container */
+    background-position: center; /* Center the image in the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: 200px; /* Set a fixed width for the icon */
+    height: 150px; /* Set a fixed height for the icon */
+    visibility: hidden;
+    left: 300px;
+    top: -35px;
+  }
+  /*stylize both nav bars inside of navigationBar*/
+  .navigationBar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    word-spacing: 0.5rem;
+    background: #f2f2f2;
+    font-size: 10.5px;
+    margin: 30px;
+    width: 88%;
     margin: 0 auto;
     border-radius: 0.5rem;
   }
