@@ -506,7 +506,7 @@ body {
   body {
     min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width: 75vh;
+    width: 125vh;
   }
   #containerIcon {
     position: absolute;
@@ -567,20 +567,11 @@ body {
   body {
     min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width: 41vh;
+    width: 55vh;
   }
 
   #containerIcon {
-    position: absolute;
-    background-image: url('Images/icon2.png');
-    background-size: contain; /* Ensure the image scales to fit the container */
-    background-position: center; /* Center the image in the div */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    width: 150px; /* Set a fixed width for the icon */
-    height: 150px; /* Set a fixed height for the icon */
     visibility: hidden;
-    left: 1%;
-    top: -35px;
   }
   /*stylize both nav bars inside of navigationBar*/
   .navigationBar {
@@ -630,20 +621,11 @@ body {
   body {
     min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width: 48vh;
+    width: 59vh;
   }
 
   #containerIcon {
-    position: absolute;
-    background-image: url('Images/icon2.png');
-    background-size: contain; /* Ensure the image scales to fit the container */
-    background-position: center; /* Center the image in the div */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    width: 150px; /* Set a fixed width for the icon */
-    height: 150px; /* Set a fixed height for the icon */
     visibility: hidden;
-    left: 300px;
-    top: -35px;
   }
   /*stylize both nav bars inside of navigationBar*/
   .navigationBar {
@@ -697,16 +679,7 @@ body {
   }
 
   #containerIcon {
-    position: absolute;
-    background-image: url('Images/icon2.png');
-    background-size: contain; /* Ensure the image scales to fit the container */
-    background-position: center; /* Center the image in the div */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    width: 200px; /* Set a fixed width for the icon */
-    height: 150px; /* Set a fixed height for the icon */
     visibility: hidden;
-    left: 300px;
-    top: -35px;
   }
   /*stylize both nav bars inside of navigationBar*/
   .navigationBar {
