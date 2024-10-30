@@ -423,7 +423,7 @@ body {
   body {
     min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width: 79vh;
+    width: 130vh;
   }
   #containerIcon {
     position: absolute;

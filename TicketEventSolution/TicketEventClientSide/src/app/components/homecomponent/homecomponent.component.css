@@ -1101,7 +1101,7 @@ body {
       background: #f2f2f2;
       position: absolute;
       top: 15%;
-      left: 15%;
+      left: 33%;
       border-radius: 20px;
       text-align: center;
       height: 200px;
@@ -1113,7 +1113,7 @@ body {
       background-color: #f0ead2;
       left: 0px;
       top: 0px;
-      width: 50%;
+      width: 100%;
       height: 100%;
       animation: 4.5s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
       animation-iteration-count: 1; /* Ensure the animation runs only once */
@@ -1124,8 +1124,8 @@ body {
       width: 400px;
       height: 80vh;
       overflow: hidden;
-      left: 40%;
-      top: 100px;
+      left: 30%;
+      top: 50px;
     }
 
     .track {
@@ -1448,7 +1448,7 @@ body {
     .containerBox {
       background: #f2f2f2;
       position: absolute;
-      top: 15%;
+      top: 30%;
       border-radius: 20px;
       text-align: center;
       height: 100px;
@@ -1462,6 +1462,349 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+    }
+    .containerBox2 {
+      background: #cfd3d4;
+      color: black;
+      height: 100vh;
+      width: 99.14%;
+      position: relative;
+    }
+
+    .container {
+      position: absolute;
+      background-color: #f0ead2;
+      left: 0%;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      animation: 2.5s fadeOut forwards; /* 'forwards' keeps the final state after the animation ends */
+      animation-iteration-count: 1; /* Ensure the animation runs only once */
+      z-index: 1;
+    }
+
+    .IntroTitle {
+      position: relative;
+      left: 150px;
+      top: 10%;
+    }
+
+    .content {
+      position: relative;
+      width: 400px;
+      left: 22%;
+      top:0%;
+    }
+
+    .track {
+      position: absolute;
+      width: 400px;
+      height: 5px;
+      background-color: #333;
+      top: 300px;
+    }
+
+      .track:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        background-color: #333;
+        top: 4px;
+        box-shadow: 20px 0 #333, -10px 0 #333, -40px 0 #333, -60px 0 #333, -80px 0 #333, 40px 0 #333, 60px 0 #333, 80px 0 #333, 100px 0 #333, 120px 0 #333, 140px 0 #333, 160px 0 #333, 180px 0 #333, 200px 0 #333, 220px 0 #333, 240px 0 #333, 260px 0 #333, 280px 0 #333, 300px 0 #333, 320px 0 #333, 340px 0 #333, 360px 0 #333, 380px 0 #333, 400px 0 #333, 420px 0 #333, 440px 0 #333, -100px 0 #333, -120px 0 #333, -140px 0 #333, 460px 0 #333, 480px 0 #333;
+        animation: move 2s linear infinite reverse;
+      }
+
+    @keyframes move {
+      from {
+        left: -100px;
+      }
+
+      to {
+        left: 100px;
+      }
+    }
+
+
+
+    .train {
+      position: absolute;
+      width: 50px;
+      height: 30px;
+      border: 5px solid #333;
+      background-color: #9e2a2b;
+      border-radius: 0 10px 0 0;
+      top: 230px;
+      left: 285px;
+      animation: scale 1s linear infinite;
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scaleY(1);
+      }
+
+      50% {
+        transform: scaleY(0.99);
+      }
+
+      100% {
+        transform: scaleY(1);
+      }
+    }
+
+    .train:before {
+      content: "";
+      position: absolute;
+      border: 5px solid #333;
+      background-color: #335c67;
+      width: 35px;
+      height: 60px;
+      left: -45px;
+      top: -35px;
+    }
+
+    .train:after {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 5px;
+      border-radius: 10px;
+      border: 5px solid #333;
+      background-color: #fff3b0;
+      top: 30px;
+      left: -50px;
+    }
+
+    .front {
+      position: absolute;
+      border: 5px solid #333;
+      background-color: #aed9e0;
+      box-shadow: inset 2px -5px rgba(255,255,255,0.3);
+      width: 20px;
+      height: 30px;
+      left: -37.5px;
+      top: -20px;
+    }
+
+      .front:before {
+        content: "";
+        position: absolute;
+        background-color: #333;
+        width: 15px;
+        height: 5px;
+        border-radius: 10px;
+        top: 25px;
+        left: 70px;
+        box-shadow: 0px 10px #333, -50px -45px #333, -86px -45px #333, -22px -41px #333,-11px -41px #333;
+      }
+
+      .front:after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 20px;
+        border: 5px solid #333;
+        left: 50px;
+        top: -16px;
+        background-color: #adb5bd;
+      }
+
+    .wheels {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .smallOne, .smallTwo, .smallThree, .smallFour, .smallFive, .smallSix {
+      position: absolute;
+      border: 5px solid #333;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      top: 40px;
+      background-color: #e09f3e;
+      box-shadow: inset 2px 2px white;
+      z-index: 2;
+    }
+
+    .smallOne {
+      left: 30px;
+      animation: spin .5s infinite linear;
+    }
+
+    .smallTwo {
+      left: 0;
+      animation: spin .5s infinite linear;
+    }
+
+    .smallThree {
+      left: -225px;
+      animation: spin .5s infinite linear;
+    }
+
+    .smallFour {
+      left: -190px;
+      animation: spin .5s infinite linear;
+    }
+
+    .smallFive {
+      left: -130px;
+      animation: spin .5s infinite linear;
+    }
+
+    .smallSix {
+      left: -95px;
+      animation: spin .5s infinite linear;
+    }
+
+    .big {
+      position: absolute;
+      border: 5px solid #333;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      background-color: #e09f3e;
+      box-shadow: inset 2px 2px white;
+      top: 30px;
+      left: -40px;
+      animation: spin .5s infinite linear;
+    }
+
+    .cord {
+      position: absolute;
+      width: 10px;
+      height: 5px;
+      background-color: #333;
+      top: 35px;
+      left: -59px;
+      z-index: 3;
+    }
+
+      .cord:before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 70px;
+        background-color: #333;
+        top: 15px;
+        left: 35px;
+      }
+
+      .cord:after {
+        content: "";
+        position: absolute;
+        background-color: #333;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        top: 5px;
+        left: 29px;
+      }
+
+    .coach {
+      position: absolute;
+      width: 80px;
+      height: 60px;
+      border: 5px solid #333;
+      background-color: #9e2a2b;
+      left: -145px;
+      top: -20px;
+    }
+
+      .coach:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        background-color: #333;
+        top: 50px;
+        left: -15px;
+      }
+
+      .coach:after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 60px;
+        border: 5px solid #333;
+        background-color: #335c67;
+        top: -5px;
+        left: -100px;
+      }
+
+    .coachTwo {
+      position: absolute;
+      border: 5px solid #333;
+      background-color: #aed9e0;
+      box-shadow: inset 2px -5px rgba(255,255,255,0.3);
+      width: 15px;
+      height: 25px;
+      left: -225px;
+      top: -5px;
+    }
+
+      .coachTwo:before, .coachTwo:after {
+        content: "";
+        position: absolute;
+        border: 5px solid #333;
+        background-color: #aed9e0;
+        box-shadow: inset 2px -5px rgba(255,255,255,0.3);
+        width: 15px;
+        height: 25px;
+        top: -5px;
+      }
+
+      .coachTwo:before {
+        left: 30px;
+      }
+
+      .coachTwo:after {
+        left: 90px;
+      }
+
+    .windows {
+      position: absolute;
+      border: 5px solid #333;
+      background-color: #aed9e0;
+      box-shadow: inset 2px -5px rgba(255,255,255,0.3);
+      width: 15px;
+      height: 25px;
+      left: -95px;
+      top: -5px;
+      z-index: 6;
+    }
+
+      .windows:before {
+        content: "";
+        position: absolute;
+        background-color: #333;
+        height: 5px;
+        width: 95px;
+        border-radius: 10px;
+        top: -20px;
+        left: -153px;
+        box-shadow: 95px 0px #333;
+      }
+
+      .windows:after {
+        content: "";
+        position: absolute;
+        background-color: #333;
+        height: 5px;
+        width: 40px;
+        top: 51px;
+        left: -125px;
+        box-shadow: 95px 0 #333;
+      }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
 @media (min-width: 376px) and (max-width: 425px) { /*425 width 812 height Mobile L*/
