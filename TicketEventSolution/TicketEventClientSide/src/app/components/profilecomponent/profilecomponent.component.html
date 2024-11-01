@@ -4,7 +4,7 @@
     <p>Last Name: {{lastname}}</p>
     <p>Email: {{email}}</p>
     <p>Password: {{password}}</p>
-    <button (click)="toggleEditMode()">Edit</button>
+    <button (click)="toggleEditMode()">Edit Account</button>
   </div>
   <div class="container" *ngIf="isEditMode">
     <form>
@@ -28,8 +28,17 @@
     <button (click)="saveChanges()">Save</button>
     <button (click)="toggleEditMode()">Cancel</button>
   </div>
-  <div class="tokenContainer">
+  <div class="tokenContainer" *ngIf="!isEditToken">
     <p>Please enter your token: </p>
     <p>Token: {{eventToken}}</p>
+    <button (click)="toggleTokenEdit()">Edit Token</button>
   </div>
-</div>
+  <div class="container" *ngIf="isEditToken">
+    <form>
+      <label>Token</label>
+      <input matInput [(ngModel)]="eventToken">
+    </form>
+    <button (click)="saveToken()">Save Token</button>
+    <button (click)="toggleTokenEdit()">Cancel</button>
+  </div>
+  </div>

@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerserviceService {
+export class CustomerserviceService implements OnInit{
   
   //default url for the api which is swagger
   private token: string | null = null;
@@ -20,7 +20,12 @@ export class CustomerserviceService {
   private tokenSaved = 'tokenSaved';
   constructor(private http: HttpClient, private cookieService: CookieService) {
   }
-  
+  ngOnInit() {
+    if (this.getToken() != null) {
+      this.isAuthenticated = true;
+      // console.log("the token is true, will stay on customer info page: ", this.isAuthenticated);
+    }
+  }
   validateLogin(email: string, password: string): Observable<boolean>
   {
     console.log("customer service now: ", email, password);
@@ -79,9 +84,12 @@ export class CustomerserviceService {
    return this.cookieService.get(this.tokenSaved) || null;
   }
   // Need to decode token to recieve email
-  getEmail(token: string): string | null{
+  getEmail(): Observable<string>{
     //replace this return later
-    return this.baseUrl;
+    const body = {};
+    this.token = this.cookieService.get(this.tokenSaved);
+    return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail?email=${this.token}`, body);
+
   }
   
   isLoggedIn(): boolean {
