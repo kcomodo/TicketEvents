@@ -84,12 +84,28 @@ export class CustomerserviceService implements OnInit{
    return this.cookieService.get(this.tokenSaved) || null;
   }
   // Need to decode token to recieve email
-  getEmail(): Observable<string>{
+  /*
+  getEmail(): Observable<any>{
     //replace this return later
     const body = {};
-    this.token = this.cookieService.get(this.tokenSaved);
-    return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail?email=${this.token}`, body);
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`
+    });
+    console.log("service token: ", this.token);
+    console.log("Header:",headers);
+    
+    //return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail?email=${this.token}`, body);
+    return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
+  }
+  */
+  getEmail(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`
+    });
+    console.log("Service token: ", this.token);
+    console.log("Header:", headers);
 
+    return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
   }
   
   isLoggedIn(): boolean {

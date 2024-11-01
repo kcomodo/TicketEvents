@@ -127,10 +127,10 @@ namespace TicketEventBackEnd.Controllers
                 return Unauthorized(new { message = "Invalid email or password" });
             }
         }
-        
+
         [Authorize]
         [HttpGet("GetCustomerEmail")]
-        public IActionResult getCustomerEmail(string token)
+        public IActionResult GetCustomerEmail()
         {
             /*
              STEPS:
@@ -144,14 +144,22 @@ namespace TicketEventBackEnd.Controllers
 
             try
             {
-                // Validate the token
-                var principal = tokenHandler.ValidateToken(token, new TokenValidationParameters
+                // Get the token from the Authorization header
+                var authHeader = HttpContext.Request.Headers["Authorization"].ToString();
+                var checktoken = authHeader.StartsWith("Bearer ") ? authHeader.Substring("Bearer ".Length).Trim() : null;
+
+                if (string.IsNullOrEmpty(checktoken))
                 {
-                    //Parameters used for token (Same as generating)
+                    return BadRequest("Token is missing.");
+                }
+
+                // Validate the token
+                var principal = tokenHandler.ValidateToken(checktoken, new TokenValidationParameters
+                {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = true,
-                    ValidIssuer = _issuer,
+                    ValidIssuer = "https://localhost:7240", // or your _issuer if defined
                     ValidateAudience = true,
                     ValidAudience = "https://localhost:7240",
                     ValidateLifetime = true, // Ensure the token is not expired
@@ -159,7 +167,7 @@ namespace TicketEventBackEnd.Controllers
                 }, out SecurityToken validatedToken);
 
                 // Get the email claim
-                var emailClaim = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value; // or use JwtRegisteredClaimNames.Sub
+                var emailClaim = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value; // or JwtRegisteredClaimNames.Sub
                 if (emailClaim != null)
                 {
                     return Ok(new { email = emailClaim });
@@ -172,6 +180,7 @@ namespace TicketEventBackEnd.Controllers
                 return BadRequest($"Token validation failed: {ex.Message}");
             }
         }
+
 
 
         [Authorize]
