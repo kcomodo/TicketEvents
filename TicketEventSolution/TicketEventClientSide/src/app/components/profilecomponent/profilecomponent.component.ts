@@ -16,12 +16,33 @@ export class ProfilecomponentComponent implements OnInit{
   lastname: string = "UNDEFINED";
   email: string = "UNDEFINED";
   password: string = "UNDEFINED";
-  eventToken: string = "UNDEFINED";
+  eventToken: string | null = "UNDEFINED";
+  token: string | null = "UNDEFINED";
   ngOnInit() {
+
     //get email then get info
+    /*
     this.customerService.getEmail().subscribe(email => {
       this.eventToken = email;
     })
+    */
+    this.token = this.customerService.getToken()
+    console.log("profile token: ",this.token);
+   /*
+    this.customerService.getEmail().subscribe(email => {
+      this.email = email;
+    })
+    */
+    // console.log(this.customerService.getEmail().subscribe(email => { this.email = email }));
+    this.customerService.getEmail().subscribe(
+      response => {
+        this.email = response.email; // Assuming response has an `email` field
+      },
+      error => {
+        console.error("Error fetching email:", error);
+      }
+    );
+    console.log("profile email: ",this.email);
   }
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
