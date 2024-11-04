@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAkwLYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T14:21:49.995Z",
               "EditorCaption": ""
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAmwGwAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAmwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-11-01T14:19:43.813Z",
               "EditorCaption": ""
@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwCwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwCAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-11-01T14:12:37.163Z",
               "EditorCaption": ""
@@ -87,10 +87,9 @@
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.html",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.html",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-01T14:11:30.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T14:11:30.677Z"
             }
           ]
         }

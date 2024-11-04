@@ -21,19 +21,8 @@ export class ProfilecomponentComponent implements OnInit{
   ngOnInit() {
 
     //get email then get info
-    /*
-    this.customerService.getEmail().subscribe(email => {
-      this.eventToken = email;
-    })
-    */
     this.token = this.customerService.getToken()
     console.log("profile token: ",this.token);
-   /*
-    this.customerService.getEmail().subscribe(email => {
-      this.email = email;
-    })
-    */
-    // console.log(this.customerService.getEmail().subscribe(email => { this.email = email }));
     this.customerService.getEmail().subscribe(
       response => {
         this.email = response.email; // Assuming response has an `email` field
@@ -42,7 +31,9 @@ export class ProfilecomponentComponent implements OnInit{
         console.error("Error fetching email:", error);
       }
     );
-    console.log("profile email: ",this.email);
+    console.log("profile email: ", this.email);
+    const updatedInfo = {};
+    this.customerService.getCustomerInfoByEmail(this.email);
   }
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
