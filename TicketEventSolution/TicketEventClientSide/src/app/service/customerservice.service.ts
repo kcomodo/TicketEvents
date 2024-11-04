@@ -84,20 +84,6 @@ export class CustomerserviceService implements OnInit{
    return this.cookieService.get(this.tokenSaved) || null;
   }
   // Need to decode token to recieve email
-  /*
-  getEmail(): Observable<any>{
-    //replace this return later
-    const body = {};
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.token}`
-    });
-    console.log("service token: ", this.token);
-    console.log("Header:",headers);
-    
-    //return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail?email=${this.token}`, body);
-    return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
-  }
-  */
   getEmail(): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
@@ -107,7 +93,13 @@ export class CustomerserviceService implements OnInit{
 
     return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
   }
-  
+  getCustomerByEmail(email: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`
+    });
+
+    return this.http.get<any>(`${this.baseUrl}/GetCustomerByEmail?email=${email}`, { headers });
+  }
   isLoggedIn(): boolean {
     return this.isAuthenticated;
   }

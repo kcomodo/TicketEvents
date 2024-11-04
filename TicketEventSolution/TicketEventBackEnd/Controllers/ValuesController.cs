@@ -66,6 +66,12 @@ namespace TicketEventBackEnd.Controllers
         [HttpGet("GetCustomerByEmail")]
         public async Task<IActionResult> GetCustomerByEmail(string email)
         {
+            var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (tokenEmail != email)
+            {
+                return Forbid("The email in the token does not match the requested email.");
+            }
             CustomerModel customer = await _customerRepository.getCustomerInfo(email);
             if (customer == null)
             {
