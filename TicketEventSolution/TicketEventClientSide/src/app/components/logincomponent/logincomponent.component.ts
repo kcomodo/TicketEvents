@@ -32,10 +32,11 @@ export class LogincomponentComponent {
 
             });
 
-          this.emailService.setEmail(this.email);
+         
           */
+          this.customerService.setEmail(this.email);
           // console.log("Login successful, Email saved:", this.emailService.getEmail());
-          this.router.navigate(['/home']);
+          this.router.navigate(['/profile']);
         }
 
       },

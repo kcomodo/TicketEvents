@@ -8,32 +8,23 @@ import { CustomerserviceService } from '../../service/customerservice.service'
 })
 
 
-export class ProfilecomponentComponent implements OnInit{
+export class ProfilecomponentComponent implements OnInit {
   constructor(private customerService: CustomerserviceService) { }
   isEditMode: boolean = false;
   isEditToken: boolean = false;
-  firstname: string = "UNDEFINED";
-  lastname: string = "UNDEFINED";
-  email: string = "UNDEFINED";
-  password: string = "UNDEFINED";
+  firstname: string = "";
+  lastname: string = "";
+  email: string = "";
+  password: string = "";
   eventToken: string | null = "UNDEFINED";
   token: string | null = "UNDEFINED";
   ngOnInit() {
 
     //get email then get info
-    this.token = this.customerService.getToken()
-    console.log("profile token: ",this.token);
-    this.customerService.getEmail().subscribe(
-      response => {
-        this.email = response.email; // Assuming response has an `email` field
-      },
-      error => {
-        console.error("Error fetching email:", error);
-      }
-    );
-    console.log("profile email: ", this.email);
-    const updatedInfo = {};
-    this.customerService.getCustomerInfoByEmail(this.email);
+    this.grabInfo();
+    this.email = this.customerService.getEmailSaved();
+    console.log("email saved:", this.email);
+    this.displayInfo();
   }
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
@@ -42,21 +33,46 @@ export class ProfilecomponentComponent implements OnInit{
   toggleTokenEdit() {
     this.isEditToken = !this.isEditToken;
   }
+  
   saveChanges() {
     const updatedInfo = {
       firstname: this.firstname,
       lastname: this.lastname,
       email: this.email,
       password: this.password,
-      
+
     }
     //console.log("Edit clicked: ", this.isEditMode);
   }
+  
   saveToken() {
     const updateToken = {
       eventToken: this.eventToken
     }
-    
+
+  }
+  grabInfo() {
+    this.token = this.customerService.getToken()
+    console.log("profile token: ", this.token);
+    this.customerService.getEmail().subscribe(
+      response => {
+        this.email = response.email; // Assuming response has an `email` field
+        this.customerService.setEmail(this.email);
+      },
+      error => {
+        console.error("Error fetching email:", error);
+      }
+
+    );
+
+  }
+  displayInfo() {
+    this.customerService.getCustomerInfoByEmail(this.email).subscribe((response) => {
+      console.log(response.firstname, response.lastname, response.password, response.email);
+      this.firstname = response.firstname;
+      this.lastname = response.lastname;
+      this.password = response.password;
+    });
   }
 }
 
