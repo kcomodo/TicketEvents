@@ -72,7 +72,7 @@ namespace TicketEventBackEnd.Controllers
             {
                 return Forbid("The email in the token does not match the requested email.");
             }
-            CustomerModel customer = await _customerRepository.getCustomerInfo(email);
+            var customer = await _customerRepository.getCustomerInfo(email);
             if (customer == null)
             {
                 return NotFound(new { message = "Customer not found." });

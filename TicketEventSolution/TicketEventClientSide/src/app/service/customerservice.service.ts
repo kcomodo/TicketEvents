@@ -11,13 +11,15 @@ import { Component, OnInit } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerserviceService implements OnInit{
-  
+export class CustomerserviceService implements OnInit {
+
   //default url for the api which is swagger
   private token: string | null = null;
   private isAuthenticated = false;
   private baseUrl = "https://localhost:7240/api/Values";
   private tokenSaved = 'tokenSaved';
+  private emailSaved = 'emailSaved';
+  private email: string | null = null;
   constructor(private http: HttpClient, private cookieService: CookieService) {
   }
   ngOnInit() {
@@ -93,12 +95,24 @@ export class CustomerserviceService implements OnInit{
 
     return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
   }
-  getCustomerByEmail(email: string): Observable<any> {
+  getCustomerInfoByEmail(email: string): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
 
-    return this.http.get<any>(`${this.baseUrl}/GetCustomerByEmail?email=${email}`, { headers });
+    return this.http.get<any>(`${this.baseUrl}/GetCustomerByEmail?email=${email}`, { headers }).pipe(
+      tap(response => {
+        console.log('Received customer response:', response); // Log the response from the server
+      })
+    );
+  }
+  setEmail(email: string): void {
+    this.cookieService.set(this.emailSaved, email, { path: '/' }); // Save email in cookie
+  }
+
+  getEmailSaved(): string {
+    return this.cookieService.get(this.emailSaved);
+
   }
   isLoggedIn(): boolean {
     return this.isAuthenticated;
@@ -107,5 +121,6 @@ export class CustomerserviceService implements OnInit{
     this.isAuthenticated = false;
     this.token = null;
     this.cookieService.delete(this.tokenSaved, '/');
+    this.cookieService.delete(this.emailSaved, '/');
   }
 }
