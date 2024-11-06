@@ -2280,7 +2280,8 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "MySql.Data": "9.0.0",
           "Swashbuckle.AspNetCore": "6.7.3",
-          "System.IdentityModel.Tokens.Jwt": "8.0.2"
+          "System.IdentityModel.Tokens.Jwt": "8.0.2",
+          "TicketEventClientSide": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TicketEventBackEnd.dll": {}
@@ -2291,6 +2292,15 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "TicketEventClientSide/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/TicketEventClientSide.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketEventClientSide.dll": {}
+        }
       }
     }
   },
@@ -7237,6 +7247,11 @@
       "type": "project",
       "path": "../TicketEventBackEnd/TicketEventBackEnd.csproj",
       "msbuildProject": "../TicketEventBackEnd/TicketEventBackEnd.csproj"
+    },
+    "TicketEventClientSide/1.0.0": {
+      "type": "project",
+      "path": "../TicketEventClientSide/TicketEventClientSide.esproj",
+      "msbuildProject": "../TicketEventClientSide/TicketEventClientSide.esproj"
     }
   },
   "projectFileDependencyGroups": {

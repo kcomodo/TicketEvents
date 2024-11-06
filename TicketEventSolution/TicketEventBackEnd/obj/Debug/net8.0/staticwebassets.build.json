@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "Xz7s1y9Xu/JSvgj9hLHVEBWnfDNNmXpGmp3eVQueviE=",
+  "Hash": "8k7sBPlYRXdFWWFGGAZabte3X10BSQNzbnF8+PaEeJk=",
   "Source": "TicketEventBackEnd",
   "BasePath": "_content/TicketEventBackEnd",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
+      "Version": 2,
+      "Source": "TicketEventClientSide",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }
