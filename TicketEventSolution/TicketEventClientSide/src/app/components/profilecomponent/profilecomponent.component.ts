@@ -1,6 +1,5 @@
 import { Component , OnInit} from '@angular/core';
-import { CustomerserviceService } from '../../service/customerservice.service'
-
+import { CustomerserviceService } from '../../service/customerservice.service';
 @Component({
   selector: 'app-profilecomponent',
   templateUrl: './profilecomponent.component.html',
@@ -12,10 +11,11 @@ export class ProfilecomponentComponent implements OnInit {
   constructor(private customerService: CustomerserviceService) { }
   isEditMode: boolean = false;
   isEditToken: boolean = false;
-  firstname: string = "";
-  lastname: string = "";
+  firstname: string | null= "";
+  lastname: string | null= "";
   email: string = "";
   password: string = "";
+  customerId: string = "";
   eventToken: string | null = "UNDEFINED";
   token: string | null = "UNDEFINED";
   ngOnInit() {
@@ -67,12 +67,28 @@ export class ProfilecomponentComponent implements OnInit {
 
   }
   displayInfo() {
+    // console.log("Console log:" ,this.customerService.getCustomerInfoByEmail(this.email));
+   /*
     this.customerService.getCustomerInfoByEmail(this.email).subscribe((response) => {
       console.log(response.firstname, response.lastname, response.password, response.email);
       this.firstname = response.firstname;
       this.lastname = response.lastname;
       this.password = response.password;
     });
+    */
+  
+    this.customerService.getCustomerInfoByEmail(this.email).subscribe(
+      (data) => {
+        console.log('Customer data received in component:', data);
+        this.firstname = data.firstName;
+        this.lastname = data.firstName;
+        this.password = data.password;
+        console.log("checkpoint", this.customerId ,this.firstname, this.lastname, this.password);
+      },
+      (error) => {
+        console.error('Error fetching customer data:', error);
+      }
+    );
   }
 }
 

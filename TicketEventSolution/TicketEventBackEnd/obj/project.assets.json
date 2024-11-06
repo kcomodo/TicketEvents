@@ -692,6 +692,15 @@
         "runtime": {
           "lib/net8.0/ZstdSharp.dll": {}
         }
+      },
+      "TicketEventClientSide/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/TicketEventClientSide.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketEventClientSide.dll": {}
+        }
       }
     }
   },
@@ -2336,6 +2345,11 @@
         "zstdsharp.port.0.8.0.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "TicketEventClientSide/1.0.0": {
+      "type": "project",
+      "path": "../TicketEventClientSide/TicketEventClientSide.esproj",
+      "msbuildProject": "../TicketEventClientSide/TicketEventClientSide.esproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2343,7 +2357,8 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.8",
       "MySql.Data >= 9.0.0",
       "Swashbuckle.AspNetCore >= 6.7.3",
-      "System.IdentityModel.Tokens.Jwt >= 8.0.2"
+      "System.IdentityModel.Tokens.Jwt >= 8.0.2",
+      "TicketEventClientSide >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2373,7 +2388,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
+              "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj"
+            }
+          }
         }
       },
       "warningProperties": {

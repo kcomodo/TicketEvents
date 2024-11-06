@@ -28,7 +28,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
+                "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -84,6 +88,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
+        "projectName": "TicketEventClientSide",
+        "projectPath": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\TicketEventClientSide.esproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }
