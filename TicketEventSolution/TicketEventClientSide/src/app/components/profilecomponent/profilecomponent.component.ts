@@ -1,5 +1,6 @@
 import { Component , OnInit} from '@angular/core';
 import { CustomerserviceService } from '../../service/customerservice.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profilecomponent',
   templateUrl: './profilecomponent.component.html',
@@ -8,7 +9,7 @@ import { CustomerserviceService } from '../../service/customerservice.service';
 
 
 export class ProfilecomponentComponent implements OnInit {
-  constructor(private customerService: CustomerserviceService) { }
+  constructor(private customerService: CustomerserviceService, private router : Router) { }
   isEditMode: boolean = false;
   isEditToken: boolean = false;
   firstname: string | null= "";
@@ -18,12 +19,13 @@ export class ProfilecomponentComponent implements OnInit {
   customerId: string = "";
   eventToken: string | null = "UNDEFINED";
   token: string | null = "UNDEFINED";
+  targetemail: string = "";
   ngOnInit() {
-
     //get email then get info
     this.grabInfo();
     this.email = this.customerService.getEmailSaved();
-    console.log("email saved:", this.email);
+    this.targetemail = this.email;
+  //  console.log("email saved:", this.email);
     this.displayInfo();
   }
   toggleEditMode() {
@@ -36,13 +38,25 @@ export class ProfilecomponentComponent implements OnInit {
   
   saveChanges() {
     const updatedInfo = {
-      firstname: this.firstname,
-      lastname: this.lastname,
-      email: this.email,
-      password: this.password,
+      FirstName: this.firstname,
+      LastName: this.lastname,
+      Email: this.email,
+      Password: this.password,
+    };
 
-    }
-    //console.log("Edit clicked: ", this.isEditMode);
+    this.customerService.updateCustomerInfo(updatedInfo, this.targetemail).subscribe({
+      next: (response) => {
+        console.log('Update successful:', response);
+        this.isEditMode = false;  // Exit edit mode
+        this.targetemail = this.email;
+        this.displayInfo();       // Refresh the displayed information
+      },
+      error: (error) => {
+        console.error('Update failed:', error);
+        // Handle error (e.g., show error message to user)
+      }
+
+    });
   }
   
   saveToken() {
@@ -53,7 +67,7 @@ export class ProfilecomponentComponent implements OnInit {
   }
   grabInfo() {
     this.token = this.customerService.getToken()
-    console.log("profile token: ", this.token);
+   // console.log("profile token: ", this.token);
     this.customerService.getEmail().subscribe(
       response => {
         this.email = response.email; // Assuming response has an `email` field
@@ -64,29 +78,15 @@ export class ProfilecomponentComponent implements OnInit {
       }
 
     );
-
   }
   displayInfo() {
-    // console.log("Console log:" ,this.customerService.getCustomerInfoByEmail(this.email));
-   /*
-    this.customerService.getCustomerInfoByEmail(this.email).subscribe((response) => {
-      console.log(response.firstname, response.lastname, response.password, response.email);
-      this.firstname = response.firstname;
-      this.lastname = response.lastname;
-      this.password = response.password;
-    });
-    */
-  
     this.customerService.getCustomerInfoByEmail(this.email).subscribe(
       (data) => {
-        console.log('Customer data received in component:', data);
+       // console.log('Customer data received in component:', data);
         this.firstname = data.firstName;
-        this.lastname = data.firstName;
+        this.lastname = data.lastName;
         this.password = data.password;
-        console.log("checkpoint", this.customerId ,this.firstname, this.lastname, this.password);
-      },
-      (error) => {
-        console.error('Error fetching customer data:', error);
+        console.log("checkpoint",this.firstname, this.lastname, this.password);
       }
     );
   }

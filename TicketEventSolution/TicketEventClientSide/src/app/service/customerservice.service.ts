@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service'; //npm install ngx-cookie-service --save --force used for read, saet, and delete browser cookies
-import { tap } from 'rxjs/operators';
+import { catchError, first, tap } from 'rxjs/operators';
 import { Token } from '@angular/compiler';
 import { map } from 'rxjs/operators';
 import { response } from 'express';
@@ -22,15 +22,14 @@ export class CustomerserviceService implements OnInit {
   private email: string | null = null;
   constructor(private http: HttpClient, private cookieService: CookieService) {
   }
+  
   ngOnInit() {
-    if (this.getToken() != null) {
-      this.isAuthenticated = true;
-      // console.log("the token is true, will stay on customer info page: ", this.isAuthenticated);
-    }
+    console.log("Authentication: ", this.isAuthenticated);
   }
+
   validateLogin(email: string, password: string): Observable<boolean>
   {
-    console.log("customer service now: ", email, password);
+    //console.log("customer service now: ", email, password);
     //keep it as a post because the information is not visible to the URl, and is more secured
     //old method
     //return this.http.post<{ token: string }>(`${this.baseUrl}/ValidateLogin?email=${email}&password=${password}`, "")
@@ -40,7 +39,7 @@ export class CustomerserviceService implements OnInit {
     })
       .pipe(
         tap(response => {
-          console.log(response);
+          //console.log(response);
         if (response.token) {
           this.token = response.token;
           this.isAuthenticated = true; // Set authentication status based on response
@@ -72,14 +71,8 @@ export class CustomerserviceService implements OnInit {
       headers: { 'Content-Type': 'application/json' }
     })
   }
-  /*
-  updateCustomerInfo(updatedInfo: any): Observable<any> {
-    //replace the return later
-    return this.http.post<any>(`${this.baseUrl}/UpdateCustomer`, { updatedInfo.firstname, updatedInfo.lastname, updatedInfo.email, updatedInfo.password}, {
-      headers: { 'Content-Type': 'application/json' }
-    })
-  }
-*/  
+
+
   getToken(): string | null {
     //grab the token from the cookie service and then return it to be stored
     //cookieService is a library that allows us to store the token
@@ -90,11 +83,13 @@ export class CustomerserviceService implements OnInit {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
+    /*
     console.log("Service token: ", this.token);
     console.log("Header:", headers);
-
+    */
     return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
   }
+
   getCustomerInfoByEmail(email: string): Observable<any> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
@@ -102,7 +97,7 @@ export class CustomerserviceService implements OnInit {
 
     return this.http.get<any>(`${this.baseUrl}/GetCustomerByEmail?email=${email}`, { headers }).pipe(
       tap(response => {
-        console.log('Received customer response:', response); // Log the response from the server
+      //  console.log('Received customer response:', response); // Log the response from the server
       })
     );
   }
@@ -110,12 +105,31 @@ export class CustomerserviceService implements OnInit {
     this.cookieService.set(this.emailSaved, email, { path: '/' }); // Save email in cookie
   }
 
+  updateCustomerInfo(updatedInfo: any, originalEmail: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`,
+      'Content-Type': 'application/json'
+    });
+
+    const updateUrl = `${this.baseUrl}/UpdateCustomer?targetemail=${originalEmail}`;
+
+    return this.http.put(updateUrl, updatedInfo, { headers }).pipe(
+      tap(response => {
+        console.log('Update successful:', response);
+      }),
+      catchError(error => {
+        console.error('Update failed:', error);
+        throw error;
+      })
+    );
+  }
   getEmailSaved(): string {
     return this.cookieService.get(this.emailSaved);
 
   }
   isLoggedIn(): boolean {
-    return this.isAuthenticated;
+    console.log("isLoggedIn: ", this.isAuthenticated);
+     return this.isAuthenticated;
   }
   lougout(): void {
     this.isAuthenticated = false;
