@@ -86,12 +86,65 @@ namespace TicketEventBackEnd.Controllers
             _customerRepository.addCustomer(customer);
             return Ok(customer);
         }
+        /*
         [Authorize]
         [HttpPut("UpdateCustomer")]
-        public IActionResult UpdateCustomer([FromBody] CustomerModel customer, string targetemail)
+        public IActionResult UpdateCustomer([FromQuery] string targetemail, [FromBody] CustomerModel customer)
         {
+            var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (tokenEmail != targetemail)
+            {
+                return Forbid("The email in the token does not match the requested email.");
+            }
+            System.Diagnostics.Debug.WriteLine(customer.FirstName, customer.LastName, customer.Email, customer.Password, targetemail);
+            // Update the customer in the repository using the information provided
+            // Fetch and return the updated customer details
+            var updatedCustomer = _customerRepository.getCustomerInfo(targetemail);
+            if (updatedCustomer == null)
+            {
+                return NotFound("Customer not found after update.");
+            }
             _customerRepository.updateCustomer(customer.FirstName, customer.LastName, customer.Email, customer.Password, targetemail);
             return Ok();
+        }
+        */
+        [Authorize]
+        [HttpPut("UpdateCustomer")]
+        public IActionResult UpdateCustomer([FromQuery] string targetemail, [FromBody] CustomerModel customer)
+        {
+            var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (tokenEmail != targetemail)
+            {
+                return Forbid("The email in the token does not match the requested email.");
+            }
+
+            try
+            {
+                // First check if the customer exists
+                var existingCustomer = _customerRepository.getCustomerInfo(targetemail).Result;
+                if (existingCustomer == null)
+                {
+                    return NotFound($"Customer with email {targetemail} not found.");
+                }
+
+                // Then perform the update
+                _customerRepository.updateCustomer(
+                    customer.FirstName,
+                    customer.LastName,
+                    customer.Email,
+                    customer.Password,
+                    targetemail
+                );
+
+                // Return success status
+                return Ok(new { message = "Customer updated successfully" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error updating customer", error = ex.Message });
+            }
         }
         [HttpDelete("DeleteCustomer")]
         public IActionResult DeleteCustomer(string email)

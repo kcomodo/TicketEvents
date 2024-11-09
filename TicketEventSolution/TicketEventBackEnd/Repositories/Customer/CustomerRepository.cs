@@ -135,6 +135,8 @@ namespace TicketEventBackEnd.Repositories.Customer
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@password", password);
             command.ExecuteNonQuery();
+
+
         }
     }
 }

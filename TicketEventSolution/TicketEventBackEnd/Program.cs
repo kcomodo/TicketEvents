@@ -20,6 +20,8 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerServices, CustomerServices>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<IAdminServices, AdminServices>();
+builder.Logging.AddConsole();
+
 //Allows the controller to recieve its dependency
 //just make sure to go to program.cs to inject the dependency
 /*

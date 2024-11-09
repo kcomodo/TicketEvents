@@ -7,27 +7,32 @@
     <button (click)="toggleEditMode()">Edit Account</button>
   </div>
   <div class="container" *ngIf="isEditMode">
-    <form>
-      <label>First Name</label>
-      <input matInput [(ngModel)]="firstname">
-    </form>
+    <form (ngSubmit)="saveChanges()">
+      <div>
+        <label>First Name</label>
+        <input matInput [(ngModel)]="firstname" name="firstname">
+      </div>
 
-    <form>
-      <label>Last Name</label>
-      <input matInput [(ngModel)]="lastname">
-    </form>
+      <div>
+        <label>Last Name</label>
+        <input matInput [(ngModel)]="lastname" name="lastname">
+      </div>
 
-    <form>
-      <label>Email</label>
-      <input matInput [(ngModel)]="email">
+      <div>
+        <label>Email</label>
+        <input matInput [(ngModel)]="email" name="email">
+      </div>
+
+      <div>
+        <label>Password</label>
+        <input matInput [(ngModel)]="password" name="password" type="password">
+      </div>
+
+      <button type="submit">Save</button>
+      <button type="button" (click)="toggleEditMode()">Cancel</button>
     </form>
-    <form>
-      <label>Password</label>
-      <input matInput [(ngModel)]="password" type="password">
-    </form>
-    <button (click)="saveChanges()">Save</button>
-    <button (click)="toggleEditMode()">Cancel</button>
   </div>
+
   <div class="tokenContainer" *ngIf="!isEditToken">
     <p>Please enter your token: </p>
     <p>Token: {{eventToken}}</p>
@@ -41,4 +46,4 @@
     <button (click)="saveToken()">Save Token</button>
     <button (click)="toggleTokenEdit()">Cancel</button>
   </div>
-  </div>
+</div>

@@ -113,14 +113,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "customer",
-        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
-        "IsRequired": true
-      },
-      {
         "Name": "targetemail",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "customer",
+        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
