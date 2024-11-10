@@ -22,11 +22,15 @@ export class ProfilecomponentComponent implements OnInit {
   targetemail: string = "";
   ngOnInit() {
     //get email then get info
-    this.grabInfo();
     this.email = this.customerService.getEmailSaved();
+    if (this.email) {
+      this.displayInfo();  // Only call if email is available
+    } else {
+      // Optionally handle the case where email is missing
+      this.router.navigate(['/login']);
+    }
     this.targetemail = this.email;
   //  console.log("email saved:", this.email);
-    this.displayInfo();
   }
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;

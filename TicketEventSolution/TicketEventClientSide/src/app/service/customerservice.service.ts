@@ -129,7 +129,7 @@ export class CustomerserviceService implements OnInit {
   }
   isLoggedIn(): boolean {
     console.log("isLoggedIn: ", this.isAuthenticated);
-     return this.isAuthenticated;
+    return this.getToken() != null;  // Check directly if token exists
   }
   lougout(): void {
     this.isAuthenticated = false;
