@@ -24,6 +24,7 @@ export class ProfilecomponentComponent implements OnInit {
     //get email then get info
     this.email = this.customerService.getEmailSaved();
     if (this.email) {
+
       this.displayInfo();  // Only call if email is available
     } else {
       // Optionally handle the case where email is missing
