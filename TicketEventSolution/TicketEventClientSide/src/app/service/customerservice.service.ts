@@ -91,10 +91,14 @@ export class CustomerserviceService implements OnInit {
   }
 
   getCustomerInfoByEmail(email: string): Observable<any> {
+    /*
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
-
+    */
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.getToken()}`
+    });
     return this.http.get<any>(`${this.baseUrl}/GetCustomerByEmail?email=${email}`, { headers }).pipe(
       tap(response => {
       //  console.log('Received customer response:', response); // Log the response from the server

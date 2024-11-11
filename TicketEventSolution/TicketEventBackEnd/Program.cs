@@ -113,8 +113,9 @@ builder.Services.AddCors(options =>
         {
             builder.WithOrigins("http://localhost:4200") // Allow requests from this origin
                    .AllowAnyMethod()  // Allow any HTTP method (GET, POST, PUT, etc.)
+                   .AllowCredentials()
                    .AllowAnyHeader(); // Allow any HTTP headers
-        });
+});
 });
 builder.Services.AddControllers();
 var app = builder.Build();
@@ -129,9 +130,11 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = "swagger";
     });
 }
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("AllowAngularApp");
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseHttpsRedirection();
 
 app.UseCors("AllowSpecificOrigin"); // Apply CORS policy globally
 app.MapControllers();
