@@ -11,7 +11,15 @@ export class RegisterComponent {
   lastname: string = "";
   email: string = "";
   password: string = "";
+  confirmPassword: string = "";
   constructor(private router: Router, private customerService: CustomerserviceService) { }
+  doPasswordsMatch(): boolean {
+    return this.password === this.confirmPassword;
+  }
+  isEmailValid(): boolean {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(this.email);
+  }
   onRegister(): void {
     this.customerService.registerCustomer(this.firstname, this.lastname, this.email, this.password).subscribe(
       (response) => {

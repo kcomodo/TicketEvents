@@ -1,0 +1,32 @@
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #f2f2f2;
+  width:100%;
+  position:relative;
+
+}
+.error-message{
+    color:red;
+}
+.container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  left: 25%;
+}
+.registerText{
+    font-size:20px;
+
+}
+.buttonContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.existingEmailLink {
+  padding: 10px;
+
+}
