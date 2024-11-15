@@ -15,6 +15,8 @@ import { GuideComponent } from './components/guide/guide.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TransitTrackerComponent } from './components/transit-tracker/transit-tracker.component';
+import { ForgotUserComponent } from './components/forgot-user/forgot-user.component';
+import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,8 @@ import { TransitTrackerComponent } from './components/transit-tracker/transit-tr
     DiscoverComponent,
     RegisterComponent,
     TransitTrackerComponent,
+    ForgotUserComponent,
+    EmailConfirmationComponent,
   ],
   imports: [
     FormsModule,

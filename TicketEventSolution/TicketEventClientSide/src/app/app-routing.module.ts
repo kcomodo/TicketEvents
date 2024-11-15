@@ -9,6 +9,8 @@ import { DiscoverComponent } from './components/discover/discover.component';
 import { RegisterComponent }from './components/register/register.component';
 import { accessGuard } from './guards/access.guard';
 import { TransitTrackerComponent } from './components/transit-tracker/transit-tracker.component';
+import { ForgotUserComponent } from './components/forgot-user/forgot-user.component';
+import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -43,6 +45,15 @@ const routes: Routes = [
   {
     path: 'discover',
     component: DiscoverComponent
+  },
+  {
+    path: 'forgot',
+    component: ForgotUserComponent
+  },
+  {
+    path: 'confirmation',
+    component: EmailConfirmationComponent,
+    //canActivate: [accessGuard]
   },
   {
     path: '',

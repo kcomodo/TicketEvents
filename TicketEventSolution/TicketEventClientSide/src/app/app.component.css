@@ -1,11 +1,11 @@
-body {
-  background: #cfd3d4;
-  min-height: 100vh; /* Ensures the body is at least 100% of the viewport height */
-  margin: 0; /* Removes any default margin that might cause overflow */
-  overflow: hidden;
-}
-@media(min-width: 1025px) { /*Desktop View*/
 
+@media(min-width: 1025px) { /*Desktop View*/
+  body {
+    background: #cfd3d4;
+    min-height: 98vh; /* Ensures the body is at least 100% of the viewport height */
+    margin: 0; /* Removes any default margin that might cause overflow */
+    overflow: hidden;
+  }
   #containerIcon {
     position: absolute;
     background-image: url('Images/icon2.png');
@@ -73,10 +73,12 @@ body {
 }
 @media(max-width: 1024px) {
   body {
-    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    background: #cfd3d4;
+    min-height: 98vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width: 100%;
+    overflow: hidden;
   }
+
   #containerIcon {
     position: absolute;
     background-image: url('Images/icon2.png');
@@ -142,9 +144,10 @@ body {
 
 @media (min-width: 426px) and (max-width: 768px) {
   body {
-    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    background: #cfd3d4;
+    min-height: 98vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-    width: 100%;
+    overflow: hidden;
   }
   #containerIcon {
     position: absolute;
@@ -206,9 +209,10 @@ body {
 }
 @media (min-width: 376px) and (max-width: 425px) {
   body {
-    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    background: #cfd3d4;
+    min-height: 98vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-
+    overflow: hidden;
   }
 
   #containerIcon {
@@ -272,9 +276,10 @@ body {
 }
 @media(min-width:321px) and (max-width: 375px) {
   body {
-    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    background: #cfd3d4;
+    min-height: 98vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
-
+    overflow: hidden;
   }
 
   #containerIcon {
@@ -322,8 +327,10 @@ body {
 }
 @media(max-width: 320px) {
   body {
-    min-height: 200vh; /* Ensures the body is at least 100% of the viewport height */
+    background: #cfd3d4;
+    min-height: 98vh; /* Ensures the body is at least 100% of the viewport height */
     margin: 0; /* Removes any default margin that might cause overflow */
+    overflow: hidden;
   }
 
   #containerIcon {
