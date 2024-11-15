@@ -1,19 +1,34 @@
 <body>
   <div class="container">
+
     <form class="login-form" (ngSubmit)="onLogin()">
-      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
-      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
-      <div class="buttonContainer">
-        <button type="submit" class="guideButton">
-          Log in!
-        </button>
-        <button type="button" routerLink="/register" class="guideButton">
-          Register
-        </button>
-        <button type="button" routerLink="/home" class="guideButton">
+      <div class="form1">
+        <h1 class="WelcomeMessage">Welcome!</h1>
+        <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required class="emailPlaceholder"/>
+        <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required class="passwordPlaceholder"/>
+        <a routerLink="/home" class="forgotButton">
           Forgot Password
-        </button>
+        </a>
+      </div>
+      <div class="buttonContainer">
+        <div class="submitContainer">
+          <button type="submit" class="SubmitButton">
+            Sign In!
+          </button>
+        </div>
+        <div class="registerContainer">
+          <h3>
+            Don't have an account?
+            <button type="button" routerLink="/register" class="RegisterButton">
+              Sign Up!
+            </button>
+          </h3>
+      
+        </div>
+
+
       </div>
     </form>
+
   </div>
 </body>

@@ -1,12 +1,242 @@
 body{
     display:initial;
 }
-.container {
-  background: #f2f2f2;
-  position: relative;
-  top: 25%;
-  border-radius: 20px;
-  text-align: center;
-  height: 100px;
-  display: flex;
+@media(min-width: 1441px) { /*My display*/
+  .container {
+    background: #f2f2f2;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    width: 20%;
+    display: flex;
+    left: 40%;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .submitContainer {
+    display: wrap;
+    flex-direction: column;
+    
+  }
+  .SubmitButton{
+      width:180px;
+      height:30px;
+  }
+  .registerContainer {
+    display: wrap;
+  }
+
+  .emailPlaceholder {
+    height: 30px;
+  }
+
+  .passwordPlaceholder {
+    height: 30px;
+  }
+
+  .forgotButton {
+    display: flex;
+    justify-content: flex-end;
+    padding:5px;
+  }
+}
+@media(max-width: 1440px) { /*Laptop Large*/
+  .container {
+    background: #f2f2f2;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    width: 40%;
+    display: flex;
+    left: 31%;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .submitContainer {
+    display: wrap;
+    flex-direction: column;
+  }
+
+  .SubmitButton {
+    width: 180px;
+    height: 30px;
+  }
+
+  .registerContainer {
+    display: wrap;
+  }
+
+  .emailPlaceholder {
+    height: 30px;
+  }
+
+  .passwordPlaceholder {
+    height: 30px;
+  }
+
+  .forgotButton {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .container {
+    background: #f2f2f2;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    left: 5%;
+    top:-100px;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .submitContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .registerContainer {
+    display: wrap;
+  }
+
+  .emailPlaceholder {
+    height: 30px;
+  }
+
+  .passwordPlaceholder {
+    height: 30px;
+  }
+
+  .forgotButton {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media(min-width:321px) and (max-width: 375px) {
+  .container {
+    background: #f2f2f2;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    left: 5%;
+    top: -100px;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .submitContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .registerContainer {
+    display: wrap;
+  }
+
+  .emailPlaceholder {
+    height: 30px;
+  }
+
+  .passwordPlaceholder {
+    height: 30px;
+  }
+
+  .forgotButton {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media(max-width: 320px) {
+  .container {
+    background: #f2f2f2;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    left: 5%;
+    top: -100px;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .submitContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .registerContainer {
+    display: wrap;
+  }
+
+  .emailPlaceholder {
+    height: 30px;
+  }
+
+  .passwordPlaceholder {
+    height: 30px;
+  }
+
+  .forgotButton {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
