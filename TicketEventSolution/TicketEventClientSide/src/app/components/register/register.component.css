@@ -1,32 +1,180 @@
-.registerForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-  background: #f2f2f2;
-  width:100%;
-  position:relative;
+@media(min-width: 1441px) {
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    position: relative;
+  }
 
-}
-.error-message{
-    color:red;
-}
-.container {
-  position: relative;
-  width: 50%;
-  height: 100%;
-  left: 25%;
-}
-.registerText{
-    font-size:20px;
+  .error-message {
+    color: red;
+  }
 
-}
-.buttonContainer {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.existingEmailLink {
-  padding: 10px;
+  .container {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    left: 35%;
+  }
 
+  .registerText {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .existingEmailLink {
+    padding: 10px;
+  }
+}
+@media(max-width: 1440px) {
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    position: relative;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .container {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    left: 35%;
+  }
+
+  .registerText {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .existingEmailLink {
+    padding: 10px;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    position: relative;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    left: 23%;
+  }
+
+  .registerText {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .existingEmailLink {
+    padding: 10px;
+  }
+}
+@media(min-width:321px) and (max-width: 375px) {
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    position: relative;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .container {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    left: 20%;
+  }
+
+  .registerText {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .existingEmailLink {
+    padding: 10px;
+  }
+}
+@media(max-width: 320px) {
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    position: relative;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .container {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    left: 20%;
+  }
+
+  .registerText {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .existingEmailLink {
+    padding: 10px;
+  }
 }
