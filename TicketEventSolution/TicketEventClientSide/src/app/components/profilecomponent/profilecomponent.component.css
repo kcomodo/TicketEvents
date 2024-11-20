@@ -1,0 +1,173 @@
+@media(min-width: 1441px) {
+  .card {
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .tokenContainer {
+    padding: 10px;
+  }
+
+  .entireForm {
+    position: relative;
+    display: flex;
+    width: 30%;
+    left: 35%;
+    outline-style: solid;
+    background: #f2f2f2;
+  }
+}
+@media(max-width: 1440px) {
+  .card {
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .tokenContainer {
+    padding: 10px;
+  }
+
+  .entireForm {
+    position: relative;
+    display: flex;
+    width: 30%;
+    left: 35%;
+    outline-style: solid;
+    background: #f2f2f2;
+  }
+}
+@media(max-width: 1024px) {
+  .card {
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .tokenContainer {
+    padding: 10px;
+  }
+
+  .entireForm {
+    position: relative;
+    display: flex;
+    width: 40%;
+    left: 30%;
+    outline-style: solid;
+    background: #f2f2f2;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .card {
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .tokenContainer {
+    padding: 10px;
+  }
+
+  .entireForm {
+    position: relative;
+    display: flex;
+    width: 30%;
+    left: 35%;
+    outline-style: solid;
+    background: #f2f2f2;
+  }
+}
+
+@media(max-width: 1024px) {
+  .card {
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .tokenContainer {
+    padding: 10px;
+  }
+
+  .entireForm {
+    position: relative;
+    display: flex;
+    width: 45%;
+    left: 30%;
+    outline-style: solid;
+    background: #f2f2f2;
+  }
+}
+
+  @media (min-width: 376px) and (max-width: 425px) {
+    .card {
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    .tokenContainer {
+      padding: 10px;
+    }
+
+    .entireForm {
+      position: relative;
+      display: flex;
+      width: 90%;
+      left: 5%;
+      outline-style: solid;
+      background: #f2f2f2;
+    }
+  }
+
+  @media(min-width:321px) and (max-width: 375px) {
+    .card {
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    .tokenContainer {
+      padding: 10px;
+    }
+
+    .entireForm {
+      position: relative;
+      display: flex;
+      width: 90%;
+      left: 5%;
+      outline-style: solid;
+      background: #f2f2f2;
+    }
+  }
+
+  @media(max-width: 320px) {
+    .card {
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    .tokenContainer {
+      padding: 10px;
+    }
+
+    .entireForm {
+      position: relative;
+      display: flex;
+      width: 97%;
+      left: 1%;
+      outline-style: solid;
+      background: #f2f2f2;
+      font-size:15px;
+    }
+  }
