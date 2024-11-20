@@ -4,7 +4,7 @@ using TicketEventBackEnd.Repositories;
 using TicketEventBackEnd.Repositories.Customer;
 namespace TicketEventBackEnd.Services.Customer
 {
- 
+
     public class CustomerServices : ICustomerServices
     {
 
@@ -17,15 +17,25 @@ namespace TicketEventBackEnd.Services.Customer
         public async Task<bool> validateCustomerLogin(string email, string password)
         {
             CustomerModel customerInfo = await _customerRepository.getCustomerInfo(email);
-            if(customerInfo == null)
+            if (customerInfo == null)
             {
                 return false;
             }
-            if(customerInfo.Email == email && customerInfo.Password == password)
+            if (customerInfo.Email == email && customerInfo.Password == password)
             {
                 return true;
             }
             return false;
         }
+        /*
+        public async Task<bool> getFeed(string email)
+        {
+
+        }
+        public async Task<bool> getLocation(string token, string name)
+        {
+
+        }
+        */
     }
 }

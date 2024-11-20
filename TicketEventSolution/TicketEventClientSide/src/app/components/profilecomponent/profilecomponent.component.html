@@ -1,49 +1,53 @@
 <div class="card">
-  <div class="container" *ngIf="!isEditMode">
-    <p>First Name: {{firstname}}</p>
-    <p>Last Name: {{lastname}}</p>
-    <p>Email: {{email}}</p>
-    <p>Password: {{password}}</p>
-    <button (click)="toggleEditMode()">Edit Account</button>
-  </div>
-  <div class="container" *ngIf="isEditMode">
-    <form (ngSubmit)="saveChanges()">
-      <div>
-        <label>First Name</label>
-        <input matInput [(ngModel)]="firstname" name="firstname">
-      </div>
+  <div class="entireForm">
+    <div class="container" *ngIf="!isEditMode">
+      <p>First Name: {{firstname}}</p>
+      <p>Last Name: {{lastname}}</p>
+      <p>Email: {{email}}</p>
+      <p>Password: {{password}}</p>
+      <button (click)="toggleEditMode()">Edit Account</button>
+    </div>
+    <div class="container" *ngIf="isEditMode">
+      <form (ngSubmit)="saveChanges()">
+        <p>
+          <label>First Name: </label>
+          <input matInput [(ngModel)]="firstname" name="firstname">
+        </p>
 
-      <div>
-        <label>Last Name</label>
-        <input matInput [(ngModel)]="lastname" name="lastname">
-      </div>
+        <p>
+          <label>Last Name: </label>
+          <input matInput [(ngModel)]="lastname" name="lastname">
+        </p>
 
-      <div>
-        <label>Email</label>
-        <input matInput [(ngModel)]="email" name="email">
-      </div>
+        <p>
+          <label>Email: </label>
+          <input matInput [(ngModel)]="email" name="email">
+        </p>
 
-      <div>
-        <label>Password</label>
-        <input matInput [(ngModel)]="password" name="password" type="password">
-      </div>
+        <p>
+          <label>Password: </label>
+          <input matInput [(ngModel)]="password" name="password" type="password">
+        </p>
 
-      <button type="submit">Save</button>
-      <button type="button" (click)="toggleEditMode()">Cancel</button>
-    </form>
-  </div>
+        <button type="submit">Save</button>
+        <button type="button" (click)="toggleEditMode()">Cancel</button>
+      </form>
+    </div>
 
-  <div class="tokenContainer" *ngIf="!isEditToken">
-    <p>Please enter your token: </p>
-    <p>Token: {{eventToken}}</p>
-    <button (click)="toggleTokenEdit()">Edit Token</button>
-  </div>
-  <div class="container" *ngIf="isEditToken">
-    <form>
-      <label>Token</label>
-      <input matInput [(ngModel)]="eventToken">
-    </form>
-    <button (click)="saveToken()">Save Token</button>
-    <button (click)="toggleTokenEdit()">Cancel</button>
+    <div class="tokenContainer" *ngIf="!isEditToken">
+      <p>Please enter your token: </p>
+      <p>Token: {{eventToken}}</p>
+      <button (click)="toggleTokenEdit()">Edit Token</button>
+    </div>
+    <div class="container" *ngIf="isEditToken">
+      <form (ngSubmit)="saveToken()">
+        <p>
+        <label>Please enter your token: </label>
+        <input matInput [(ngModel)]="eventToken" name="eventToken">
+          </p>
+      </form>
+      <button type="submit">Save Token</button>
+      <button type= "button" (click)="toggleTokenEdit()">Cancel</button>
+    </div>
   </div>
 </div>
