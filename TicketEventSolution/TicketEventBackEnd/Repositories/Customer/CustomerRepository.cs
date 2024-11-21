@@ -138,11 +138,12 @@ namespace TicketEventBackEnd.Repositories.Customer
 
 
         }
-        public void updateFeedToken(string feedToken)
+        public void updateFeedToken(string target_email, string feedToken)
         {
-            string query = "UPDATE customer SET feed_token = @feedToken where customer_email = @target_email";
+            string query = "UPDATE customer SET feed_token = @feedToken WHERE customer_email = @target_email";
             MySqlCommand command = new MySqlCommand(query, _connection);
-            command.Parameters.AddWithValue("@feed_token", feedToken);
+            command.Parameters.AddWithValue("@target_email", target_email);
+            command.Parameters.AddWithValue("@feedToken", feedToken);
             command.ExecuteNonQuery();
         }
     }

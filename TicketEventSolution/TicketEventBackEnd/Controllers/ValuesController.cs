@@ -240,7 +240,34 @@ namespace TicketEventBackEnd.Controllers
             }
         }
 
+        [Authorize]
+        [HttpPut("UpdateFeedToken")]
+        public async Task<IActionResult> UpdateFeedToken([FromQuery] string customer_email, [FromBody] CustomerModel customer)
+        {
+ 
+            var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+            if (tokenEmail == null || tokenEmail != customer_email)
+            {
+                return Forbid("You are not authorized to update this feed token.");
+            }
+            try
+            {
+                var existingCustomer = await _customerRepository.getCustomerInfo(customer_email);
+                if (existingCustomer == null)
+                {
+                    return NotFound($"Customer with email {customer_email} not found.");
+                }
+
+                _customerRepository.updateFeedToken(customer_email, customer.tokenFeed);
+
+                return Ok(new { message = "Token feed updated successfully" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error updating token feed", error = ex.Message });
+            }
+        }
 
         [Authorize]
         [HttpGet("GetAgencyLocation")]
