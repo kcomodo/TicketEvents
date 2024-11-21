@@ -127,6 +127,27 @@
   },
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "UpdateFeedToken",
+    "RelativePath": "api/Values/UpdateFeedToken",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer_email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "customer",
+        "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "ValidateLogin",
     "RelativePath": "api/Values/ValidateLogin",
     "HttpMethod": "POST",
