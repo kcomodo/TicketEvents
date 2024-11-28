@@ -127,6 +127,24 @@ export class CustomerserviceService implements OnInit {
       })
     );
   }
+  updateTokenFeed(updatedInfo: any, originalEmail: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`,
+      'Content-Type': 'application/json'
+    });
+
+    const updateUrl = `${this.baseUrl}/UpdateFeedToken?targetemail=${originalEmail}`;
+
+    return this.http.put(updateUrl, updatedInfo, { headers }).pipe(
+      tap(response => {
+        console.log('Update successful:', response);
+      }),
+      catchError(error => {
+        console.error('Update failed:', error);
+        throw error;
+      })
+    );
+  }
   getEmailSaved(): string {
     return this.cookieService.get(this.emailSaved);
 
