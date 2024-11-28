@@ -91,6 +91,7 @@ export class ProfilecomponentComponent implements OnInit {
         this.firstname = data.firstName;
         this.lastname = data.lastName;
         this.password = data.password;
+        this.eventToken = data.feedToken;
         console.log("checkpoint",this.firstname, this.lastname, this.password);
       }
     );

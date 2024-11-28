@@ -15,7 +15,8 @@ namespace TicketEventBackEnd.Repositories.Customer
             //check port on xampp
             //server is the root address so 127, etc.
             //userid is root
-            string connectionString = "server=127.0.0.1;database=ticketevent;userid=root;port=3307";
+            string connectionString = "server=127.0.0.1;database=ticketevent;userid=root;password=c9nbQ5yMX2E9WVW;port=3306";
+                
             _connection = new MySqlConnection(connectionString);
             //call the object and insert the connection url into MySqlConnection
             //then open the connection
@@ -48,6 +49,7 @@ namespace TicketEventBackEnd.Repositories.Customer
                         customer.LastName = reader.GetString("customer_lastname");
                         customer.Email = reader.GetString("customer_email");
                         customer.Password = reader.GetString("customer_password");
+                        customer.tokenFeed = reader.GetString("feed_token");
                     };
                     return customer;
                 }
