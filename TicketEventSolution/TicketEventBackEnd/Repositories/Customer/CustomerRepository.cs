@@ -72,7 +72,8 @@ namespace TicketEventBackEnd.Repositories.Customer
                         FirstName = reader.GetString("customer_firstname"),
                         LastName = reader.GetString("customer_lastname"),
                         Email = reader.GetString("customer_email"),
-                        Password = reader.GetString("customer_password")
+                        Password = reader.GetString("customer_password"),
+                        tokenFeed = reader.GetString("feed_token")
                     });
 
                 }
@@ -139,6 +140,28 @@ namespace TicketEventBackEnd.Repositories.Customer
             command.ExecuteNonQuery();
 
 
+        }
+        public async Task<CustomerModel> getFeedToken(string email)
+        {
+            string query = "SELECT * FROM customer WHERE customer_email = @Email";
+            //insert query into the commands as well as adding the connection to it
+            MySqlCommand command = new MySqlCommand(query, _connection);
+            //Bind the parameter value to the query value
+            command.Parameters.AddWithValue("@Email", email);
+            //Use a reader now to grab the data
+            using (MySqlDataReader reader = await command.ExecuteReaderAsync() as MySqlDataReader)
+            {
+                if (await reader.ReadAsync())
+                {
+                    //create a new object to store the data
+                    CustomerModel customer = new CustomerModel();
+                    {
+                        customer.tokenFeed = reader.GetString("feed_token");
+                    };
+                    return customer;
+                }
+                return null;
+            }
         }
         public void updateFeedToken(string target_email, string feedToken)
         {
