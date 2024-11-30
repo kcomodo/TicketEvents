@@ -106,6 +106,22 @@
   },
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "getFeedToken",
+    "RelativePath": "api/Values/GetFeedToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "UpdateCustomer",
     "RelativePath": "api/Values/UpdateCustomer",
     "HttpMethod": "PUT",

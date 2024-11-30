@@ -10,5 +10,6 @@ namespace TicketEventBackEnd.Repositories.Customer
         void deleteCustomer(string email);
         void updateCustomer(string firstname, string lastname, string email, string password, string targetemail);
         void updateFeedToken(string customer_email, string feedToken);
+        Task<CustomerModel> getFeedToken(string email);
     }
 }
