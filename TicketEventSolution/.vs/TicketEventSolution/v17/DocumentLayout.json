@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\TicketEvents\\TicketEventSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\repositories\\customer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\repositories\\customer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|d:\\ticketevents\\ticketeventsolution\\ticketeventbackend\\repositories\\customer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B793877-A766-42B5-B912-553758F18D07}|TicketEventBackEnd\\TicketEventBackEnd.csproj|solutionrelative:ticketeventbackend\\repositories\\customer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\service\\customerservice.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 809,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Program.cs",
+              "RelativeDocumentMoniker": "TicketEventBackEnd\\Program.cs",
+              "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Program.cs",
+              "RelativeToolTip": "TicketEventBackEnd\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T00:07:00.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CustomerModel.cs",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Models\\CustomerModel.cs",
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Models\\CustomerModel.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "profilecomponent.component.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "customerservice.service.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\service\\customerservice.service.ts",
@@ -94,14 +111,14 @@
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAowEAAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAYwBwBAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T15:34:29.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CustomerRepository.cs",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Customer\\CustomerRepository.cs",
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Repositories\\Customer\\CustomerRepository.cs",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ICustomerRepository.cs",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Repositories\\Customer\\ICustomerRepository.cs",
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Repositories\\Customer\\ICustomerRepository.cs",

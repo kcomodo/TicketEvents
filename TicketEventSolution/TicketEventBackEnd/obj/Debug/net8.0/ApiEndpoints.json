@@ -90,22 +90,6 @@
   },
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
-    "Method": "getFeedFromSite",
-    "RelativePath": "api/Values/GetFeed",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "siteToken",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "getFeedToken",
     "RelativePath": "api/Values/GetFeedToken",
     "HttpMethod": "GET",
@@ -158,6 +142,22 @@
         "Name": "customer",
         "Type": "TicketEventBackEnd.Models.Customer.CustomerModel",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "getFeedFromSite",
+    "RelativePath": "api/Values/ValidateFeedToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "siteToken",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

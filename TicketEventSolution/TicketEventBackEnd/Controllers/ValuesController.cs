@@ -19,6 +19,8 @@ using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using System.Security.Claims;
 using static System.Net.WebRequestMethods;
+using Org.BouncyCastle.Asn1.Ocsp;
+using System.Net.Http;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TicketEventBackEnd.Controllers
@@ -32,15 +34,18 @@ namespace TicketEventBackEnd.Controllers
         private readonly string _issuer = "https://localhost:7240"; // Your issuer
         private readonly string _audience = "https://localhost:7240 , http://localhost:4200"; // Your audience
 
-     
+
         //Use this for transit api
         //And for searching specific agency/operator names
         private readonly ICustomerRepository _customerRepository;
         private readonly ICustomerServices _customerServices;
-        public ValuesController(ICustomerRepository customerRepository, ICustomerServices customerServices)
+        private readonly HttpClient _httpClient; //inject httpclient in program.cs
+        //Use httpclient to do HTTP requests to external apis
+        public ValuesController(ICustomerRepository customerRepository, ICustomerServices customerServices, HttpClient httpClient)
         {
             _customerRepository = customerRepository;
             _customerServices = customerServices;
+            _httpClient = httpClient;
 
         }
         
@@ -267,11 +272,29 @@ namespace TicketEventBackEnd.Controllers
         }
         
         [Authorize]
-        [HttpGet("GetFeed")]
+        [HttpPost("ValidateFeedToken")]
         public async Task<IActionResult> getFeedFromSite(string siteToken)
         {
             //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV //get feeds
-            return Ok();
+            //Check if user has entered a token
+            //Validate token through transitland api
+            if (string.IsNullOrWhiteSpace(siteToken))
+            {
+                return BadRequest(new { message = "API key is required." });
+            }
+       
+            string apiUrl = $"https://transit.land/api/v2/rest/feeds?apikey={siteToken}";
+            var response = await _httpClient.GetAsync(apiUrl);
+
+            // Check the response
+            if (response.IsSuccessStatusCode)
+            {
+                return Ok(new { message = "API key is valid." });
+            }
+            else
+            {
+                return Unauthorized(new { message = "Invalid API key." });
+            }
         }
         
         //use email as parameter to identify the user when the token is presented in the future requests
