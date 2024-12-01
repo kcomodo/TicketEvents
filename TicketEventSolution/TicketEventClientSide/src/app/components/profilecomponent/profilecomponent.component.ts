@@ -67,8 +67,18 @@ export class ProfilecomponentComponent implements OnInit {
   saveToken() {
     const updateToken = {
       eventToken: this.eventToken
-    }
-
+    };
+    this.customerService.updateTokenFeed(updateToken, this.targetemail).subscribe({
+      next: (response) => {
+        console.log('Token update successful:', response);
+        this.isEditMode = false;  // Exit edit mode
+        this.displayInfo();       // Refresh the displayed information
+      },
+      error: (error) => {
+        console.error('Token update failed:', error);
+        // Handle error (e.g., show error message to user)
+      }
+    });
   }
   grabInfo() {
     this.token = this.customerService.getToken()
@@ -91,7 +101,7 @@ export class ProfilecomponentComponent implements OnInit {
         this.firstname = data.firstName;
         this.lastname = data.lastName;
         this.password = data.password;
-        this.eventToken = data.feedToken;
+        this.eventToken = data.tokenFeed;
         console.log("checkpoint",this.firstname, this.lastname, this.password);
       }
     );

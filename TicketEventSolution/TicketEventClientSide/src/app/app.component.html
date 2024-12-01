@@ -19,8 +19,11 @@
       <a routerLink="profile">
         Profile
       </a>
-      <a routerLink="login">
+      <a *ngIf="!checkLogin()" routerLink="login">
         Login
+      </a>
+      <a *ngIf="checkLogin()" (click)="checkLogout()" routerLink="home">
+        Logout
       </a>
     </div>
   </nav>

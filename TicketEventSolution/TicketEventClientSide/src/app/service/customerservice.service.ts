@@ -89,7 +89,7 @@ export class CustomerserviceService implements OnInit {
     */
     return this.http.get<string>(`${this.baseUrl}/GetCustomerEmail`, { headers });
   }
-
+  
   getCustomerInfoByEmail(email: string): Observable<any> {
     /*
     const headers = new HttpHeaders({
@@ -102,6 +102,16 @@ export class CustomerserviceService implements OnInit {
     return this.http.get<any>(`${this.baseUrl}/GetCustomerByEmail?email=${email}`, { headers }).pipe(
       tap(response => {
       //  console.log('Received customer response:', response); // Log the response from the server
+      })
+    );
+  }
+  getFeedToken(email: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    return this.http.get<any>(`${this.baseUrl}/GetFeedToken?email=${email}`, { headers }).pipe(
+      tap(response => {
+        //  console.log('Received customer response:', response); // Log the response from the server
       })
     );
   }
@@ -153,7 +163,7 @@ export class CustomerserviceService implements OnInit {
     console.log("isLoggedIn: ", this.isAuthenticated);
     return this.getToken() != null;  // Check directly if token exists
   }
-  lougout(): void {
+  logout(): void {
     this.isAuthenticated = false;
     this.token = null;
     this.cookieService.delete(this.tokenSaved, '/');

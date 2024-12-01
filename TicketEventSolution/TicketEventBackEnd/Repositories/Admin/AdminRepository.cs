@@ -9,7 +9,7 @@ namespace TicketEventBackEnd.Repositories.Admin
         private readonly MySqlConnection _connection;
         public AdminRepository()
         {
-            string connectionString = "server=127.0.0.1;database=ticketevent;userid=root;port=3307";
+            string connectionString = "server=127.0.0.1;database=ticketevent;userid=root;port=3306";
             _connection = new MySqlConnection(connectionString);
             _connection.Open();
         }
