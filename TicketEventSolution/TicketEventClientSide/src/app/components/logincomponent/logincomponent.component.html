@@ -4,8 +4,8 @@
     <form class="login-form" (ngSubmit)="onLogin()">
       <div class="form1">
         <h1 class="WelcomeMessage">Welcome!</h1>
-        <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required class="emailPlaceholder"/>
-        <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required class="passwordPlaceholder"/>
+        <input type="email" placeholder="Email" [(ngModel)]="customer_email" name="customer_email" required class="emailPlaceholder"/>
+        <input type="password" placeholder="Password" [(ngModel)]="customer_password" name="customer_password" required class="passwordPlaceholder"/>
         <a routerLink="/home" class="forgotButton">
           Forgot Password
         </a>

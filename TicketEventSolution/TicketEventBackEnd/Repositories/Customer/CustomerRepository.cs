@@ -126,21 +126,21 @@ namespace TicketEventBackEnd.Repositories.Customer
             }
 
         }
-        public void updateCustomer(string customer_firstname, string customer_lastname, string customer_email, string customer_password, string target_email)
+        public void updateCustomer(string customer_firstname, string customer_lastname, string customer_email, string customer_password, string feed_token, string target_email)
         {
-            //UPDATE tablename SET value = @value, value = @value where customer_email = @email
-            string query = "UPDATE customer SET customer_firstname = @first_name, customer_lastname = @last_name," +
-                "customer_email = @email, customer_password = @password where customer_email = @target_email";
+            string query = "UPDATE customer SET customer_firstname = @first_name, customer_lastname = @last_name, " +
+                           "customer_email = @email, customer_password = @password, feed_token = @feed_token " +
+                           "WHERE customer_email = @target_email";
             MySqlCommand command = new MySqlCommand(query, _connection);
             command.Parameters.AddWithValue("@target_email", target_email);
             command.Parameters.AddWithValue("@first_name", customer_firstname);
             command.Parameters.AddWithValue("@last_name", customer_lastname);
             command.Parameters.AddWithValue("@email", customer_email);
             command.Parameters.AddWithValue("@password", customer_password);
+            command.Parameters.AddWithValue("@feed_token", feed_token); // Add feed_token as a parameter
             command.ExecuteNonQuery();
-
-
         }
+
         public async Task<CustomerModel> getFeedToken(string customer_email)
         {
             string query = "SELECT * FROM customer WHERE customer_email = @Email";

@@ -21,6 +21,7 @@ using System.Security.Claims;
 using static System.Net.WebRequestMethods;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System.Net.Http;
+using Newtonsoft.Json;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TicketEventBackEnd.Controllers
@@ -96,13 +97,26 @@ namespace TicketEventBackEnd.Controllers
         [HttpPut("UpdateCustomer")]
         public IActionResult UpdateCustomer([FromQuery] string targetemail, [FromBody] CustomerModel customer)
         {
-            var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            // Check if the model is valid
+            if (!ModelState.IsValid)
+            {
+                // Log validation errors (optional)
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine($"Validation error: {error.ErrorMessage}");
+                }
 
+                // Return a BadRequest with the model state
+                return BadRequest(ModelState);
+            }
+            var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            Console.WriteLine($"Received targetemail: {targetemail}");
+            Console.WriteLine($"Received customer: {JsonConvert.SerializeObject(customer)}");
             if (tokenEmail != targetemail)
             {
                 return Forbid("The email in the token does not match the requested email.");
             }
-
+     
             try
             {
                 // First check if the customer exists
@@ -118,6 +132,7 @@ namespace TicketEventBackEnd.Controllers
                     customer.customer_lastname,
                     customer.customer_email,
                     customer.customer_password,
+                    customer.feed_token,
                     targetemail
                 );
 
@@ -138,8 +153,8 @@ namespace TicketEventBackEnd.Controllers
         [HttpPost("ValidateLogin")]
         public async Task<IActionResult> ValidateLogin([FromBody] LoginForm loginRequest)
         {
-            var customer_email = loginRequest.Email;
-            var customer_password = loginRequest.Password;
+            var customer_email = loginRequest.customer_email;
+            var customer_password = loginRequest.customer_password;
             bool validate = await _customerServices.validateCustomerLogin(customer_email, customer_password);
             //when validation is true, generate a token for authorization of other methods
             if (validate)

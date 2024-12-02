@@ -1,110 +1,107 @@
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CustomerserviceService } from '../../service/customerservice.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-profilecomponent',
   templateUrl: './profilecomponent.component.html',
-  styleUrl: './profilecomponent.component.css'
+  styleUrls: ['./profilecomponent.component.css']
 })
 
-
 export class ProfilecomponentComponent implements OnInit {
-  constructor(private customerService: CustomerserviceService, private router : Router) { }
   isEditMode: boolean = false;
   isEditToken: boolean = false;
-  firstname: string | null= "";
-  lastname: string | null= "";
-  email: string = "";
-  password: string = "";
-  customerId: string = "";
-  eventToken: string | null = "UNDEFINED";
+  customer_firstname: string | null = "";
+  customer_lastname: string | null = "";
+  customer_email: string = "";
+  customer_password: string = "";
+  feed_token: string | null = "UNDEFINED";
   token: string | null = "UNDEFINED";
   targetemail: string = "";
-  ngOnInit() {
-    //get email then get info
-    this.email = this.customerService.getEmailSaved();
-    if (this.email) {
 
-      this.displayInfo();  // Only call if email is available
+  constructor(private customerService: CustomerserviceService, private router: Router) { }
+
+  ngOnInit() {
+    // Get email then retrieve the customer info
+    this.customer_email = this.customerService.getEmailSaved();
+    if (this.customer_email) {
+      this.targetemail = this.customer_email; // Set the targetemail only once
+      console.log("original email", this.targetemail);
+      this.displayInfo();  // Call displayInfo if email is available
     } else {
-      // Optionally handle the case where email is missing
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login']); // Navigate to login if email is not available
     }
-    this.targetemail = this.email;
-  //  console.log("email saved:", this.email);
   }
+
+  // Toggle edit mode for customer info
   toggleEditMode() {
     this.isEditMode = !this.isEditMode;
-    //console.log("Edit clicked: ", this.isEditMode);
   }
+
+  // Toggle edit mode for feed token
   toggleTokenEdit() {
     this.isEditToken = !this.isEditToken;
   }
-  
+
+  // Save customer info changes
   saveChanges() {
     const updatedInfo = {
-      FirstName: this.firstname,
-      LastName: this.lastname,
-      Email: this.email,
-      Password: this.password,
+      customer_firstname: this.customer_firstname,
+      customer_lastname: this.customer_lastname,
+      customer_email: this.customer_email,
+      customer_password: this.customer_password,
+      feed_token: this.feed_token
     };
+
+    console.log("Info changed: ", updatedInfo);
+    console.log("Original email: ", this.targetemail);
 
     this.customerService.updateCustomerInfo(updatedInfo, this.targetemail).subscribe({
       next: (response) => {
         console.log('Update successful:', response);
         this.isEditMode = false;  // Exit edit mode
-        this.targetemail = this.email;
         this.displayInfo();       // Refresh the displayed information
       },
       error: (error) => {
-        console.error('Update failed:', error);
-        // Handle error (e.g., show error message to user)
+        console.error('Profile component update failed:', error);
+        // Optionally display a user-friendly error message here
       }
-
     });
   }
-  
+
+  // Save feed token changes
   saveToken() {
     const updateToken = {
-      eventToken: this.eventToken
+      eventToken: this.feed_token
     };
+
     this.customerService.updateTokenFeed(updateToken, this.targetemail).subscribe({
       next: (response) => {
         console.log('Token update successful:', response);
-        this.isEditMode = false;  // Exit edit mode
+        this.isEditToken = false;  // Exit token edit mode
         this.displayInfo();       // Refresh the displayed information
       },
       error: (error) => {
         console.error('Token update failed:', error);
-        // Handle error (e.g., show error message to user)
+        // Optionally display a user-friendly error message here
       }
     });
   }
-  grabInfo() {
-    this.token = this.customerService.getToken()
-   // console.log("profile token: ", this.token);
-    this.customerService.getEmail().subscribe(
-      response => {
-        this.email = response.email; // Assuming response has an `email` field
-        this.customerService.setEmail(this.email);
-      },
-      error => {
-        console.error("Error fetching email:", error);
-      }
 
-    );
-  }
+  // Fetch customer info based on email
   displayInfo() {
-    this.customerService.getCustomerInfoByEmail(this.email).subscribe(
-      (data) => {
-       // console.log('Customer data received in component:', data);
-        this.firstname = data.firstName;
-        this.lastname = data.lastName;
-        this.password = data.password;
-        this.eventToken = data.tokenFeed;
-        console.log("checkpoint",this.firstname, this.lastname, this.password);
+    this.customerService.getCustomerInfoByEmail(this.customer_email).subscribe({
+      next: (data) => {
+        this.customer_firstname = data.customer_firstname;
+        this.customer_lastname = data.customer_lastname;
+        this.customer_password = data.customer_password;
+        this.feed_token = data.feed_token;
+        console.log("Customer data received:", data);
+      },
+      error: (error) => {
+        console.error("Error fetching customer info:", error);
+        // Handle the error (e.g., display an error message to the user)
       }
-    );
+    });
   }
 }
-

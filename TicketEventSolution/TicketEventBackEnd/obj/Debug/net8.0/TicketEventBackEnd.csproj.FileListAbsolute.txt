@@ -114,3 +114,4 @@ D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\refint\T
 D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\TicketEventBackEnd.pdb
 D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\TicketEventBackEnd.genruntimeconfig.cache
 D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\ref\TicketEventBackEnd.dll
+D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Newtonsoft.Json.dll

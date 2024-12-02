@@ -27,15 +27,6 @@ namespace TicketEventBackEnd.Services.Customer
             }
             return false;
         }
-        /*
-        public async Task<bool> getFeed(string email)
-        {
-
-        }
-        public async Task<bool> getLocation(string token, string name)
-        {
-
-        }
-        */
+  
     }
 }

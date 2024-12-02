@@ -10,18 +10,18 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './logincomponent.component.css'
 })
 export class LogincomponentComponent {
-  email: string = "";
-  password: string = "";
+  customer_email: string = "";
+  customer_password: string = "";
   errorMessage: string = '';
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   passwordFormControl = new FormControl('', [Validators.required]);
   constructor(private router: Router, private customerService: CustomerserviceService) { }
   onLogin(): void {
-   // console.log('Login clicked with email: ', this.email, ' and password: ', this.password);
-    this.customerService.validateLogin(this.email, this.password).subscribe(
+    console.log('Login clicked with email: ', this.customer_email, ' and password: ', this.customer_password);
+    this.customerService.validateLogin(this.customer_email, this.customer_password).subscribe(
       (response) => {
-        // console.log(response);
-        // console.log(this.email, this.password);
+         console.log(response);
+         console.log(this.customer_email, this.customer_password);
         // Handle successful login, e.g., redirect to dashboard
         if (response == true) {
           /*
@@ -34,7 +34,7 @@ export class LogincomponentComponent {
 
          
           */
-          this.customerService.setEmail(this.email);
+          this.customerService.setEmail(this.customer_email);
           // console.log("Login successful, Email saved:", this.emailService.getEmail());
           this.router.navigate(['/profile']);
         }
