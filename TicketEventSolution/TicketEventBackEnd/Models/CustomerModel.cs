@@ -2,11 +2,11 @@
 {
     public class CustomerModel
     {
-        public int CustomerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string tokenFeed { get; set; }
+        public int customer_id { get; set; }
+        public string customer_firstname { get; set; }
+        public string customer_lastname { get; set; }
+        public string customer_email { get; set; }
+        public string customer_password { get; set; }
+        public string feed_token { get; set; }
     }
 }

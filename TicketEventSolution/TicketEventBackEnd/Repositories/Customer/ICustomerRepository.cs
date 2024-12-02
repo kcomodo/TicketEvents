@@ -5,11 +5,11 @@ namespace TicketEventBackEnd.Repositories.Customer
     public interface ICustomerRepository
     {
         Task<IEnumerable<CustomerModel>> getAllCustomer();
-        Task<CustomerModel> getCustomerInfo(string email);
+        Task<CustomerModel> getCustomerInfo(string customer_email);
         void addCustomer(CustomerModel customer);
-        void deleteCustomer(string email);
-        void updateCustomer(string firstname, string lastname, string email, string password, string targetemail);
-        void updateFeedToken(string customer_email, string feedToken);
-        Task<CustomerModel> getFeedToken(string email);
+        void deleteCustomer(string customer_email);
+        void updateCustomer(string customer_firstname, string customer_lastname, string customer_email, string customer_password, string targetemail);
+        void updateFeedToken(string customer_email, string feed_token);
+        Task<CustomerModel> getFeedToken(string customer_email);
     }
 }

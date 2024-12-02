@@ -69,15 +69,15 @@ namespace TicketEventBackEnd.Controllers
         // GET api/<ValuesController>/5
         [Authorize]
         [HttpGet("GetCustomerByEmail")]
-        public async Task<IActionResult> GetCustomerByEmail(string email)
+        public async Task<IActionResult> GetCustomerByEmail(string customer_email)
         {
             var tokenEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-            if (tokenEmail != email)
+            if (tokenEmail != customer_email)
             {
                 return Forbid("The email in the token does not match the requested email.");
             }
-            var customer = await _customerRepository.getCustomerInfo(email);
+            var customer = await _customerRepository.getCustomerInfo(customer_email);
             if (customer == null)
             {
                 return NotFound(new { message = "Customer not found." });
@@ -114,10 +114,10 @@ namespace TicketEventBackEnd.Controllers
 
                 // Then perform the update
                 _customerRepository.updateCustomer(
-                    customer.FirstName,
-                    customer.LastName,
-                    customer.Email,
-                    customer.Password,
+                    customer.customer_firstname,
+                    customer.customer_lastname,
+                    customer.customer_email,
+                    customer.customer_password,
                     targetemail
                 );
 
@@ -130,21 +130,21 @@ namespace TicketEventBackEnd.Controllers
             }
         }
         [HttpDelete("DeleteCustomer")]
-        public IActionResult DeleteCustomer(string email)
+        public IActionResult DeleteCustomer(string customer_email)
         {
-            _customerRepository.deleteCustomer(email);
+            _customerRepository.deleteCustomer(customer_email);
             return Ok();
         }
         [HttpPost("ValidateLogin")]
         public async Task<IActionResult> ValidateLogin([FromBody] LoginForm loginRequest)
         {
-            var email = loginRequest.Email;
-            var password = loginRequest.Password;
-            bool validate = await _customerServices.validateCustomerLogin(email, password);
+            var customer_email = loginRequest.Email;
+            var customer_password = loginRequest.Password;
+            bool validate = await _customerServices.validateCustomerLogin(customer_email, customer_password);
             //when validation is true, generate a token for authorization of other methods
             if (validate)
             {
-                var token = generateJWTToken(email);
+                var token = generateJWTToken(customer_email);
                 //create an instance for the cookie by assigning it to an object
                 //normally has configurable options such as expiration date, security setting and accessbility
                 var cookieOptions = new CookieOptions
@@ -242,7 +242,7 @@ namespace TicketEventBackEnd.Controllers
                     return NotFound($"Customer with email {customer_email} not found.");
                 }
 
-                _customerRepository.updateFeedToken(customer_email, customer.tokenFeed);
+                _customerRepository.updateFeedToken(customer_email, customer.feed_token);
 
                 return Ok(new { message = "Token feed updated successfully" });
             }
