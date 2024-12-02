@@ -1,32 +1,32 @@
 <div class="card">
   <div class="entireForm">
     <div class="container" *ngIf="!isEditMode">
-      <p>First Name: {{firstname}}</p>
-      <p>Last Name: {{lastname}}</p>
-      <p>Email: {{email}}</p>
-      <p>Password: {{password}}</p>
+      <p>First Name: {{customer_firstname}}</p>
+      <p>Last Name: {{customer_lastname}}</p>
+      <p>Email: {{customer_email}}</p>
+      <p>Password: {{customer_password}}</p>
       <button (click)="toggleEditMode()">Edit Account</button>
     </div>
     <div class="container" *ngIf="isEditMode">
       <form (ngSubmit)="saveChanges()">
         <p>
           <label>First Name: </label>
-          <input matInput [(ngModel)]="firstname" name="firstname">
+          <input matInput [(ngModel)]="customer_firstname" name="customer_firstname">
         </p>
 
         <p>
           <label>Last Name: </label>
-          <input matInput [(ngModel)]="lastname" name="lastname">
+          <input matInput [(ngModel)]="customer_lastname" name="customer_lastname">
         </p>
 
         <p>
           <label>Email: </label>
-          <input matInput [(ngModel)]="email" name="email">
+          <input matInput [(ngModel)]="customer_email" name="customer_email">
         </p>
 
         <p>
           <label>Password: </label>
-          <input matInput [(ngModel)]="password" name="password" type="password">
+          <input matInput [(ngModel)]="customer_password" name="customer_password" type="password">
         </p>
 
         <button type="submit">Save</button>
@@ -36,14 +36,14 @@
 
     <div class="tokenContainer" *ngIf="!isEditToken">
       <p>Please enter your token: </p>
-      <p>Token: {{eventToken}}</p>
+      <p>Token: {{feed_token}}</p>
       <button (click)="toggleTokenEdit()">Edit Token</button>
     </div>
     <div class="container" *ngIf="isEditToken">
       <form (ngSubmit)="saveToken()">
         <p>
         <label>Please enter your token: </label>
-        <input matInput [(ngModel)]="eventToken" name="eventToken">
+        <input matInput [(ngModel)]="feed_token" name="feed_token">
           </p>
       </form>
       <button type="submit">Save Token</button>

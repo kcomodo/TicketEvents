@@ -986,6 +986,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "MySql.Data": "9.0.0",
+          "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.7.3",
           "System.IdentityModel.Tokens.Jwt": "8.0.2",
           "TicketEventClientSide": "1.0.0"

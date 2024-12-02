@@ -2,7 +2,7 @@
 {
     public class LoginForm
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string customer_email { get; set; }
+        public string customer_password { get; set; }
     }
 }

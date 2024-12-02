@@ -44,12 +44,12 @@ namespace TicketEventBackEnd.Repositories.Customer
                     //create a new object to store the data
                     CustomerModel customer = new CustomerModel();
                     {
-                        customer.CustomerId = reader.GetInt32("customer_id");
-                        customer.FirstName = reader.GetString("customer_firstname");
-                        customer.LastName = reader.GetString("customer_lastname");
-                        customer.Email = reader.GetString("customer_email");
-                        customer.Password = reader.GetString("customer_password");
-                        customer.tokenFeed = reader.GetString("feed_token");
+                        customer.customer_id = reader.GetInt32("customer_id");
+                        customer.customer_firstname = reader.GetString("customer_firstname");
+                        customer.customer_lastname = reader.GetString("customer_lastname");
+                        customer.customer_email = reader.GetString("customer_email");
+                        customer.customer_password = reader.GetString("customer_password");
+                        customer.feed_token = reader.GetString("feed_token");
                     };
                     return customer;
                 }
@@ -68,12 +68,12 @@ namespace TicketEventBackEnd.Repositories.Customer
                 {
                     customers.Add(new CustomerModel
                     {
-                        CustomerId = reader.GetInt32("customer_id"),
-                        FirstName = reader.GetString("customer_firstname"),
-                        LastName = reader.GetString("customer_lastname"),
-                        Email = reader.GetString("customer_email"),
-                        Password = reader.GetString("customer_password"),
-                        tokenFeed = reader.GetString("feed_token")
+                        customer_id = reader.GetInt32("customer_id"),
+                        customer_firstname = reader.GetString("customer_firstname"),
+                        customer_lastname = reader.GetString("customer_lastname"),
+                        customer_email = reader.GetString("customer_email"),
+                        customer_password = reader.GetString("customer_password"),
+                        feed_token = reader.GetString("feed_token")
                     });
 
                 }
@@ -86,31 +86,31 @@ namespace TicketEventBackEnd.Repositories.Customer
             Regex verifyEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             string query = "INSERT INTO customer (customer_firstname, customer_lastname, customer_email, customer_password) VALUES (@FirstName, @LastName, @Email, @Password)";
             MySqlCommand command = new MySqlCommand(query, _connection);
-            if(!verifyEmail.IsMatch(customer.Email))
+            if(!verifyEmail.IsMatch(customer.customer_email))
             {
                 Console.WriteLine("Invalid Email. Customer not added.");
                 return; // Exit the method without executing the query
             }
             else
             {
-            command.Parameters.AddWithValue("@FirstName", customer.FirstName);
-            command.Parameters.AddWithValue("@LastName", customer.LastName);
-            command.Parameters.AddWithValue("@Email", customer.Email);
-            command.Parameters.AddWithValue("@Password", customer.Password);
+            command.Parameters.AddWithValue("@FirstName", customer.customer_firstname);
+            command.Parameters.AddWithValue("@LastName", customer.customer_lastname);
+            command.Parameters.AddWithValue("@Email", customer.customer_email);
+            command.Parameters.AddWithValue("@Password", customer.customer_password);
             }
     
             command.ExecuteNonQuery();
         }
-        public void deleteCustomer(string email)
+        public void deleteCustomer(string customer_email)
         {
             Regex verifyEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            if (!verifyEmail.IsMatch(email))
+            if (!verifyEmail.IsMatch(customer_email))
             {
                 Console.WriteLine("Email is invalid");
                 return;
             }
             CustomerRepository customer = new CustomerRepository();
-            Task<CustomerModel> customerInfo = customer.getCustomerInfo(email);
+            Task<CustomerModel> customerInfo = customer.getCustomerInfo(customer_email);
             if(customerInfo == null)
             {
                 Console.WriteLine("Email does not exist");
@@ -121,33 +121,33 @@ namespace TicketEventBackEnd.Repositories.Customer
                 string query = "DELETE FROM customer where customer_email = @Email";
                 MySqlCommand command = new MySqlCommand(query, _connection);
 
-                command.Parameters.AddWithValue("@Email", email);
+                command.Parameters.AddWithValue("@Email", customer_email);
                 command.ExecuteNonQuery();
             }
 
         }
-        public void updateCustomer(string firstname, string lastname, string email, string password, string target_email)
+        public void updateCustomer(string customer_firstname, string customer_lastname, string customer_email, string customer_password, string feed_token, string target_email)
         {
-            //UPDATE tablename SET value = @value, value = @value where customer_email = @email
-            string query = "UPDATE customer SET customer_firstname = @first_name, customer_lastname = @last_name," +
-                "customer_email = @email, customer_password = @password where customer_email = @target_email";
+            string query = "UPDATE customer SET customer_firstname = @first_name, customer_lastname = @last_name, " +
+                           "customer_email = @email, customer_password = @password, feed_token = @feed_token " +
+                           "WHERE customer_email = @target_email";
             MySqlCommand command = new MySqlCommand(query, _connection);
             command.Parameters.AddWithValue("@target_email", target_email);
-            command.Parameters.AddWithValue("@first_name", firstname);
-            command.Parameters.AddWithValue("@last_name", lastname);
-            command.Parameters.AddWithValue("@email", email);
-            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@first_name", customer_firstname);
+            command.Parameters.AddWithValue("@last_name", customer_lastname);
+            command.Parameters.AddWithValue("@email", customer_email);
+            command.Parameters.AddWithValue("@password", customer_password);
+            command.Parameters.AddWithValue("@feed_token", feed_token); // Add feed_token as a parameter
             command.ExecuteNonQuery();
-
-
         }
-        public async Task<CustomerModel> getFeedToken(string email)
+
+        public async Task<CustomerModel> getFeedToken(string customer_email)
         {
             string query = "SELECT * FROM customer WHERE customer_email = @Email";
             //insert query into the commands as well as adding the connection to it
             MySqlCommand command = new MySqlCommand(query, _connection);
             //Bind the parameter value to the query value
-            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Email", customer_email);
             //Use a reader now to grab the data
             using (MySqlDataReader reader = await command.ExecuteReaderAsync() as MySqlDataReader)
             {
@@ -156,19 +156,19 @@ namespace TicketEventBackEnd.Repositories.Customer
                     //create a new object to store the data
                     CustomerModel customer = new CustomerModel();
                     {
-                        customer.tokenFeed = reader.GetString("feed_token");
+                        customer.feed_token = reader.GetString("feed_token");
                     };
                     return customer;
                 }
                 return null;
             }
         }
-        public void updateFeedToken(string target_email, string feedToken)
+        public void updateFeedToken(string target_email, string feed_token)
         {
             string query = "UPDATE customer SET feed_token = @feedToken WHERE customer_email = @target_email";
             MySqlCommand command = new MySqlCommand(query, _connection);
             command.Parameters.AddWithValue("@target_email", target_email);
-            command.Parameters.AddWithValue("@feedToken", feedToken);
+            command.Parameters.AddWithValue("@feedToken", feed_token);
             command.ExecuteNonQuery();
         }
     }

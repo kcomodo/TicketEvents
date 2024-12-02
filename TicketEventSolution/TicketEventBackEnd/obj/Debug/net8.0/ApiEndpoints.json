@@ -24,7 +24,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
+        "Name": "customer_email",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -71,7 +71,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
+        "Name": "customer_email",
         "Type": "System.String",
         "IsRequired": false
       }
