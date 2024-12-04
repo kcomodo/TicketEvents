@@ -154,41 +154,6 @@ export class CustomerserviceService implements OnInit {
     );
   }
 
-/*
-  updateCustomerInfo(updatedInfo: any, targetemail: string): Observable<any> {
-    const token = this.getToken(); // Use method to retrieve token
-    if (!token) {
-      console.error('No token available');
-      // Handle token absence appropriately
-    }
-
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
-    });
-
-    const updateUrl = `${this.baseUrl}/UpdateCustomer?targetemail=${encodeURIComponent(targetemail)}`;
-    console.log('Authorization Header Token:', headers.get('Authorization'));
-    // Ensure updatedInfo matches CustomerModel exactly
-    const completeInfo = {
-      customer_firstname: updatedInfo.customer_firstname,
-      customer_lastname: updatedInfo.customer_lastname,
-      customer_email: updatedInfo.customer_email,
-      customer_password: updatedInfo.customer_password
-    };
-
-    return this.http.put(updateUrl, completeInfo, {headers}).pipe(
-      tap(response => {
-        console.log('Update successful:', response);
-      }),
-      catchError(error => {
-        console.error('Customer service Update failed:', error, completeInfo, updateUrl, headers);
-        throw error;
-      })
-    );
-  }
-
-  */
 
   updateTokenFeed(updatedInfo: any, customer_email: string): Observable<any> {
     const headers = new HttpHeaders({
