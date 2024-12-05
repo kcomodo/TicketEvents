@@ -84,7 +84,7 @@ namespace TicketEventBackEnd.Repositories.Customer
         public void addCustomer(CustomerModel customer)
         {
             Regex verifyEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            string query = "INSERT INTO customer (customer_firstname, customer_lastname, customer_email, customer_password) VALUES (@FirstName, @LastName, @Email, @Password)";
+            string query = "INSERT INTO customer (customer_firstname, customer_lastname, customer_email, customer_password, feed_token) VALUES (@FirstName, @LastName, @Email, @Password, @feed_token)";
             MySqlCommand command = new MySqlCommand(query, _connection);
             if(!verifyEmail.IsMatch(customer.customer_email))
             {
@@ -97,6 +97,7 @@ namespace TicketEventBackEnd.Repositories.Customer
             command.Parameters.AddWithValue("@LastName", customer.customer_lastname);
             command.Parameters.AddWithValue("@Email", customer.customer_email);
             command.Parameters.AddWithValue("@Password", customer.customer_password);
+            command.Parameters.AddWithValue("@feed_token", customer.feed_token);
             }
     
             command.ExecuteNonQuery();
