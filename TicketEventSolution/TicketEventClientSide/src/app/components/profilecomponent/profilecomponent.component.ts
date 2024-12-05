@@ -55,7 +55,10 @@ export class ProfilecomponentComponent implements OnInit {
 
     console.log("Info changed: ", updatedInfo);
     console.log("Original email: ", this.targetemail);
-
+    this.customerService.validateFeedToken(this.feed_token).subscribe({
+      next: (response) => { },
+      error: (error) => { }
+    })
     this.customerService.updateCustomerInfo(updatedInfo, this.targetemail).subscribe({
       next: (response) => {
         console.log('Update successful:', response);
@@ -70,6 +73,7 @@ export class ProfilecomponentComponent implements OnInit {
   }
 
   // Save feed token changes
+  /*
   saveToken() {
     const updateToken = {
       eventToken: this.feed_token
@@ -87,7 +91,7 @@ export class ProfilecomponentComponent implements OnInit {
       }
     });
   }
-
+  */
   // Fetch customer info based on email
   displayInfo() {
     this.customerService.getCustomerInfoByEmail(this.customer_email).subscribe({
