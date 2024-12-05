@@ -12,6 +12,7 @@ export class RegisterComponent {
   email: string = "";
   password: string = "";
   confirmPassword: string = "";
+  feed_token: string = "";
   constructor(private router: Router, private customerService: CustomerserviceService) { }
   doPasswordsMatch(): boolean {
     return this.password === this.confirmPassword;
@@ -21,7 +22,7 @@ export class RegisterComponent {
     return emailRegex.test(this.email);
   }
   onRegister(): void {
-    this.customerService.registerCustomer(this.firstname, this.lastname, this.email, this.password).subscribe(
+    this.customerService.registerCustomer(this.firstname, this.lastname, this.email, this.password, this.feed_token).subscribe(
       (response) => {
         console.log('Registration successful:', response);
         this.router.navigate(['/home']);

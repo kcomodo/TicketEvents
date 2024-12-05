@@ -65,9 +65,10 @@ export class CustomerserviceService implements OnInit {
 
   
   }
-  registerCustomer(customer_firstname: string, customer_lastname: string, customer_email: string, customer_password: string) {
+  registerCustomer(customer_firstname: string, customer_lastname: string, customer_email: string, customer_password: string, feed_token : any) {
     console.log("registerCustomer called");
-    return this.http.post<any>(`${this.baseUrl}/AddCustomer`, { customer_firstname, customer_lastname, customer_email, customer_password }, {
+
+    return this.http.post<any>(`${this.baseUrl}/AddCustomer`, { customer_firstname, customer_lastname, customer_email, customer_password, feed_token }, {
       headers: { 'Content-Type': 'application/json' }
     })
   }
