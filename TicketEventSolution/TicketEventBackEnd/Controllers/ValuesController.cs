@@ -286,11 +286,12 @@ namespace TicketEventBackEnd.Controllers
             return Ok();
         }
         
-        [Authorize]
+        
         [HttpPost("ValidateFeedToken")]
         public async Task<IActionResult> getFeedFromSite(string feed_token)
         {
-            //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV //get feeds
+        //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV //get feeds
+        //https://localhost:7240/api/Values/ValidateFeedToken?feed_token=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
             //Check if user has entered a token
             //Validate token through transitland api
             if (string.IsNullOrWhiteSpace(feed_token))

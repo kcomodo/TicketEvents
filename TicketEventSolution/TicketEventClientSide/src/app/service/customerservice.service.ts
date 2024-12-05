@@ -155,42 +155,31 @@ export class CustomerserviceService implements OnInit {
   }
 
 
-  updateTokenFeed(updatedInfo: any, customer_email: string): Observable<any> {
+
+  validateFeedToken(feed_token: string): Observable<any> {
+    const token = this.getToken();
+
+    if (!token) {
+      console.error('No token available');
+      // Handle token absence appropriately (return an observable with an error message, for example)
+      return throwError(() => new Error('No token available'));
+    }
+
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.token}`,
+      'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
     });
 
-    const updateUrl = `${this.baseUrl}/UpdateFeedToken?targetemail=${customer_email}`;
-
-    return this.http.put(updateUrl, updatedInfo, { headers }).pipe(
-      tap(response => {
-        console.log('Update successful:', response);
-      }),
-      catchError(error => {
-        console.error('Customer service Update failed:', error);
-        throw error;
-      })
-    );
-  }
-  
-  validateFeedToken(feed_token: any): Observable<any> {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.token}`,
-      'Content-Type': 'application/json'
-    });
     const updateUrl = `${this.baseUrl}/ValidateFeedToken?feed_token=${feed_token}`;
-
-    return this.http.put(updateUrl, { headers }).pipe(
+    console.log(feed_token);
+    return this.http.post<any>(`${this.baseUrl}/ValidateFeedToken?feed_token=${feed_token}`, { headers }).pipe(
       tap(response => {
-        console.log('Validation successful:', response);
-      }),
-      catchError(error => {
-        console.error('Validation failed:', error);
-        throw error;
+        //  console.log('Received customer response:', response); // Log the response from the server
       })
     );
+
   }
+
   
   getEmailSaved(): string {
     return this.cookieService.get(this.emailSaved);
