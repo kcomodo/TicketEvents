@@ -288,17 +288,17 @@ namespace TicketEventBackEnd.Controllers
         
         [Authorize]
         [HttpPost("ValidateFeedToken")]
-        public async Task<IActionResult> getFeedFromSite(string siteToken)
+        public async Task<IActionResult> getFeedFromSite(string feed_token)
         {
             //https://transit.land/api/v2/rest/feeds?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV //get feeds
             //Check if user has entered a token
             //Validate token through transitland api
-            if (string.IsNullOrWhiteSpace(siteToken))
+            if (string.IsNullOrWhiteSpace(feed_token))
             {
                 return BadRequest(new { message = "API key is required." });
             }
        
-            string apiUrl = $"https://transit.land/api/v2/rest/feeds?apikey={siteToken}";
+            string apiUrl = $"https://transit.land/api/v2/rest/feeds?apikey={feed_token}";
             var response = await _httpClient.GetAsync(apiUrl);
 
             // Check the response

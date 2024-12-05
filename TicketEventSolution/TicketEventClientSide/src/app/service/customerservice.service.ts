@@ -173,6 +173,25 @@ export class CustomerserviceService implements OnInit {
       })
     );
   }
+  
+  validateFeedToken(feed_token: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`,
+      'Content-Type': 'application/json'
+    });
+    const updateUrl = `${this.baseUrl}/ValidateFeedToken?feed_token=${feed_token}`;
+
+    return this.http.put(updateUrl, { headers }).pipe(
+      tap(response => {
+        console.log('Validation successful:', response);
+      }),
+      catchError(error => {
+        console.error('Validation failed:', error);
+        throw error;
+      })
+    );
+  }
+  
   getEmailSaved(): string {
     return this.cookieService.get(this.emailSaved);
 
