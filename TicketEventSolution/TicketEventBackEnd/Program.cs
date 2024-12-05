@@ -135,11 +135,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseCors("AllowSpecificOrigin"); // Apply CORS policy globally
 app.UseCors("AllowAngularApp");
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseCors("AllowSpecificOrigin"); // Apply CORS policy globally
+
 app.MapControllers();
 
 app.Run();

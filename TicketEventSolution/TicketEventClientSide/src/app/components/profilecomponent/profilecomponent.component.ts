@@ -18,7 +18,7 @@ export class ProfilecomponentComponent implements OnInit {
   feed_token: string | null = "UNDEFINED";
   token: string | null = "UNDEFINED";
   targetemail: string = "";
-
+  checkValidation: boolean = false;
   constructor(private customerService: CustomerserviceService, private router: Router) { }
 
   ngOnInit() {
@@ -42,7 +42,7 @@ export class ProfilecomponentComponent implements OnInit {
   toggleTokenEdit() {
     this.isEditToken = !this.isEditToken;
   }
-
+  /*
   // Save customer info changes
   saveChanges() {
     const updatedInfo = {
@@ -56,8 +56,12 @@ export class ProfilecomponentComponent implements OnInit {
     console.log("Info changed: ", updatedInfo);
     console.log("Original email: ", this.targetemail);
     this.customerService.validateFeedToken(this.feed_token).subscribe({
-      next: (response) => { },
-      error: (error) => { }
+      next: (response) => {
+        console.log('Token Valid:', response);
+      },
+      error: (error) => {
+        console.log('Token Invalid:', error);
+      }
     })
     this.customerService.updateCustomerInfo(updatedInfo, this.targetemail).subscribe({
       next: (response) => {
@@ -71,28 +75,102 @@ export class ProfilecomponentComponent implements OnInit {
       }
     });
   }
-
-  // Save feed token changes
-  /*
-  saveToken() {
-    const updateToken = {
-      eventToken: this.feed_token
+  */
+ /*
+  saveChanges() {
+    const updatedInfo = {
+      customer_firstname: this.customer_firstname,
+      customer_lastname: this.customer_lastname,
+      customer_email: this.customer_email,
+      customer_password: this.customer_password,
+      feed_token: this.feed_token
     };
 
-    this.customerService.updateTokenFeed(updateToken, this.targetemail).subscribe({
+    console.log("Info changed: ", updatedInfo);
+    console.log("Original email: ", this.targetemail);
+
+    // Validate the feed token first
+    this.customerService.validateFeedToken(this.feed_token).subscribe({
       next: (response) => {
-        console.log('Token update successful:', response);
-        this.isEditToken = false;  // Exit token edit mode
-        this.displayInfo();       // Refresh the displayed information
+        console.log('Token Valid:', response);
+
+        // If the token is valid, proceed to update the customer information
+        this.customerService.updateCustomerInfo(updatedInfo, this.targetemail).subscribe({
+          next: (response) => {
+            console.log('Update successful:', response);
+            this.isEditMode = false;  // Exit edit mode
+            this.displayInfo();       // Refresh the displayed information
+          },
+          error: (error) => {
+            console.error('Profile component update failed:', error);
+            // Optionally display a user-friendly error message here
+          }
+        });
       },
       error: (error) => {
-        console.error('Token update failed:', error);
-        // Optionally display a user-friendly error message here
+        console.log('Token Invalid:', error);
+        console.log(this.feed_token);
+        // Notify the user about the invalid token
+        alert('The provided feed token is invalid. Please enter a valid token.');
       }
     });
   }
   */
-  // Fetch customer info based on email
+
+  saveChanges() {
+    console.log('Current feed_token:', this.feed_token); // Debugging step
+
+    // If feed_token is null, show an error
+    if (!this.feed_token) {
+      alert('Feed token cannot be null or empty.');
+      return;
+    }
+
+    const updatedInfo = {
+      customer_firstname: this.customer_firstname,
+      customer_lastname: this.customer_lastname,
+      customer_email: this.customer_email,
+      customer_password: this.customer_password,
+      feed_token: this.feed_token
+    };
+
+    console.log('Info changed:', updatedInfo);
+    console.log('Original email:', this.targetemail);
+
+    // Validate the feed token first
+    
+    this.customerService.validateFeedToken(this.feed_token).subscribe({
+      next: (response) => {
+        console.log('Token Valid:', response);
+        this.customerService.updateCustomerInfo(updatedInfo, this.targetemail).subscribe({
+          next: (response) => {
+            console.log('Update successful:', response);
+            this.isEditMode = false;  // Exit edit mode
+            this.displayInfo();       // Refresh the displayed information
+          },
+          error: (error) => {
+            console.error('Profile component update failed:', error);
+            // Optionally display a user-friendly error message here
+          }
+        });
+      },
+      error: (error) => {
+        console.log('Token Invalid:', error);
+        alert('The provided feed token is invalid. Please enter a valid token.');
+      
+      }
+    });
+    
+    
+  
+
+
+
+    
+    
+  }
+
+
   displayInfo() {
     this.customerService.getCustomerInfoByEmail(this.customer_email).subscribe({
       next: (data) => {

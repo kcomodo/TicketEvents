@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketEventBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66082689c32f90f6ca50ad3ae6673e49fd6bc70d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0adad909f001718fc2bb22fb553140bf1c996a28")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketEventBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketEventBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

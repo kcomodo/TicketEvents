@@ -155,7 +155,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "siteToken",
+        "Name": "feed_token",
         "Type": "System.String",
         "IsRequired": false
       }
