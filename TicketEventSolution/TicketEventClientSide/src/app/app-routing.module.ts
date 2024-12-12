@@ -11,6 +11,7 @@ import { accessGuard } from './guards/access.guard';
 import { TransitTrackerComponent } from './components/transit-tracker/transit-tracker.component';
 import { ForgotUserComponent } from './components/forgot-user/forgot-user.component';
 import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
+import { MapComponent } from './components/map/map.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'home',
     component:HomecomponentComponent
+  },
+  {
+    path: 'map',
+    component: MapComponent
   },
   {
     path: 'profile',
