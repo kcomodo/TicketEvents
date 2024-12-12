@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventTicketUnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7ce38596999e8f3f4dd8037a58c231465a1b553")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c5e1eb276fdddd421a4b4a4f7da0377a54c66a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventTicketUnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventTicketUnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
