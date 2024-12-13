@@ -4,10 +4,17 @@ import { accessGuard } from "../../guards/access.guard";
 import { Router } from "@angular/router";
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import * as countries from 'countries-list';
+
+
+
+
+
 @Component({
   selector: 'app-logincomponent',
   templateUrl: './logincomponent.component.html',
   styleUrl: './logincomponent.component.css'
+
 })
 export class LogincomponentComponent {
   customer_email: string = "";
@@ -15,9 +22,17 @@ export class LogincomponentComponent {
   errorMessage: string = '';
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   passwordFormControl = new FormControl('', [Validators.required]);
-  constructor(private router: Router, private customerService: CustomerserviceService) { }
+  countriesData = countries.countries;  // Get country data
+
+  constructor(private router: Router, private customerService: CustomerserviceService) {
+  }
   onLogin(): void {
     console.log('Login clicked with email: ', this.customer_email, ' and password: ', this.customer_password);
+
+    console.log(this.countriesData);  // Logs country names and codes
+
+
+
     this.customerService.validateLogin(this.customer_email, this.customer_password).subscribe(
       (response) => {
          console.log(response);
