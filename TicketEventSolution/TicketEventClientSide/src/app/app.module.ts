@@ -18,6 +18,7 @@ import { TransitTrackerComponent } from './components/transit-tracker/transit-tr
 import { ForgotUserComponent } from './components/forgot-user/forgot-user.component';
 import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 import { MapComponent } from './components/map/map.component';
+
 @NgModule({ declarations: [
         AppComponent,
         HomecomponentComponent,

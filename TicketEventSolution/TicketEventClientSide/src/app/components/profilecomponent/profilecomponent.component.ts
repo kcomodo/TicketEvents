@@ -3,9 +3,10 @@ import { CustomerserviceService } from '../../service/customerservice.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profilecomponent',
-  templateUrl: './profilecomponent.component.html',
-  styleUrls: ['./profilecomponent.component.css']
+    selector: 'app-profilecomponent',
+    templateUrl: './profilecomponent.component.html',
+    styleUrls: ['./profilecomponent.component.css'],
+    standalone: false
 })
 
 export class ProfilecomponentComponent implements OnInit {

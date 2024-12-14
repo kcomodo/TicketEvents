@@ -7,14 +7,11 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as countries from 'countries-list';
 
 
-
-
-
 @Component({
-  selector: 'app-logincomponent',
-  templateUrl: './logincomponent.component.html',
-  styleUrl: './logincomponent.component.css'
-
+    selector: 'app-logincomponent',
+    templateUrl: './logincomponent.component.html',
+    styleUrl: './logincomponent.component.css',
+    standalone: false
 })
 export class LogincomponentComponent {
   customer_email: string = "";
