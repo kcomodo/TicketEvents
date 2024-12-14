@@ -7,9 +7,6 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as countries from 'countries-list';
 
 
-
-
-
 @Component({
   selector: 'app-logincomponent',
   templateUrl: './logincomponent.component.html',

@@ -23,6 +23,7 @@
     <PackageJsonDependenciesLeaflet Condition="$(PackageJsonDependenciesLeaflet) == ''">^1.9.4</PackageJsonDependenciesLeaflet>
     <PackageJsonDependenciesNgxCookieService Condition="$(PackageJsonDependenciesNgxCookieService) == ''">^18.0.0</PackageJsonDependenciesNgxCookieService>
     <PackageJsonDependenciesRxjs Condition="$(PackageJsonDependenciesRxjs) == ''">~7.8.0</PackageJsonDependenciesRxjs>
+    <PackageJsonDependenciesTaigaUi Condition="$(PackageJsonDependenciesTaigaUi) == ''">^4.18.0</PackageJsonDependenciesTaigaUi>
     <PackageJsonDependenciesTslib Condition="$(PackageJsonDependenciesTslib) == ''">^2.3.0</PackageJsonDependenciesTslib>
     <PackageJsonDependenciesZoneJs Condition="$(PackageJsonDependenciesZoneJs) == ''">~0.14.3</PackageJsonDependenciesZoneJs>
     <PackageJsonDevdependenciesAngularDevkitBuildAngular Condition="$(PackageJsonDevdependenciesAngularDevkitBuildAngular) == ''">^18.2.12</PackageJsonDevdependenciesAngularDevkitBuildAngular>

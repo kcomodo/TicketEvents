@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\TicketEvents\\TicketEventSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\components\\logincomponent\\logincomponent.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\app\\components\\logincomponent\\logincomponent.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\iso3166.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|solutionrelative:ticketeventclientside\\src\\iso3166.d.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D47A67D-A888-4619-ACC5-E9ADA73CC54C}|TicketEventClientSide\\TicketEventClientSide.esproj|d:\\ticketevents\\ticketeventsolution\\ticketeventclientside\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -47,45 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "tsconfig.json",
-              "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\tsconfig.json",
-              "RelativeDocumentMoniker": "TicketEventClientSide\\tsconfig.json",
-              "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\tsconfig.json",
-              "RelativeToolTip": "TicketEventClientSide\\tsconfig.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-13T22:41:28.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "iso3166.d.ts",
-              "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\iso3166.d.ts",
-              "RelativeDocumentMoniker": "TicketEventClientSide\\src\\iso3166.d.ts",
-              "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\iso3166.d.ts",
-              "RelativeToolTip": "TicketEventClientSide\\src\\iso3166.d.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-12-13T22:38:30.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "logincomponent.component.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.ts",
               "ToolTip": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.ts",
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\components\\logincomponent\\logincomponent.component.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-12-13T22:04:04.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "profilecomponent.component.ts",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
               "RelativeDocumentMoniker": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
@@ -93,12 +59,11 @@
               "RelativeToolTip": "TicketEventClientSide\\src\\app\\components\\profilecomponent\\profilecomponent.component.ts",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-12-13T22:03:25.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T22:03:25.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "D:\\TicketEvents\\TicketEventSolution\\TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
@@ -106,8 +71,7 @@
               "RelativeToolTip": "TicketEventBackEnd\\Controllers\\ValuesController.cs",
               "ViewState": "AgIAAAYBAAAAAAAAAAAYwB8BAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:32:24.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T20:32:24.79Z"
             }
           ]
         }
