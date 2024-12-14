@@ -17,6 +17,10 @@
     <PackageJsonDependenciesAngularPlatformBrowser Condition="$(PackageJsonDependenciesAngularPlatformBrowser) == ''">^19.0.4</PackageJsonDependenciesAngularPlatformBrowser>
     <PackageJsonDependenciesAngularPlatformBrowserDynamic Condition="$(PackageJsonDependenciesAngularPlatformBrowserDynamic) == ''">^19.0.4</PackageJsonDependenciesAngularPlatformBrowserDynamic>
     <PackageJsonDependenciesAngularRouter Condition="$(PackageJsonDependenciesAngularRouter) == ''">^19.0.4</PackageJsonDependenciesAngularRouter>
+    <PackageJsonDependenciesTaigaUiCdk Condition="$(PackageJsonDependenciesTaigaUiCdk) == ''">^4.18.0</PackageJsonDependenciesTaigaUiCdk>
+    <PackageJsonDependenciesTaigaUiCore Condition="$(PackageJsonDependenciesTaigaUiCore) == ''">^4.18.0</PackageJsonDependenciesTaigaUiCore>
+    <PackageJsonDependenciesTaigaUiIcons Condition="$(PackageJsonDependenciesTaigaUiIcons) == ''">^4.18.0</PackageJsonDependenciesTaigaUiIcons>
+    <PackageJsonDependenciesTaigaUiKit Condition="$(PackageJsonDependenciesTaigaUiKit) == ''">^4.18.0</PackageJsonDependenciesTaigaUiKit>
     <PackageJsonDependenciesTypesLeaflet Condition="$(PackageJsonDependenciesTypesLeaflet) == ''">^1.9.15</PackageJsonDependenciesTypesLeaflet>
     <PackageJsonDependenciesCountriesList Condition="$(PackageJsonDependenciesCountriesList) == ''">^3.1.1</PackageJsonDependenciesCountriesList>
     <PackageJsonDependenciesJestEditorSupport Condition="$(PackageJsonDependenciesJestEditorSupport) == ''">*</PackageJsonDependenciesJestEditorSupport>
