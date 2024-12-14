@@ -21,7 +21,7 @@
     <PackageJsonDependenciesCountriesList Condition="$(PackageJsonDependenciesCountriesList) == ''">^3.1.1</PackageJsonDependenciesCountriesList>
     <PackageJsonDependenciesJestEditorSupport Condition="$(PackageJsonDependenciesJestEditorSupport) == ''">*</PackageJsonDependenciesJestEditorSupport>
     <PackageJsonDependenciesLeaflet Condition="$(PackageJsonDependenciesLeaflet) == ''">^1.9.4</PackageJsonDependenciesLeaflet>
-    <PackageJsonDependenciesNgxCookieService Condition="$(PackageJsonDependenciesNgxCookieService) == ''">^18.0.0</PackageJsonDependenciesNgxCookieService>
+    <PackageJsonDependenciesNgxCookieService Condition="$(PackageJsonDependenciesNgxCookieService) == ''">^19.0.0</PackageJsonDependenciesNgxCookieService>
     <PackageJsonDependenciesRxjs Condition="$(PackageJsonDependenciesRxjs) == ''">~7.8.0</PackageJsonDependenciesRxjs>
     <PackageJsonDependenciesTaigaUi Condition="$(PackageJsonDependenciesTaigaUi) == ''">^4.18.0</PackageJsonDependenciesTaigaUi>
     <PackageJsonDependenciesTslib Condition="$(PackageJsonDependenciesTslib) == ''">^2.3.0</PackageJsonDependenciesTslib>
