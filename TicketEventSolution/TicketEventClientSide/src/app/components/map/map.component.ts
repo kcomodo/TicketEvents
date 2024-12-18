@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
@@ -7,19 +7,27 @@ import * as L from 'leaflet';
     styleUrl: './map.component.css',
     standalone: false
 })
-export class MapComponent {
-  ngOnInit(): void {
-    // Create the map instance
-    const map = L.map('map').setView([51.505, -0.09], 13); // Default coordinates: [latitude, longitude], zoom level
+export class MapComponent implements AfterViewInit {
+  private map!: L.Map; // Explicitly define the type as L.Map
 
-    // Add OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19
-    }).addTo(map);
+  private initMap(): void {
+    this.map = L.map('map', {
+      center: [39.8282, -98.5795],
+      zoom: 3
+    });
 
-    // Optional: Add a marker to the map
-    L.marker([51.5, -0.09]).addTo(map)
-      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-      .openPopup();
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 3,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+
+    tiles.addTo(this.map);
+  }
+
+  constructor() { }
+
+  ngAfterViewInit(): void {
+    this.initMap();
   }
 }
