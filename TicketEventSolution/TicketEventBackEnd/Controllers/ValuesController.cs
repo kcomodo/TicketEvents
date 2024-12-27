@@ -281,8 +281,9 @@ namespace TicketEventBackEnd.Controllers
         [HttpGet("GetAgencyLocation")]
         public async Task<IActionResult> getLocationBasedOnAgency(string siteToken, string agencyName)
         {
-            //You can find schedule based on agency
-            //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+        //You can find schedule based on agency
+        //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+        //https://transit.land/api/v2/rest/agencies?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
             return Ok();
         }
         

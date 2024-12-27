@@ -9,6 +9,7 @@
 }
 
 .map-frame {
+    position:relative;
   border: 2px solid black;
   height: 100%;
 }
