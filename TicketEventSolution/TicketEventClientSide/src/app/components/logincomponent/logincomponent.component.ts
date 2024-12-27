@@ -20,16 +20,12 @@ export class LogincomponentComponent {
   errorMessage: string = '';
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   passwordFormControl = new FormControl('', [Validators.required]);
-  countriesData = countries.countries;  // Get country data
+
 
   constructor(private router: Router, private customerService: CustomerserviceService) {
   }
   onLogin(): void {
-    console.log('Login clicked with email: ', this.customer_email, ' and password: ', this.customer_password);
-
-    console.log(this.countriesData);  // Logs country names and codes
-
-
+    //console.log('Login clicked with email: ', this.customer_email, ' and password: ', this.customer_password);
 
     this.customerService.validateLogin(this.customer_email, this.customer_password).subscribe(
       (response) => {
