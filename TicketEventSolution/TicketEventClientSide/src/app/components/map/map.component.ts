@@ -5,8 +5,7 @@ import { TuiDay, TuiTime } from '@taiga-ui/cdk';
 import { Geocoder, geocoders } from 'leaflet-control-geocoder';
 import "leaflet/dist/leaflet.css";
 import "leaflet-control-geocoder/dist/Control.Geocoder.css";
-
-
+import "leaflet.vectorgrid";
 
 @Component({
     selector: 'app-map',
@@ -32,7 +31,17 @@ export class MapComponent implements AfterViewInit {
     });
 
     tiles.addTo(this.map);
-
+    //https://www.transit.land/examples/example-map.html?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+    //needed to install @types/leaflet.vectorgrid
+    //The plugin only supported js so we need @types
+    const mapBox = L.vectorGrid.protobuf("https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV", {
+      vectorTileLayerStyles: {
+        roads: { color: 'blue', weight: 1 },
+        water: { color: 'cyan' },
+        landuse: { color: 'green', weight: 0.5 }, },
+      subdomains: "abcd"
+    }).addTo(this.map);
+    
     new Geocoder({
       geocoder: new geocoders.Nominatim(),
       position: 'topleft',
