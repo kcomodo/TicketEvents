@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketEventWPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e50f931b092f117b2e8cbdb037884824e71effd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b200c3ac292f9df475940912615320763bf59185")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketEventWPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketEventWPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
