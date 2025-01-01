@@ -25,8 +25,8 @@ export class MapComponent implements AfterViewInit {
     });
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      minZoom: 1,
+      maxZoom: 14,
+      
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
@@ -34,12 +34,19 @@ export class MapComponent implements AfterViewInit {
     //https://www.transit.land/examples/example-map.html?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
     //needed to install @types/leaflet.vectorgrid
     //The plugin only supported js so we need @types
+    //replace the api key later when fully finished
     const mapBox = L.vectorGrid.protobuf("https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV", {
       vectorTileLayerStyles: {
-        roads: { color: 'blue', weight: 1 },
-        water: { color: 'cyan' },
-        landuse: { color: 'green', weight: 0.5 }, },
-      subdomains: "abcd"
+        routes: {
+          weight: 3,
+          color: "#ff0000",
+          opacity: 1
+        }
+
+      },
+      maxZoom: 14
+      // subdomains: "abcd"
+
     }).addTo(this.map);
     
     new Geocoder({
