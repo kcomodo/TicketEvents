@@ -18,7 +18,8 @@ import { TransitTrackerComponent } from './components/transit-tracker/transit-tr
 import { ForgotUserComponent } from './components/forgot-user/forgot-user.component';
 import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 import { MapComponent } from './components/map/map.component';
-import { GraphqlMapComponent } from './components/graphql-map/graphql-map.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 @NgModule({ declarations: [
         AppComponent,
@@ -33,7 +34,7 @@ import { GraphqlMapComponent } from './components/graphql-map/graphql-map.compon
         ForgotUserComponent,
         EmailConfirmationComponent,
         MapComponent,
-        GraphqlMapComponent
+        DashboardComponent
     ],
     bootstrap: [AppComponent], imports: [FormsModule,
         ReactiveFormsModule,

@@ -12,6 +12,7 @@ import { TransitTrackerComponent } from './components/transit-tracker/transit-tr
 import { ForgotUserComponent } from './components/forgot-user/forgot-user.component';
 import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 import { MapComponent } from './components/map/map.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path: 'forgot',
     component: ForgotUserComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   },
   {
     path: 'confirmation',
