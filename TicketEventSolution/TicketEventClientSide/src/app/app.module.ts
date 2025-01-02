@@ -1,7 +1,6 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomecomponentComponent } from './components/homecomponent/homecomponent.component';
@@ -20,6 +19,11 @@ import { ForgotUserComponent } from './components/forgot-user/forgot-user.compon
 import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 import { MapComponent } from './components/map/map.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({ declarations: [
@@ -41,8 +45,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
         ReactiveFormsModule,
         BrowserModule,
       AppRoutingModule,
+      MatButtonModule,
+      MatStepperModule,
+      FormsModule,
+      MatFormFieldModule,
+      BrowserAnimationsModule,
+      MatInputModule,
         RouterModule.forRoot([]), // add your routes here if any
 
         
-    ], providers: [CustomerserviceService, CookieService, provideHttpClient(withInterceptorsFromDi()), ] })
+    ], providers: [CustomerserviceService, CookieService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
