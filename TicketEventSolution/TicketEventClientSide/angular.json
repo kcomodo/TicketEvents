@@ -35,8 +35,10 @@
               "src/assets"
             ],
             "styles": [
+     
               "./node_modules/leaflet/dist/leaflet.css",
-              "src/styles.css"
+              "src/styles.css",
+
             ],
             "scripts": [
               "node_modules/leaflet-control-geocoder/dist/Control.Geocoder.js"

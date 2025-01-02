@@ -10,17 +10,23 @@
     <PackageJsonScriptsTest Condition="$(PackageJsonScriptsTest) == ''">ng test</PackageJsonScriptsTest>
     <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
     <PackageJsonDependenciesAngularAnimations Condition="$(PackageJsonDependenciesAngularAnimations) == ''">^19.0.4</PackageJsonDependenciesAngularAnimations>
+    <PackageJsonDependenciesAngularCdk Condition="$(PackageJsonDependenciesAngularCdk) == ''">^19.0.0</PackageJsonDependenciesAngularCdk>
     <PackageJsonDependenciesAngularCommon Condition="$(PackageJsonDependenciesAngularCommon) == ''">^19.0.4</PackageJsonDependenciesAngularCommon>
     <PackageJsonDependenciesAngularCompiler Condition="$(PackageJsonDependenciesAngularCompiler) == ''">^19.0.4</PackageJsonDependenciesAngularCompiler>
     <PackageJsonDependenciesAngularCore Condition="$(PackageJsonDependenciesAngularCore) == ''">^19.0.4</PackageJsonDependenciesAngularCore>
     <PackageJsonDependenciesAngularForms Condition="$(PackageJsonDependenciesAngularForms) == ''">^19.0.4</PackageJsonDependenciesAngularForms>
+    <PackageJsonDependenciesAngularMaterial Condition="$(PackageJsonDependenciesAngularMaterial) == ''">^19.0.4</PackageJsonDependenciesAngularMaterial>
     <PackageJsonDependenciesAngularPlatformBrowser Condition="$(PackageJsonDependenciesAngularPlatformBrowser) == ''">^19.0.4</PackageJsonDependenciesAngularPlatformBrowser>
     <PackageJsonDependenciesAngularPlatformBrowserDynamic Condition="$(PackageJsonDependenciesAngularPlatformBrowserDynamic) == ''">^19.0.4</PackageJsonDependenciesAngularPlatformBrowserDynamic>
     <PackageJsonDependenciesAngularRouter Condition="$(PackageJsonDependenciesAngularRouter) == ''">^19.0.4</PackageJsonDependenciesAngularRouter>
-    <PackageJsonDependenciesTaigaUiCdk Condition="$(PackageJsonDependenciesTaigaUiCdk) == ''">^4.18.0</PackageJsonDependenciesTaigaUiCdk>
-    <PackageJsonDependenciesTaigaUiCore Condition="$(PackageJsonDependenciesTaigaUiCore) == ''">^4.18.0</PackageJsonDependenciesTaigaUiCore>
-    <PackageJsonDependenciesTaigaUiIcons Condition="$(PackageJsonDependenciesTaigaUiIcons) == ''">^4.18.0</PackageJsonDependenciesTaigaUiIcons>
-    <PackageJsonDependenciesTaigaUiKit Condition="$(PackageJsonDependenciesTaigaUiKit) == ''">^4.18.0</PackageJsonDependenciesTaigaUiKit>
+    <PackageJsonDependenciesTaigaUiAddonCharts Condition="$(PackageJsonDependenciesTaigaUiAddonCharts) == ''">^4.19.0</PackageJsonDependenciesTaigaUiAddonCharts>
+    <PackageJsonDependenciesTaigaUiAddonCommerce Condition="$(PackageJsonDependenciesTaigaUiAddonCommerce) == ''">^4.19.0</PackageJsonDependenciesTaigaUiAddonCommerce>
+    <PackageJsonDependenciesTaigaUiAddonDoc Condition="$(PackageJsonDependenciesTaigaUiAddonDoc) == ''">^4.19.0</PackageJsonDependenciesTaigaUiAddonDoc>
+    <PackageJsonDependenciesTaigaUiAddonMobile Condition="$(PackageJsonDependenciesTaigaUiAddonMobile) == ''">^4.19.0</PackageJsonDependenciesTaigaUiAddonMobile>
+    <PackageJsonDependenciesTaigaUiAddonTable Condition="$(PackageJsonDependenciesTaigaUiAddonTable) == ''">^4.19.0</PackageJsonDependenciesTaigaUiAddonTable>
+    <PackageJsonDependenciesTaigaUiEventPlugins Condition="$(PackageJsonDependenciesTaigaUiEventPlugins) == ''">^4.0.2</PackageJsonDependenciesTaigaUiEventPlugins>
+    <PackageJsonDependenciesTaigaUiIcons Condition="$(PackageJsonDependenciesTaigaUiIcons) == ''">^4.19.0</PackageJsonDependenciesTaigaUiIcons>
+    <PackageJsonDependenciesTaigaUiLayout Condition="$(PackageJsonDependenciesTaigaUiLayout) == ''">^4.19.0</PackageJsonDependenciesTaigaUiLayout>
     <PackageJsonDependenciesTypesLeaflet Condition="$(PackageJsonDependenciesTypesLeaflet) == ''">^1.9.15</PackageJsonDependenciesTypesLeaflet>
     <PackageJsonDependenciesTypesLeafletVectorgrid Condition="$(PackageJsonDependenciesTypesLeafletVectorgrid) == ''">^1.3.5</PackageJsonDependenciesTypesLeafletVectorgrid>
     <PackageJsonDependenciesCountriesList Condition="$(PackageJsonDependenciesCountriesList) == ''">^3.1.1</PackageJsonDependenciesCountriesList>
@@ -30,9 +36,8 @@
     <PackageJsonDependenciesLeafletVectorgrid Condition="$(PackageJsonDependenciesLeafletVectorgrid) == ''">^1.3.0</PackageJsonDependenciesLeafletVectorgrid>
     <PackageJsonDependenciesNgxCookieService Condition="$(PackageJsonDependenciesNgxCookieService) == ''">^19.0.0</PackageJsonDependenciesNgxCookieService>
     <PackageJsonDependenciesRxjs Condition="$(PackageJsonDependenciesRxjs) == ''">~7.8.0</PackageJsonDependenciesRxjs>
-    <PackageJsonDependenciesTaigaUi Condition="$(PackageJsonDependenciesTaigaUi) == ''">^4.18.0</PackageJsonDependenciesTaigaUi>
     <PackageJsonDependenciesTslib Condition="$(PackageJsonDependenciesTslib) == ''">^2.3.0</PackageJsonDependenciesTslib>
-    <PackageJsonDependenciesZoneJs Condition="$(PackageJsonDependenciesZoneJs) == ''">~0.15.0</PackageJsonDependenciesZoneJs>
+    <PackageJsonDependenciesZoneJs Condition="$(PackageJsonDependenciesZoneJs) == ''">^0.15.0</PackageJsonDependenciesZoneJs>
     <PackageJsonDevdependenciesAngularDevkitBuildAngular Condition="$(PackageJsonDevdependenciesAngularDevkitBuildAngular) == ''">^19.0.5</PackageJsonDevdependenciesAngularDevkitBuildAngular>
     <PackageJsonDevdependenciesAngularCli Condition="$(PackageJsonDevdependenciesAngularCli) == ''">^19.0.5</PackageJsonDevdependenciesAngularCli>
     <PackageJsonDevdependenciesAngularCompilerCli Condition="$(PackageJsonDevdependenciesAngularCompilerCli) == ''">^19.0.4</PackageJsonDevdependenciesAngularCompilerCli>
