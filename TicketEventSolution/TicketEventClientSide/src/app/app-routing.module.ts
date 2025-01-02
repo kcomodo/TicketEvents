@@ -13,6 +13,8 @@ import { ForgotUserComponent } from './components/forgot-user/forgot-user.compon
 import { EmailConfirmationComponent } from './components/email-confirmation/email-confirmation.component';
 import { MapComponent } from './components/map/map.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const routes: Routes = [
   {
     path: 'login',

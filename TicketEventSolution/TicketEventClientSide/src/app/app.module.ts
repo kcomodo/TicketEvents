@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,7 +40,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     bootstrap: [AppComponent], imports: [FormsModule,
         ReactiveFormsModule,
         BrowserModule,
-        AppRoutingModule,
-        RouterModule.forRoot([]) // add your routes here if any
-    ], providers: [CustomerserviceService, CookieService, provideHttpClient(withInterceptorsFromDi())] })
+      AppRoutingModule,
+        RouterModule.forRoot([]), // add your routes here if any
+
+        
+    ], providers: [CustomerserviceService, CookieService, provideHttpClient(withInterceptorsFromDi()), ] })
 export class AppModule { }

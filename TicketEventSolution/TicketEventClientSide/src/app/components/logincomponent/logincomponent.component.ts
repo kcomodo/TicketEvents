@@ -5,29 +5,6 @@ import { Router } from "@angular/router";
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as countries from 'countries-list';
-import { TuiDay, TuiTime } from '@taiga-ui/cdk';
-import {
-  TuiAppearance,
-  TuiButton,
-  TuiError,
-  TuiGroup,
-  TuiLabel,
-  TuiTextfield,
-  TuiTitle,
-} from '@taiga-ui/core';
-import {
-  TuiBlock,
-  TuiCheckbox,
-  TuiDataListWrapper,
-  TuiFieldErrorPipe,
-  TuiRadio,
-  TuiStepper,
-} from '@taiga-ui/kit';
-
-
-
-
-
 @Component({
     selector: 'app-logincomponent',
     templateUrl: './logincomponent.component.html',
