@@ -24,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({ declarations: [
@@ -54,5 +55,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         RouterModule.forRoot([]), // add your routes here if any
 
         
-    ], providers: [CustomerserviceService, CookieService, provideHttpClient(withInterceptorsFromDi())] })
+    ], providers: [CustomerserviceService, CookieService, provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync()] })
 export class AppModule { }

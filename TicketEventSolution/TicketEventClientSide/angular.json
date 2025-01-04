@@ -35,10 +35,9 @@
               "src/assets"
             ],
             "styles": [
-     
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "./node_modules/leaflet/dist/leaflet.css",
               "src/styles.css"
-
             ],
             "scripts": [
               "node_modules/leaflet-control-geocoder/dist/Control.Geocoder.js"
@@ -100,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": [],
