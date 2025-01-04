@@ -1,180 +1,79 @@
 @media(min-width: 1441px) {
-  .registerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    background: #f2f2f2;
-    width: 100%;
-    position: relative;
+
+  :root {
+    /* Define primary and tertiary colors */
+    --tertiary-color: #1976d2; /* Replace with mat.$blue-palette */
+    --font-family: 'Roboto', sans-serif;
   }
 
-  .error-message {
-    color: red;
-  }
-
-  .container {
-    position: relative;
-    width: 30%;
+  body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 30px;
     height: 100%;
-    left: 35%;
+    font-family: var(--font-family);
   }
 
-  .registerText {
-    font-size: 20px;
+  mat-stepper {
+    margin: 20px auto;
+    max-width: 1000px; /* Adjust to fit your design */
+    color: var(--tertiary-color);
   }
 
-  .buttonContainer {
-    padding: 10px;
+  button[mat-button] {
+    color: white;
+    background-color: #2196F3; /* Blue background */
+    margin: 8px;
+  }
+
+    button[mat-button]:hover {
+      background-color: #1976D2; /* Darker blue on hover */
+    }
+
+    button[mat-button]:disabled {
+      background-color: #B0BEC5; /* Gray background for disabled state */
+    }
+
+  .field-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
   }
 
-  .existingEmailLink {
-    padding: 10px;
+    .field-container .test1 {
+      flex: 0.5;
+    }
+
+  .field-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
   }
+
+    .field-container2 .test2 {
+      flex: 0.5;
+    }
+
+  .field-container3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+    .field-container3 .test3 {
+      flex: 0.5;
+    }
+
 }
 @media(max-width: 1440px) {
-  .registerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    background: #f2f2f2;
-    width: 100%;
-    position: relative;
-  }
 
-  .error-message {
-    color: red;
-  }
-
-  .container {
-    position: relative;
-    width: 30%;
-    height: 100%;
-    left: 35%;
-  }
-
-  .registerText {
-    font-size: 20px;
-  }
-
-  .buttonContainer {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .existingEmailLink {
-    padding: 10px;
-  }
 }
 @media (min-width: 376px) and (max-width: 425px) {
-  .registerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    background: #f2f2f2;
-    width: 100%;
-    position: relative;
-  }
 
-  .error-message {
-    color: red;
-  }
-
-  .container {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    left: 23%;
-  }
-
-  .registerText {
-    font-size: 20px;
-  }
-
-  .buttonContainer {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .existingEmailLink {
-    padding: 10px;
-  }
 }
 @media(min-width:321px) and (max-width: 375px) {
-  .registerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    background: #f2f2f2;
-    width: 100%;
-    position: relative;
-  }
 
-  .error-message {
-    color: red;
-  }
-
-  .container {
-    position: relative;
-    width: 60%;
-    height: 100%;
-    left: 20%;
-  }
-
-  .registerText {
-    font-size: 20px;
-  }
-
-  .buttonContainer {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .existingEmailLink {
-    padding: 10px;
-  }
 }
 @media(max-width: 320px) {
-  .registerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    background: #f2f2f2;
-    width: 100%;
-    position: relative;
-  }
 
-  .error-message {
-    color: red;
-  }
-
-  .container {
-    position: relative;
-    width: 60%;
-    height: 100%;
-    left: 20%;
-  }
-
-  .registerText {
-    font-size: 20px;
-  }
-
-  .buttonContainer {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .existingEmailLink {
-    padding: 10px;
-  }
 }
