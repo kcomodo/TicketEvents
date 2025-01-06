@@ -66,14 +66,271 @@
 
 }
 @media(max-width: 1440px) {
+  :root {
+    /* Define primary and tertiary colors */
+    --tertiary-color: #1976d2; /* Replace with mat.$blue-palette */
+    --font-family: 'Roboto', sans-serif;
+  }
 
+  body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 30px;
+    height: 100%;
+    font-family: var(--font-family);
+  }
+
+  mat-stepper {
+    margin: 20px auto;
+    max-width: 1000px; /* Adjust to fit your design */
+    color: var(--tertiary-color);
+  }
+
+  button[mat-button] {
+    color: white;
+    background-color: #2196F3; /* Blue background */
+    margin: 8px;
+  }
+
+    button[mat-button]:hover {
+      background-color: #1976D2; /* Darker blue on hover */
+    }
+
+    button[mat-button]:disabled {
+      background-color: #B0BEC5; /* Gray background for disabled state */
+    }
+
+  .field-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+    .field-container .test1 {
+      flex: 0.5;
+    }
+
+  .field-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+    .field-container2 .test2 {
+      flex: 0.5;
+    }
+
+  .field-container3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+    .field-container3 .test3 {
+      flex: 0.5;
+    }
 }
 @media (min-width: 376px) and (max-width: 425px) {
+  :root {
+    /* Define primary and tertiary colors */
+    --tertiary-color: #1976d2; /* Replace with mat.$blue-palette */
+    --font-family: 'Roboto', sans-serif;
 
+  }
+
+  body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 5px;
+    height: 100%;
+    font-family: var(--font-family);
+  }
+
+  mat-stepper {
+    margin: 5px auto;
+    max-width: 100%; /* Adjust to fit your design */
+    color: var(--tertiary-color);
+
+  }
+
+  button[mat-button] {
+    color: white;
+    background-color: #2196F3; /* Blue background */
+    margin: 8px;
+  }
+
+    button[mat-button]:hover {
+      background-color: #1976D2; /* Darker blue on hover */
+    }
+
+    button[mat-button]:disabled {
+      background-color: #B0BEC5; /* Gray background for disabled state */
+    }
+
+  .field-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap as needed */
+  }
+
+    .field-container .test1 {
+      flex: 0.5;
+    }
+
+  .field-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap as needed */
+  }
+
+    .field-container2 .test2 {
+      flex: 0.5;
+    }
+
+  .field-container3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap as needed */
+  }
+
+    .field-container3 .test3 {
+      flex: 0.5;
+    }
 }
 @media(min-width:321px) and (max-width: 375px) {
+  :root {
+    /* Define primary and tertiary colors */
+    --tertiary-color: #1976d2; /* Replace with mat.$blue-palette */
+    --font-family: 'Roboto', sans-serif;
+  }
 
+  body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 5px;
+    height: 100%;
+    font-family: var(--font-family);
+  }
+
+  mat-stepper {
+    margin: 20px auto;
+    max-width: 100%; /* Adjust to fit your design */
+    color: var(--tertiary-color);
+  }
+
+  button[mat-button] {
+    color: white;
+    background-color: #2196F3; /* Blue background */
+    margin: 8px;
+  }
+
+    button[mat-button]:hover {
+      background-color: #1976D2; /* Darker blue on hover */
+    }
+
+    button[mat-button]:disabled {
+      background-color: #B0BEC5; /* Gray background for disabled state */
+    }
+
+  .field-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap as needed */
+  }
+
+    .field-container .test1 {
+      flex: 0.5;
+    }
+
+  .field-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+    .field-container2 .test2 {
+      flex: 0.5;
+    }
+
+  .field-container3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust gap as needed */
+  }
+
+    .field-container3 .test3 {
+      flex: 0.5;
+    }
 }
 @media(max-width: 320px) {
+  :root {
+    /* Define primary and tertiary colors */
+    --tertiary-color: #1976d2; /* Replace with mat.$blue-palette */
+    --font-family: 'Roboto', sans-serif;
 
+  }
+
+  body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 5px;
+    height: 100%;
+    font-family: var(--font-family);
+
+  }
+
+  mat-stepper {
+    margin: 50px auto;
+    max-width: 100%; /* Adjust to fit your design */
+    color: var(--tertiary-color);
+    font-size: 10px;
+  }
+
+  button[mat-button] {
+    color: white;
+    background-color: #2196F3; /* Blue background */
+    margin: 8px;
+  }
+
+    button[mat-button]:hover {
+      background-color: #1976D2; /* Darker blue on hover */
+    }
+
+    button[mat-button]:disabled {
+      background-color: #B0BEC5; /* Gray background for disabled state */
+    }
+
+  .field-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Adjust gap as needed */
+
+  }
+
+    .field-container .test1 {
+      flex: 0.5;
+    }
+
+  .field-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px; /* Adjust gap as needed */
+  }
+
+    .field-container2 .test2 {
+      flex: 0.5;
+      font-size: 10px;
+    }
+
+  .field-container3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px; /* Adjust gap as needed */
+    font-size: 10px;
+  }
+
+    .field-container3 .test3 {
+      flex: 0.5;
+      font-size: 10px;
+    }
 }
