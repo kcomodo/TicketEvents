@@ -283,11 +283,18 @@ namespace TicketEventBackEnd.Controllers
         {
         //You can find schedule based on agency
         //https://transit.land/api/v2/rest/agencies?agency_name=Clemson University&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
-        //https://transit.land/api/v2/rest/agencies?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
             return Ok();
         }
-        
-        
+
+        [Authorize]
+        [HttpGet("SearchByCountry")]
+        public async Task<IActionResult> searchByCountry(string siteToken, string countryName)
+        {
+            //You can find schedule based on agency
+            //https://transit.land/api/v2/rest/agencies?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+            return Ok();
+        }
+
         [HttpPost("ValidateFeedToken")]
         public async Task<IActionResult> getFeedFromSite(string feed_token)
         {
