@@ -1,3 +1,4 @@
+
 .map-container {
   position: absolute;
   top: 10%;
@@ -16,4 +17,62 @@
 
 #map {
   height: 100%;
+}
+
+
+
+.tabs-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+.search-container {
+  min-width: 300px;
+}
+
+
+.search-tabs {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+  .tab-buttons button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+  }
+
+    .tab-buttons button.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+
+.search-box input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }

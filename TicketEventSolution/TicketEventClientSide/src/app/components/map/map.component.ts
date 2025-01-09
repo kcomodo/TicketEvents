@@ -16,6 +16,10 @@ import { CustomerserviceService } from '../../service/customerservice.service';
 export class MapComponent implements AfterViewInit {
   constructor(private customerService: CustomerserviceService) {
   }
+  locationSearchQuery: string = '';
+  activeTab: 'location' | 'route' = 'location';
+  routeSearchQuery: string = '';
+  private geocoder: Geocoder | null = null;
   coordinates: number[][] | null = null;
   private map!: L.Map; // Explicitly define the type as L.Map
   countriesData = countries.countries;  // Get country data
@@ -30,7 +34,7 @@ export class MapComponent implements AfterViewInit {
         console.log(this.coordinates); //Testing to see if coordinates work
       }
     });
-
+    //https://leafletjs.com/examples/quick-start/
     this.map = L.map('map', {
       center: [40.8282, -98.5795],
       zoom: 5
@@ -47,10 +51,11 @@ export class MapComponent implements AfterViewInit {
     //needed to install @types/leaflet.vectorgrid
     //The plugin only supported js so we need @types
     //replace the api key later when fully finished
-
-
+    //https://leaflet.github.io/Leaflet.VectorGrid/vectorgrid-api-docs.html#vectorgrid-protobuf
     const mapBox = L.vectorGrid.protobuf(
-      `https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?operator_onestop_id=UPV&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV`,
+      //operator_onestop_id=UPV&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
+      `https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV`,
+     // https://transit.land/api/v2/rest/agencies?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
       {
         vectorTileLayerStyles: {
           routes: {
@@ -101,15 +106,92 @@ export class MapComponent implements AfterViewInit {
           .openOn(this.map);
       }
     });
- 
-
-    new Geocoder({
-      geocoder: new geocoders.Nominatim(),
-      position: 'topleft',
-    }).addTo(this.map);
-
   }
 
+
+  setActiveTab(tab: 'location' | 'route') {
+    this.activeTab = tab;
+    if (tab === 'location') {
+      setTimeout(() => {
+        this.showLocationSearch();
+      });
+    } else {
+      this.hideLocationSearch();
+    }
+  }
+  /*
+  showLocationSearch() {
+    if (!this.geocoder) {
+      this.geocoder = new Geocoder({
+        collapsed: false,
+        geocoder: new geocoders.Nominatim(),
+        position: 'topleft'
+      }).addTo(this.map);
+    }
+    const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
+    if (geocoderContainer instanceof HTMLElement) {
+      geocoderContainer.style.display = 'block';
+
+    }
+  }
+*/
+
+  showLocationSearch() {
+    if (!this.geocoder) {
+      const geocoderControl = new Geocoder({
+        collapsed: false,
+        geocoder: new geocoders.Nominatim(),
+
+      }).addTo(this.map);
+
+      // Get the geocoder container after it's added to the map
+      const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
+      if (geocoderContainer instanceof HTMLElement) {
+        // Remove it from its original position
+        geocoderContainer.remove();
+
+        // Add it to our custom container
+        const customContainer = document.getElementById('location-search-container');
+        if (customContainer) {
+          customContainer.appendChild(geocoderContainer);
+
+          // Apply styles to match the route search box
+          geocoderContainer.style.width = '100%';
+          geocoderContainer.style.margin = '0';
+          geocoderContainer.style.border = 'none';
+          geocoderContainer.style.boxShadow = 'none';
+
+          // Style the input
+          const searchInput = geocoderContainer.querySelector('input');
+          if (searchInput instanceof HTMLElement) {
+            searchInput.style.width = '100%';
+            searchInput.style.padding = '8px';
+            searchInput.style.borderRadius = '4px';
+            searchInput.style.border = '1px solid #ddd';
+          }
+        }
+      }
+
+      this.geocoder = geocoderControl;
+    }
+  }
+  
+  hideLocationSearch() {
+    /*
+    const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
+    if (geocoderContainer instanceof HTMLElement) {
+      geocoderContainer.style.display = 'none';
+    }
+    */
+  }
+  
+
+
+
+  onRouteSearch() {
+    //testing
+    console.log('Searching for route:', this.routeSearchQuery);
+  }
 
 
   ngAfterViewInit(): void {
