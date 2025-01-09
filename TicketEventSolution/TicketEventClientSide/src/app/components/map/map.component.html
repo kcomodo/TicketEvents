@@ -1,8 +1,32 @@
 
-
 <div class="map-container">
-  <div class="map-frame">
+  <div class="search-tabs">
+    <div class="tab-buttons">
+      <button [class.active]="activeTab === 'location'" (click)="setActiveTab('location')">
+        Location Search
+      </button>
+      <button [class.active]="activeTab === 'route'" (click)="setActiveTab('route')">
+        Route Search
+      </button>
+    </div>
 
+    <div class="search-content">
+      <!-- Location search -->
+      <div *ngIf="activeTab === 'location'" class="search-box">
+        <div id="location-search-container"></div>
+      </div>
+
+      <!-- Route search -->
+      <div *ngIf="activeTab === 'route'" class="search-box">
+        <input type="text"
+               placeholder="Search for a route..."
+               [(ngModel)]="routeSearchQuery"
+               (input)="onRouteSearch()">
+      </div>
+    </div>
+  </div>
+
+  <div class="map-frame">
     <div id="map"></div>
   </div>
 </div>
