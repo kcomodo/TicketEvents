@@ -111,14 +111,24 @@ export class MapComponent implements AfterViewInit {
 
   setActiveTab(tab: 'location' | 'route') {
     this.activeTab = tab;
+
+    // Remove existing geocoder if it exists
+    if (this.geocoder) {
+      const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
+      if (geocoderContainer) {
+        geocoderContainer.remove();
+      }
+      this.geocoder = null;
+    }
+
+    // Show location search if that tab is selected
     if (tab === 'location') {
       setTimeout(() => {
         this.showLocationSearch();
-      });
-    } else {
-      this.hideLocationSearch();
+      }, 0);
     }
   }
+
   /*
   showLocationSearch() {
     if (!this.geocoder) {
@@ -137,12 +147,15 @@ export class MapComponent implements AfterViewInit {
 */
 
   showLocationSearch() {
-    if (!this.geocoder) {
+    if (!this.geocoder && this.map) {
       const geocoderControl = new Geocoder({
         collapsed: false,
+        
         geocoder: new geocoders.Nominatim(),
+      });
 
-      }).addTo(this.map);
+      // Add the geocoder to the map first
+      geocoderControl.addTo(this.map);
 
       // Get the geocoder container after it's added to the map
       const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
@@ -153,13 +166,18 @@ export class MapComponent implements AfterViewInit {
         // Add it to our custom container
         const customContainer = document.getElementById('location-search-container');
         if (customContainer) {
+          // Clear any existing content
+          customContainer.innerHTML = '';
+
+          // Append the geocoder
           customContainer.appendChild(geocoderContainer);
 
-          // Apply styles to match the route search box
+          // Apply styles
           geocoderContainer.style.width = '100%';
           geocoderContainer.style.margin = '0';
           geocoderContainer.style.border = 'none';
           geocoderContainer.style.boxShadow = 'none';
+          geocoderContainer.style.display = 'block';
 
           // Style the input
           const searchInput = geocoderContainer.querySelector('input');

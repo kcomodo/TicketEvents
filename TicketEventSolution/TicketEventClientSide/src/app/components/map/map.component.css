@@ -1,4 +1,3 @@
-
 .map-container {
   position: absolute;
   top: 10%;
@@ -6,11 +5,10 @@
   right: 0;
   bottom: 0;
   margin: 30px;
- 
 }
 
 .map-frame {
-    position:relative;
+  position: relative;
   border: 2px solid black;
   height: 100%;
 }
@@ -19,9 +17,8 @@
   height: 100%;
 }
 
-
-
-.tabs-container {
+/* Search tabs styling */
+.search-tabs {
   position: absolute;
   top: 10px;
   left: 50%;
@@ -30,26 +27,10 @@
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-
-
-.search-container {
-  min-width: 300px;
-}
-
-
-.search-tabs {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 10px;
+  min-width: 320px; /* Slightly wider than search inputs to account for padding */
 }
+
 .tab-buttons {
   display: flex;
   gap: 10px;
@@ -57,11 +38,13 @@
 }
 
   .tab-buttons button {
+    flex: 1;
     padding: 8px 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background: white;
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
     .tab-buttons button.active {
@@ -70,9 +53,26 @@
       border-color: #007bff;
     }
 
-.search-box input {
-  width: 300px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+/* Search content container */
+.search-content {
+  width: 100%;
 }
+
+/* Unified search box styles */
+.search-box {
+  width: 100%;
+}
+
+  .search-box input,
+  #location-search-container .leaflet-control-geocoder-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: none;
+    background: white;
+    box-sizing: border-box;
+    display:block;
+
+  }
