@@ -1,9 +1,11 @@
 import { Component , AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import * as countries from 'countries-list';
-import { TuiDay, TuiTime } from '@taiga-ui/cdk';
+
 import { Geocoder, geocoders } from 'leaflet-control-geocoder';
+
 import "leaflet/dist/leaflet.css";
+//import the css
 import "leaflet-control-geocoder/dist/Control.Geocoder.css";
 import "leaflet.vectorgrid";
 import { CustomerserviceService } from '../../service/customerservice.service';
@@ -13,6 +15,11 @@ import { CustomerserviceService } from '../../service/customerservice.service';
   styleUrl: './map.component.css',
   standalone: false
 })
+/*
+https://github.com/perliedman/leaflet-control-geocoder/blob/master/src/control.ts
+reverse engineer the github repository, most of the commands are under controls
+
+*/
 export class MapComponent implements AfterViewInit {
   constructor(private customerService: CustomerserviceService) {
   }
@@ -21,6 +28,7 @@ export class MapComponent implements AfterViewInit {
   routeSearchQuery: string = '';
   private geocoder: Geocoder | null = null;
   coordinates: number[][] | null = null;
+  private tooltip: L.Popup | null = null;
   private map!: L.Map; // Explicitly define the type as L.Map
   countriesData = countries.countries;  // Get country data
   //Leaflet guide shows how the code is generated.
@@ -54,7 +62,7 @@ export class MapComponent implements AfterViewInit {
     //https://leaflet.github.io/Leaflet.VectorGrid/vectorgrid-api-docs.html#vectorgrid-protobuf
     const mapBox = L.vectorGrid.protobuf(
       //operator_onestop_id=UPV&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
-      `https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV`,
+      `https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV`,
      // https://transit.land/api/v2/rest/agencies?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
       {
         vectorTileLayerStyles: {
@@ -70,6 +78,12 @@ export class MapComponent implements AfterViewInit {
         interactive: true,
         getFeatureId: (f: any) => f.properties.route_id,
       }).addTo(this.map);
+    this.tooltip = L.popup({
+      closeButton: false,
+      offset: L.point(0, -10),
+      className: 'route-tooltip',
+      autoPan: false
+    });
 
     mapBox.on('mouseover', (e: any) => {
       if (e.layer) {
@@ -77,7 +91,23 @@ export class MapComponent implements AfterViewInit {
           weight: 5,
           color: '#FFD700'
         });
+        const props = e.layer.properties;
+
+        // Create tooltip content
+        const content = `
+          <div class="route-info">
+            ${props.route_short_name ? `<div>Route: ${props.route_short_name}</div>` : ''}
+            ${props.route_long_name ? `<div>${props.route_long_name}</div>` : ''}
+            ${props.route_id ? `<div>ID: ${props.route_id}</div>` : ''}
+          </div>
+        `;
+
+        this.tooltip!
+          .setLatLng(e.latlng)
+          .setContent(content)
+          .openOn(this.map);
       }
+
     });
     mapBox.on('mouseout', (e: any) => {
       if (e.layer) {
@@ -86,18 +116,28 @@ export class MapComponent implements AfterViewInit {
           color: '#ff0000'
         });
       }
+      if (this.tooltip) {
+        this.map.closePopup(this.tooltip);
+      }
+    });
+    mapBox.on('mousemove', (e: any) => {
+      if (this.tooltip && this.tooltip.isOpen()) {
+        this.tooltip.setLatLng(e.latlng); 
+      }
     });
     // Attach click handler to the vector tile layer, not the map
     mapBox.on('click', (e: any) => {
       console.log('Route clicked:', e); // For debugging
       if (e.layer && e.layer.properties) {
         const props = e.layer.properties;
+
+        // Create tooltip content
         const content = `
-      <div>
-        <strong>Route: ${props.route_name || 'Unknown'}</strong><br>
-        ${props.route_long_name ? `Long name: ${props.route_long_name}<br>` : ''}
-        ${props.route_short_name ? `Short name: ${props.route_short_name}<br>` : ''}
-      </div>
+          <div class="route-info">
+            ${props.route_short_name ? `<div>Route: ${props.route_short_name}</div>` : ''}
+            ${props.route_long_name ? `<div>${props.route_long_name}</div>` : ''}
+            ${props.route_id ? `<div>ID: ${props.route_id}</div>` : ''}
+          </div>
     `;
 
         L.popup()
@@ -129,31 +169,21 @@ export class MapComponent implements AfterViewInit {
     }
   }
 
-  /*
-  showLocationSearch() {
-    if (!this.geocoder) {
-      this.geocoder = new Geocoder({
-        collapsed: false,
-        geocoder: new geocoders.Nominatim(),
-        position: 'topleft'
-      }).addTo(this.map);
-    }
-    const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
-    if (geocoderContainer instanceof HTMLElement) {
-      geocoderContainer.style.display = 'block';
-
-    }
-  }
-*/
 
   showLocationSearch() {
     if (!this.geocoder && this.map) {
       const geocoderControl = new Geocoder({
         collapsed: false,
-        
+        query: 'Mexico',
         geocoder: new geocoders.Nominatim(),
       });
 
+
+      const currentQuery = geocoderControl.options.query;
+ 
+      console.log(currentQuery);
+
+      this.onRouteSearch();
       // Add the geocoder to the map first
       geocoderControl.addTo(this.map);
 
@@ -178,6 +208,7 @@ export class MapComponent implements AfterViewInit {
           geocoderContainer.style.border = 'none';
           geocoderContainer.style.boxShadow = 'none';
           geocoderContainer.style.display = 'block';
+          
 
           // Style the input
           const searchInput = geocoderContainer.querySelector('input');
@@ -204,13 +235,16 @@ export class MapComponent implements AfterViewInit {
   }
   
 
-
+  
 
   onRouteSearch() {
     //testing
+    /*
+    console.log('Searching for location:', this.locationSearchQuery);
     console.log('Searching for route:', this.routeSearchQuery);
+    */
   }
-
+  
 
   ngAfterViewInit(): void {
    // console.log(this.countriesData);
