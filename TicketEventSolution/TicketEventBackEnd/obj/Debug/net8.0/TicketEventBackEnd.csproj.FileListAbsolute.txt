@@ -115,3 +115,7 @@ D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\TicketEv
 D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\TicketEventBackEnd.genruntimeconfig.cache
 D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\ref\TicketEventBackEnd.dll
 D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\bin\Debug\net8.0\TicketEventBackEnd.staticwebassets.endpoints.json
+D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\staticwebassets\msbuild.TicketEventBackEnd.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\TicketEvents\TicketEventSolution\TicketEventBackEnd\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

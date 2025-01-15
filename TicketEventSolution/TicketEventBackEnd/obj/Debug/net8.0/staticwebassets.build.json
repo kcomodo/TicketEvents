@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8k7sBPlYRXdFWWFGGAZabte3X10BSQNzbnF8+PaEeJk=",
+  "Hash": "plV/Th5K4USOckS9PL6E++O/499apxC+R+B7bTcnqTM=",
   "Source": "TicketEventBackEnd",
   "BasePath": "_content/TicketEventBackEnd",
   "Mode": "Default",
@@ -19,5 +19,6 @@
     }
   ],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

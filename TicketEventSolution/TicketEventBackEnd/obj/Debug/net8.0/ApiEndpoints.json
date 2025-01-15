@@ -106,6 +106,27 @@
   },
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "searchByCountry",
+    "RelativePath": "api/Values/SearchByCountry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "siteToken",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "countryName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "UpdateCustomer",
     "RelativePath": "api/Values/UpdateCustomer",
     "HttpMethod": "PUT",
