@@ -6,7 +6,7 @@
         Location Search
       </button>
       <button [class.active]="activeTab === 'route'" (click)="setActiveTab('route')">
-        Route Search
+        Route Clicked
       </button>
     </div>
 
@@ -15,13 +15,13 @@
       <div *ngIf="activeTab === 'location'" class="search-box">
         <div id="location-search-container"></div>
       </div>
-
+      
       <!-- Route search -->
       <div *ngIf="activeTab === 'route'" class="search-box">
         <input type="text"
-               placeholder="Search... "
+               placeholder="Enter Saved Routes... "
                [(ngModel)]="routeSearchQuery"
-               (input)="onRouteSearch()">
+               (keydown.enter)="onRouteSearch()">
       </div>
     </div>
   </div>
