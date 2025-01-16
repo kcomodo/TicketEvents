@@ -26,6 +26,7 @@ export class MapComponent implements AfterViewInit {
 
   constructor(private customerService: CustomerserviceService) {
   }
+  private savedRoutes: Set<string> = new Set();
   private routeLocations: { [key: string]: L.LatLng } = {};
   locationSearchQuery: string = '';
   activeTab: 'location' | 'route' = 'location';
@@ -173,31 +174,59 @@ export class MapComponent implements AfterViewInit {
     });
     // Attach click handler to the vector tile layer, not the map
     mapBox.on('click', (e: any) => {
-      console.log('Route clicked:', e); // For debugging
       if (e.layer && e.layer.properties) {
         const props = e.layer.properties;
-
         this.routeLocations[props.route_id] = e.latlng;
 
-        // Create tooltip content
+        // Create save button HTML
+        const saveButtonHtml = this.savedRoutes.has(props.route_id)
+          ? `<button class="unsave-route-btn" data-route-id="${props.route_id}">Unsave Route</button>`
+          : `<button class="save-route-btn" data-route-id="${props.route_id}">Save Route</button>`;
+
+        // Create tooltip content with save button
         const content = `
           <div class="route-info">
             ${props.route_short_name ? `<div>Route: ${props.route_short_name}</div>` : ''}
             ${props.route_long_name ? `<div>${props.route_long_name}</div>` : ''}
             ${props.route_id ? `<div>ID: ${props.route_id}</div>` : ''}
             ${props.bbox ? `<div>Bounds: ${props.bbox}</div>` : ''}
+            <div class="route-actions">
+              ${saveButtonHtml}
+            </div>
           </div>
-    `;
+        `;
 
-        L.popup()
+        const popup = L.popup()
           .setLatLng(e.latlng)
           .setContent(content)
           .openOn(this.map);
+
+        // Add click event listener to the save/unsave button
+        setTimeout(() => {
+          const saveBtn = document.querySelector('.save-route-btn, .unsave-route-btn');
+          if (saveBtn) {
+            saveBtn.addEventListener('click', (event) => {
+              const target = event.target as HTMLButtonElement;
+              const routeId = target.getAttribute('data-route-id');
+              if (routeId) {
+                if (this.savedRoutes.has(routeId)) {
+                  this.savedRoutes.delete(routeId);
+                  target.textContent = 'Save Route';
+                  target.className = 'save-route-btn';
+                } else {
+                  this.savedRoutes.add(routeId);
+                  target.textContent = 'Unsave Route';
+                  target.className = 'unsave-route-btn';
+                }
+              }
+              // Store saved routes in localStorage
+              localStorage.setItem('savedRoutes', JSON.stringify(Array.from(this.savedRoutes)));
+            });
+          }
+        }, 0);
       }
     });
   }
-
-
 
   
 
@@ -348,6 +377,11 @@ export class MapComponent implements AfterViewInit {
     }, 0);
   }
 
-
+  ngOnInit() {
+    const savedRoutesStr = localStorage.getItem('savedRoutes');
+    if (savedRoutesStr) {
+      this.savedRoutes = new Set(JSON.parse(savedRoutesStr));
+    }
+  }
 
 }
