@@ -1,9 +1,7 @@
 import { Component , AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import * as countries from 'countries-list';
-
 import { Geocoder, geocoders } from 'leaflet-control-geocoder';
-
 import "leaflet/dist/leaflet.css";
 //import the css
 import "leaflet-control-geocoder/dist/Control.Geocoder.css";
@@ -26,8 +24,8 @@ export class MapComponent implements AfterViewInit {
 
   constructor(private customerService: CustomerserviceService) {
   }
-  private savedRoutes: Set<string> = new Set();
-  private routeLocations: { [key: string]: L.LatLng } = {};
+  private savedRoutes: { [key: string]: string } = {}; // Store as routeId
+  private routeLocations: { [key: string]: L.LatLng } = {}; //Stored as route coordinates
   locationSearchQuery: string = '';
   activeTab: 'location' | 'route' = 'location';
   routeSearchQuery: string = '';
@@ -35,25 +33,7 @@ export class MapComponent implements AfterViewInit {
   private tooltip: L.Popup | null = null;
   private map!: L.Map; // Explicitly define the type as L.Map
 
-  // coordinates: number[][] | null = null;
-  // countriesData = countries.countries;  // Get country data
-  //Leaflet guide shows how the code is generated.
   private initMap(): void {
-    /*
-    this.customerService.getAgencies().subscribe((response) => {
-      
-      if (response && response.agencies) {
-        // Access the first agency's geometry.coordinates
-        
-        const agency = response.agencies[0];
-        this.coordinates = agency.geometry.coordinates[0]; // Grabbing the first array of coordinates
-        console.log(this.coordinates); //Testing to see if coordinates work
-     
-      }
-    });
-    */
-
-
     //https://leafletjs.com/examples/quick-start/
     //guide will help us set up the map
     this.map = L.map('map', {
@@ -109,26 +89,7 @@ export class MapComponent implements AfterViewInit {
       autoPan: false
     });
 
-    mapBox.on('tileload', (e: any) => {
-      const tile = e.tile;
 
-      if (tile && tile.features) {
-        tile.features.forEach((feature: any) => {
-          const routeId = feature.properties.route_id;
-          if (routeId) {
-            // Calculate the center of the route's bounds
-            const bounds = feature.properties.bbox;
-            if (bounds) {
-              const center = L.latLng(
-                (bounds[1] + bounds[3]) / 2, // Average of latitudes
-                (bounds[0] + bounds[2]) / 2  // Average of longitudes
-              );
-              this.routeLocations[routeId] = center;
-            }
-          }
-        });
-      }
-    });
 
     mapBox.on('mouseover', (e: any) => {
       if (e.layer) {
@@ -139,7 +100,7 @@ export class MapComponent implements AfterViewInit {
         const props = e.layer.properties;
 
         //  console.log('All properties:', props);
-        // Create tooltip content
+        // Create content to display information
         const content = `
           <div class="route-info">
             ${props.route_short_name ? `<div>Route: ${props.route_short_name}</div>` : ''}
@@ -148,7 +109,7 @@ export class MapComponent implements AfterViewInit {
             ${props.bbox ? `<div>Bounds: ${props.bbox}</div>` : ''}
           </div>
         `;
-
+        //
         this.tooltip!
           .setLatLng(e.latlng)
           .setContent(content)
@@ -178,18 +139,15 @@ export class MapComponent implements AfterViewInit {
         const props = e.layer.properties;
         this.routeLocations[props.route_id] = e.latlng;
 
-        // Create save button HTML
-        const saveButtonHtml = this.savedRoutes.has(props.route_id)
+        const saveButtonHtml = props.route_id in this.savedRoutes
           ? `<button class="unsave-route-btn" data-route-id="${props.route_id}">Unsave Route</button>`
           : `<button class="save-route-btn" data-route-id="${props.route_id}">Save Route</button>`;
 
-        // Create tooltip content with save button
         const content = `
           <div class="route-info">
             ${props.route_short_name ? `<div>Route: ${props.route_short_name}</div>` : ''}
             ${props.route_long_name ? `<div>${props.route_long_name}</div>` : ''}
             ${props.route_id ? `<div>ID: ${props.route_id}</div>` : ''}
-            ${props.bbox ? `<div>Bounds: ${props.bbox}</div>` : ''}
             <div class="route-actions">
               ${saveButtonHtml}
             </div>
@@ -201,26 +159,26 @@ export class MapComponent implements AfterViewInit {
           .setContent(content)
           .openOn(this.map);
 
-        // Add click event listener to the save/unsave button
         setTimeout(() => {
           const saveBtn = document.querySelector('.save-route-btn, .unsave-route-btn');
           if (saveBtn) {
             saveBtn.addEventListener('click', (event) => {
               const target = event.target as HTMLButtonElement;
               const routeId = target.getAttribute('data-route-id');
-              if (routeId) {
-                if (this.savedRoutes.has(routeId)) {
-                  this.savedRoutes.delete(routeId);
+              if (routeId && this.routeLocations[routeId]) {
+                if (routeId in this.savedRoutes) {
+                  delete this.savedRoutes[routeId];
                   target.textContent = 'Save Route';
                   target.className = 'save-route-btn';
                 } else {
-                  this.savedRoutes.add(routeId);
+                  // Store as string representation
+                  const latLng = this.routeLocations[routeId];
+                  this.savedRoutes[routeId] = `LatLng(${latLng.lat}, ${latLng.lng})`;
                   target.textContent = 'Unsave Route';
                   target.className = 'unsave-route-btn';
                 }
+                localStorage.setItem('savedRoutes', JSON.stringify(this.savedRoutes));
               }
-              // Store saved routes in localStorage
-              localStorage.setItem('savedRoutes', JSON.stringify(Array.from(this.savedRoutes)));
             });
           }
         }, 0);
@@ -305,66 +263,57 @@ export class MapComponent implements AfterViewInit {
     }
   }
 
-  hideLocationSearch() {
-    /*
-    const geocoderContainer = document.querySelector('.leaflet-control-geocoder');
-    if (geocoderContainer instanceof HTMLElement) {
-      geocoderContainer.style.display = 'none';
+
+  onRouteSearch(): void {
+    if (!this.routeSearchQuery) return;
+
+    const routeId = this.routeSearchQuery.trim();
+    const savedRoutesStr = localStorage.getItem('savedRoutes');
+
+    if (!savedRoutesStr) {
+      console.log('No saved routes found');
+      return;
     }
-    */
-  }
 
-  onRouteSearch() {
+    const savedRoutes = JSON.parse(savedRoutesStr);
 
-    //console.log(this.routeLocations[this.routeSearchQuery]);
-    /*
-    console.log(this.routeSearchQuery);
- 
-    this.customerService.getRouteGeometry(this.routeSearchQuery).subscribe((data) => {
-      console.log(data.routes[0].geometry);
-      const geometry = data.routes[0].geometry;
-      const latLngs = this.convertMultiLineStringToLatLng(geometry.coordinates);
-      console.log(latLngs);
-      const routeLayer = L.polyline(latLngs, { color: 'blue' }).addTo(this.map);
-      //this.routeLocations[this.routeSearchQuery] = latLngs;
+    if (routeId in savedRoutes) {
+      // Parse the LatLng string
+      const latLngStr = savedRoutes[routeId];
+      const matches = latLngStr.match(/LatLng\(([-\d.]+),\s*([-\d.]+)\)/);
 
-      // Optional: Center the map on the route
-      const bounds = routeLayer.getBounds();
-      this.map.fitBounds(bounds);
-    });
-    */
-     //this.routeLocations[this.routeSearchQuery] = latLngs;
-    
-     if (!this.routeSearchQuery) return;
- 
-     const routeId = this.routeSearchQuery.trim();
-     
-     if (this.routeLocations[routeId]) {
-       this.map.setView(this.routeLocations[routeId], 12, {
-         animate: true,
-         duration: 1
-       });
-       
- 
-       const marker = L.marker(this.routeLocations[routeId])
-         .addTo(this.map)
-         .bindPopup(`Route ${routeId}`)
-         .openPopup();
- 
-       setTimeout(() => {
-         this.map.removeLayer(marker);
-       }, 3000);
-     } else {
-       console.log('Route not found. The route may not be in the current map view. Try zooming out or panning the map.');
-     }
- 
+      if (matches) {
+        const lat = parseFloat(matches[1]);
+        const lng = parseFloat(matches[2]);
+        const latLng = new L.LatLng(lat, lng);
+
+        this.map.setView(latLng, 12, {
+          animate: true,
+          duration: 1
+        });
+
+        const popupContent = `
+          <div class="route-info">
+            <div>Route ID: ${routeId}</div>
+            <div>Location: ${latLngStr}</div>
+            <div class="saved-route-badge">Saved Route</div>
+          </div>
+        `;
+
+        const marker = L.marker(latLng)
+          .addTo(this.map)
+          .bindPopup(popupContent)
+          .openPopup();
+
+        setTimeout(() => {
+          this.map.removeLayer(marker);
+        }, 3000);
+      }
+    } else {
+      console.log('Route not found in saved routes. Try saving a route first.');
+    }
   }
   
-  convertMultiLineStringToLatLng(coordinates: number[][][]): L.LatLngExpression[] {
-    return coordinates.flatMap((line) =>
-      line.map(([lon, lat]) => new L.LatLng(lat, lon))
-    );
-  }
 
   ngAfterViewInit(): void {
    // console.log(this.countriesData);
@@ -377,10 +326,22 @@ export class MapComponent implements AfterViewInit {
     }, 0);
   }
 
+
   ngOnInit() {
+    //during init, load route from local storage, will replace later.
     const savedRoutesStr = localStorage.getItem('savedRoutes');
     if (savedRoutesStr) {
-      this.savedRoutes = new Set(JSON.parse(savedRoutesStr));
+      this.savedRoutes = JSON.parse(savedRoutesStr);
+
+      // Restore routeLocations from saved routes
+      Object.entries(this.savedRoutes).forEach(([routeId, latLngStr]) => {
+        const matches = latLngStr.match(/LatLng\(([-\d.]+),\s*([-\d.]+)\)/);
+        if (matches) {
+          const lat = parseFloat(matches[1]);
+          const lng = parseFloat(matches[2]);
+          this.routeLocations[routeId] = new L.LatLng(lat, lng);
+        }
+      });
     }
   }
 
