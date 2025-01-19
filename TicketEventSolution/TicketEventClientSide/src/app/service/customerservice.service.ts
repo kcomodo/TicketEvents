@@ -154,20 +154,7 @@ export class CustomerserviceService implements OnInit {
       })
     );
   }
-  //testing ground, will rmeove later and use backend
-  /*
-  private apiUrl = 'https://transit.land/api/v2/rest/agencies?adm0_name=Mexico&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV';
-  getAgencies(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
-  }
-  */
 
-  //https://transit.land/api/v2/rest/routes?route_id=75&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV
-
-  getRouteGeometry(routeId: string): Observable<any> {
-    const url = `https://transit.land/api/v2/rest/routes?route_id=${routeId}&include_geometry=true&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV`;
-    return this.http.get(url);
-  }
 
 
   validateFeedToken(feed_token: string): Observable<any> {
