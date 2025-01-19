@@ -32,7 +32,8 @@ export class MapComponent implements AfterViewInit {
   private geocoder: Geocoder | null = null;
   private tooltip: L.Popup | null = null;
   private map!: L.Map; // Explicitly define the type as L.Map
-
+  private email: string = '';
+  private feed_token: string = '';
   private initMap(): void {
     //https://leafletjs.com/examples/quick-start/
     //guide will help us set up the map
@@ -58,8 +59,15 @@ export class MapComponent implements AfterViewInit {
     //replace the api key later when fully finished
     //https://leaflet.github.io/Leaflet.VectorGrid/vectorgrid-api-docs.html#vectorgrid-protobuf
 
+    this.email = this.customerService.getEmailSaved();
+    // console.log(this.email);
+    this.customerService.getFeedToken(this.email).subscribe(
+      (response) => {
+        this.feed_token = response.feed_token;
+ 
+
     const mapBox = L.vectorGrid.protobuf(
-      `https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?include_geometry=true&apikey=Z2xK57toXiR4t1cLlMvfC4fofM4ZhmVV`,
+      `https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?include_geometry=true&apikey=${this.feed_token}`,
       {
         vectorTileLayerStyles: {
           routes: {
@@ -184,6 +192,7 @@ export class MapComponent implements AfterViewInit {
         }, 0);
       }
     });
+      });
   }
 
   
