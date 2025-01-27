@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
+using TicketEventBackEnd.Models.Routes;
 using TicketEventBackEnd.Models.Customer;
 using TicketEventBackEnd.Repositories;
 using TicketEventBackEnd.Repositories.Customer;
+using Microsoft.AspNetCore.Http.HttpResults;
 namespace TicketEventBackEnd.Services.Customer
 {
 
@@ -26,6 +28,10 @@ namespace TicketEventBackEnd.Services.Customer
                 return true;
             }
             return false;
+        }
+        public void saveRouteInfo(string customer_id, string routeId, double routeLat, double routeLng)
+        {
+            
         }
   
     }

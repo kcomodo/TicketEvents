@@ -275,7 +275,12 @@ namespace TicketEventBackEnd.Controllers
             return Ok(customer);
         }
 
-        
+        [Authorize]
+        [HttpPut]
+        public IActionResult saveRouteInfo(string routeId, double routeLat, double routeLng)
+        {
+            return Ok();
+        }
 
         [Authorize]
         [HttpGet("GetAgencyLocation")]

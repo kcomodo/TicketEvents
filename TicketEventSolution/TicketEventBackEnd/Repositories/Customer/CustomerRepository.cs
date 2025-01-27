@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Configuration;
 namespace TicketEventBackEnd.Repositories.Customer
 {
     //Connect to the database and perform CRUD operations
@@ -10,14 +11,21 @@ namespace TicketEventBackEnd.Repositories.Customer
     {
         //create an object to represent the connection to mySql
         private readonly MySqlConnection _connection;
-        public CustomerRepository()
+
+        public CustomerRepository(IConfiguration configuration)
         {
+
             //check port on xampp
             //server is the root address so 127, etc.
             //userid is root
-            string connectionString = "server=127.0.0.1;database=ticketevent;userid=root;password=c9nbQ5yMX2E9WVW;port=3306";
-                
+            string connectionString = configuration.GetConnectionString("TicketEventDatabase");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("Database connection string is not configured.");
+            }
+
             _connection = new MySqlConnection(connectionString);
+
             //call the object and insert the connection url into MySqlConnection
             //then open the connection
             _connection.Open();
@@ -110,9 +118,10 @@ namespace TicketEventBackEnd.Repositories.Customer
                 Console.WriteLine("Email is invalid");
                 return;
             }
-            CustomerRepository customer = new CustomerRepository();
-            Task<CustomerModel> customerInfo = customer.getCustomerInfo(customer_email);
-            if(customerInfo == null)
+            //   CustomerRepository customer = new CustomerRepository();
+            //  Task<CustomerModel> customerInfo = customer.getCustomerInfo(customer_email);
+            var customerInfo = getCustomerInfo(customer_email);
+            if (customerInfo == null)
             {
                 Console.WriteLine("Email does not exist");
                 return;

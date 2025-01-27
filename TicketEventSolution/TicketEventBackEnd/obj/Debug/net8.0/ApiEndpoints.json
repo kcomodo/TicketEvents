@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "saveRouteInfo",
+    "RelativePath": "api/Values",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "routeId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "routeLat",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "routeLng",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "AddCustomer",
     "RelativePath": "api/Values/AddCustomer",
     "HttpMethod": "POST",
