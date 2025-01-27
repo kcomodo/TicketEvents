@@ -176,12 +176,16 @@ export class MapComponent implements AfterViewInit {
               if (routeId && this.routeLocations[routeId]) {
                 if (routeId in this.savedRoutes) {
                   delete this.savedRoutes[routeId];
+                  console.log("routeRemoved routeId: ", routeId);
                   target.textContent = 'Save Route';
                   target.className = 'save-route-btn';
                 } else {
                   // Store as string representation
                   const latLng = this.routeLocations[routeId];
                   this.savedRoutes[routeId] = `LatLng(${latLng.lat}, ${latLng.lng})`;
+                  console.log("routeStored routeId: ", routeId);
+                  console.log("rotueStored latLng", latLng.lat, latLng.lng)
+                  this.customerService.saveRouteInfo(routeId, latLng.lat, latLng.lng);
                   target.textContent = 'Unsave Route';
                   target.className = 'unsave-route-btn';
                 }
@@ -349,6 +353,8 @@ export class MapComponent implements AfterViewInit {
           const lat = parseFloat(matches[1]);
           const lng = parseFloat(matches[2]);
           this.routeLocations[routeId] = new L.LatLng(lat, lng);
+       //   console.log("dictionary: ",this.routeLocations[routeId] = new L.LatLng(lat, lng));
+          console.log("separate: ", routeId, lat, lng);
         }
       });
     }

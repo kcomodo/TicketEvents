@@ -108,10 +108,16 @@ export class CustomerserviceService implements OnInit {
     });
     return this.http.get<any>(`${this.baseUrl}/GetFeedToken?email=${customer_email}`, { headers }).pipe(
       tap(response => {
-        //  console.log('Received customer response:', response); // Log the response from the server
+       //  console.log('Received customer response:', response); // Log the response from the server
       })
     );
   }
+
+  saveRouteInfo(routeId: string, routeLat: number, routeLng: number): void {
+    console.log("saveRouteInfo called", routeId, routeLat, routeLng);
+    return;
+  }
+
   setEmail(customer_email: string): void {
     this.cookieService.set(this.emailSaved, customer_email, { path: '/' }); // Save email in cookie
   }
