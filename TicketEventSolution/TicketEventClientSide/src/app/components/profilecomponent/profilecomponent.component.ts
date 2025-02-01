@@ -89,13 +89,6 @@ export class ProfilecomponentComponent implements OnInit {
       }
     });
     
-    
-  
-
-
-
-    
-    
   }
 
 
