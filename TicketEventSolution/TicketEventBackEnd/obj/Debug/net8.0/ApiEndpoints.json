@@ -1,32 +1,6 @@
 [
   {
     "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
-    "Method": "saveRouteInfo",
-    "RelativePath": "api/Values",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "routeId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "routeLat",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "routeLng",
-        "Type": "System.Double",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
     "Method": "AddCustomer",
     "RelativePath": "api/Values/AddCustomer",
     "HttpMethod": "POST",
@@ -51,6 +25,27 @@
     "Parameters": [
       {
         "Name": "customer_email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "deleteRouteInfo",
+    "RelativePath": "api/Values/DeleteRoutes",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "routes_id",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -125,6 +120,53 @@
       {
         "Name": "email",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "getRouteInfo",
+    "RelativePath": "api/Values/GetRoutes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer_id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicketEventBackEnd.Controllers.ValuesController",
+    "Method": "saveRouteInfo",
+    "RelativePath": "api/Values/SaveRoutes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "routes_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitude",
+        "Type": "System.Double",
         "IsRequired": false
       }
     ],

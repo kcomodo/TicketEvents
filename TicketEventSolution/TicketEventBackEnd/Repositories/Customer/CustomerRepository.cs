@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using TicketEventBackEnd.Models.Routes;
 namespace TicketEventBackEnd.Repositories.Customer
 {
     //Connect to the database and perform CRUD operations
@@ -180,6 +181,56 @@ namespace TicketEventBackEnd.Repositories.Customer
             command.Parameters.AddWithValue("@target_email", target_email);
             command.Parameters.AddWithValue("@feedToken", feed_token);
             command.ExecuteNonQuery();
+        }
+        public void saveRouteInfo(string customer_id, string routes_id, double latitude, double longitude)
+        {
+            string query = "INSERT INTO savedroutes (customer_id, routes_id, latitude, longitude) VALUES (@customer_id, @routes_id, @latitude, @longitude)";
+            MySqlCommand command = new MySqlCommand(query, _connection);
+
+                command.Parameters.AddWithValue("@customer_id", customer_id);
+                command.Parameters.AddWithValue("@routes_id", routes_id);
+                command.Parameters.AddWithValue("@latitude", latitude);
+                command.Parameters.AddWithValue("@longitude", longitude);
+
+            command.ExecuteNonQuery();
+        }
+        public void deleteRouteInfo(string customer_id, string routes_id)
+        {
+            string query = "DELETE FROM savedroutes WHERE customer_id = @customer_id AND routes_id = @routes_id";
+            MySqlCommand command = new MySqlCommand(query, _connection);
+
+            command.Parameters.AddWithValue("@customer_id", customer_id);
+            command.Parameters.AddWithValue("@routes_id", routes_id);
+            command.ExecuteNonQuery();
+        }
+        public async Task<List<routesModel>> getRouteInfo(string customer_id)
+        {
+            string query = "SELECT * FROM savedRoutes WHERE customer_id = @customer_id";
+            //insert query into the commands as well as adding the connection to it
+            MySqlCommand command = new MySqlCommand(query, _connection);
+            //Bind the parameter value to the query value
+            command.Parameters.AddWithValue("@customer_id", customer_id);
+            List<routesModel> routesList = new List<routesModel>();
+
+            //Use a reader now to grab the data
+            using (MySqlDataReader reader = await command.ExecuteReaderAsync() as MySqlDataReader)
+            {
+                while (await reader.ReadAsync())
+                {
+                    //create a new object to store the data
+                    routesModel routes = new routesModel();
+                    {
+                    //    routes.customer_Id = reader.GetInt32("customer_id");
+                        routes.routes_Id = reader.GetInt32("routes_id");
+                        routes.latitude = reader.GetDouble("latitude");
+                        routes.longitude = reader.GetDouble("longitude");
+
+                    };
+                    routesList.Add(routes);
+                }
+               
+            }
+            return routesList;
         }
     }
 }

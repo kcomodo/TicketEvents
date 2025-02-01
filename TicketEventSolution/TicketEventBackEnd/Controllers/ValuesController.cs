@@ -22,6 +22,7 @@ using static System.Net.WebRequestMethods;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System.Net.Http;
 using Newtonsoft.Json;
+using TicketEventBackEnd.Models.Routes;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TicketEventBackEnd.Controllers
@@ -276,10 +277,27 @@ namespace TicketEventBackEnd.Controllers
         }
 
         [Authorize]
-        [HttpPut]
-        public IActionResult saveRouteInfo(string routeId, double routeLat, double routeLng)
+        [HttpPost("SaveRoutes")]
+        public IActionResult saveRouteInfo(string customer_id, string routes_id, double latitude, double longitude)
         {
+            _customerRepository.saveRouteInfo(customer_id, routes_id, latitude, longitude);
             return Ok();
+        }
+        [Authorize]
+        [HttpDelete("DeleteRoutes")]
+        public IActionResult deleteRouteInfo(string customer_id, string routes_id)
+        {
+            _customerRepository.deleteRouteInfo(customer_id, routes_id);
+            return Ok();
+        }
+        [Authorize]
+        [HttpPost("GetRoutes")]
+        public async Task<IActionResult> getRouteInfo(string customer_id)
+        {
+             List<routesModel> routeInfo = await _customerRepository.getRouteInfo(customer_id);
+            return Ok(routeInfo);
+
+
         }
 
         [Authorize]

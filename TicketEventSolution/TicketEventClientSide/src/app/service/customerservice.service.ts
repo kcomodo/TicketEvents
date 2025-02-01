@@ -113,9 +113,54 @@ export class CustomerserviceService implements OnInit {
     );
   }
 
-  saveRouteInfo(routeId: string, routeLat: number, routeLng: number): void {
-    console.log("saveRouteInfo called", routeId, routeLat, routeLng);
-    return;
+  saveRouteInfo(customer_id: string, routes_id: string, latitude: number, longitude: number): void {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+   // console.log("saveRouteInfo called", customer_id, routes_id, latitude, longitude);
+    this.http.post<any>(
+      `${this.baseUrl}/SaveRoutes?customer_id=${customer_id}&routes_id=${routes_id}&latitude=${latitude}&longitude=${longitude}`,
+      null,
+      { headers }
+    ).subscribe({
+      next: response => {
+        console.log('Response received:', response);
+      },
+      error: err => {
+        console.error('Error occurred:', err);
+      }
+    });
+
+  }
+
+  deleteRouteInfo(customer_id: string, routes_id: string): void {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    // console.log("saveRouteInfo called", customer_id, routes_id, latitude, longitude);
+    this.http.delete<any>(
+      `${this.baseUrl}/DeleteRoutes?customer_id=${customer_id}&routes_id=${routes_id}`,
+      { headers }
+    ).subscribe({
+      next: response => {
+        console.log('Response received:', response);
+      },
+      error: err => {
+        console.error('Error occurred:', err);
+      }
+    });
+
+  }
+
+  getRouteInfo(customer_id: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.getToken()}`
+    });
+    return this.http.post<any>(
+      `${this.baseUrl}/GetRoutes?customer_id=${customer_id}`,
+      null,
+      { headers }
+    );
   }
 
   setEmail(customer_email: string): void {

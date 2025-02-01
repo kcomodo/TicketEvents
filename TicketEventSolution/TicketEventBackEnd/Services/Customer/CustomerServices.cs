@@ -29,10 +29,7 @@ namespace TicketEventBackEnd.Services.Customer
             }
             return false;
         }
-        public void saveRouteInfo(string customer_id, string routeId, double routeLat, double routeLng)
-        {
-            
-        }
+
   
     }
 }
